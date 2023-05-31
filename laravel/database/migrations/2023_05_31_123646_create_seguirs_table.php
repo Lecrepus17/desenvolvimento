@@ -12,12 +12,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sequirs', function (Blueprint $table) {
+        Schema::create('seguirs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('sequido_fk')->constrained(
+            $table->foreignId('seguido_fk')->constrained(
                 table: 'users'
             );
-            $table->foreignId('sequidor_fk')->constrained(
+            $table->foreignId('seguidor_fk')->constrained(
                 table: 'users'
             );
             $table->timestamps();

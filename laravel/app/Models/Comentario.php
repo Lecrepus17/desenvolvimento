@@ -12,6 +12,7 @@ class Comentario extends Model
         'texto',
         'imagem',
         'like',
+        'post_fk',
         'user_fk',
     ];
 }

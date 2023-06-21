@@ -20,6 +20,9 @@ return new class extends Migration
             $table->foreignId('post_fk')->constrained(
                 table: 'posts'
             );
+            $table->foreignId('user_fk')->constrained(
+                table: 'users'
+            );
             $table->timestamps();
         });
     }

@@ -17,7 +17,9 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'texto' => $this->faker->text(),
+            'image' => $this->faker->image(),
+            'like' => $this->faker->numberBetween(0, 1000),
         ];
     }
 }

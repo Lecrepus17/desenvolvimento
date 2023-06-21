@@ -17,7 +17,7 @@ class SeguirFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'seguindo_fk' => $this->faker->randomNumber(),
         ];
     }
 }

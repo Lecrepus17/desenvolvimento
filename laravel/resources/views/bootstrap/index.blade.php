@@ -32,7 +32,7 @@
                             <a class="nav-link" href="features.html">Features</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Páginas</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais</a>
                             <div class="dropdown-menu" aria-labelledby="pagesMenu">
                                 <a class="dropdown-item" href="blog.html">Blog</a>
                                 <a class="dropdown-item" href="{{ route('bootstrap.login') }}">Login</a>
@@ -44,9 +44,7 @@
                                 <a class="dropdown-item" href="privacy-policy.html">Política de Privacidade</a>
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contato</a>
-                        </li>
+
                     </ul>
                     <ul class="navbar-nav mt-2 mt-lg-0">
                         <li class="nav-item mr-2 mb-3 mb-lg-0">
@@ -63,14 +61,10 @@
                     <div class="col-md-6">
                         <h1>Junte-se ao AmiGo!</h1>
                         <p class="text-dark">Torne-se um Amigo e encontre vários outros Amigos com os mesmos interesses e assuntos que você! Tudo isso na nossa rede social maravilhosa!</p>
-                        <a class="btn btn-primary mb-4" href="{{ route('bootstrap.register')}}">Started</a>
+                        <a class="btn btn-primary mb-4" href="{{ route('bootstrap.register')}}">Torne-se AmiGo</a>
 
                         <div class="my-2">
-                            <p class="header-app-download-title">GET OUR MOBILE APP</p>
-                        </div>
-                        <div>
-                            <button class="btn btn-app-download mr-2"><img src="assets/images/ios.svg" alt="App store"></button>
-                            <button class="btn btn-app-download"><img src="assets/images/android.svg" alt="play store"></button>
+                            <p class="header-app-download-title"></p>
                         </div>
                     </div>
                     <div class="col-md-6">

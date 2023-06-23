@@ -17,4 +17,8 @@ class UsersController extends Controller
     public function register(){
         return view('bootstrap.register');
     }
+
+    public function criar_blog(){
+        return view('bootstrap.criar_blog');
+    }
 }

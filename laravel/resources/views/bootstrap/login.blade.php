@@ -35,8 +35,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                             <div class="dropdown-menu" aria-labelledby="pagesMenu">
                                 <a class="dropdown-item" href="blog.html">Blog</a>
-                                <a class="dropdown-item" href="login.html">Login <span class="sr-only">(current)</span></a>
-                                <a class="dropdown-item" href="register.html">Register</a>
+                                <a class="dropdown-item" href="{{ route('bootstrap.login') }}">Login <span class="sr-only">(current)</span></a>
+                                <a class="dropdown-item" href="{{ route('bootstrap.register') }}">Register</a>
                                 <a class="dropdown-item" href="faq.html">FAQ</a>
                                 <a class="dropdown-item" href="404.html">404</a>
                                 <a class="dropdown-item" href="careers.html">Careers</a>
@@ -50,10 +50,10 @@
                     </ul>
                     <ul class="navbar-nav mt-2 mt-lg-0">
                         <li class="nav-item mr-2 mb-3 mb-lg-0">
-                            <a class="btn btn-secondary" href="register.html">Sign up</a>
+                            <a class="btn btn-secondary" href="{{ route('bootstrap.register') }}">Sign up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-secondary" href="login.html">Login</a>
+                            <a class="btn btn-secondary" href="{{ route('bootstrap.login') }}">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -91,7 +91,7 @@
                                     <button class="btn btn-primary btn-auth-submit" type="submit">Submit</button>
                                 </form>
                                 <p class="mb-0">
-                                    <a href="register.html" class="text-dark font-weight-bold">New User? Sign Up</a>
+                                    <a href="{{ route('bootstrap.register') }}" class="text-dark font-weight-bold">New User? Sign Up</a>
                                 </p>
                             </div>
                             <div class="col-md-6 d-flex align-items-center">

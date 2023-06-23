@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="{{ route('bootstrap.index') }}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
@@ -35,8 +35,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                             <div class="dropdown-menu" aria-labelledby="pagesMenu">
                                 <a class="dropdown-item" href="blog.html">Blog</a>
-                                <a class="dropdown-item" href="login.html">Login</a>
-                                <a class="dropdown-item" href="register.html">Register <span class="sr-only">(current)</span></a>
+                                <a class="dropdown-item" href="{{ route('bootstrap.login') }}">Login</a>
+                                <a class="dropdown-item" href="{{ route('bootstrap.register') }}">Register <span class="sr-only">(current)</span></a>
                                 <a class="dropdown-item" href="faq.html">FAQ</a>
                                 <a class="dropdown-item" href="404.html">404</a>
                                 <a class="dropdown-item" href="careers.html">Careers</a>
@@ -50,10 +50,10 @@
                     </ul>
                     <ul class="navbar-nav mt-2 mt-lg-0">
                         <li class="nav-item mr-2 mb-3 mb-lg-0">
-                            <a class="btn btn-secondary" href="register.html">Sign up</a>
+                            <a class="btn btn-secondary" href="{{ route('bootstrap.register') }}">Sign up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-secondary" href="login.html">Login</a>
+                            <a class="btn btn-secondary" href="{{ route('bootstrap.login') }}">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -86,7 +86,7 @@
                                     <button class="btn btn-primary btn-auth-submit" type="submit">Create account</button>
                                 </form>
                                 <p class="mb-0">
-                                    <a href="login.html" class="text-dark font-weight-bold">Already have an acocunt? Sign in</a>
+                                    <a href="{{ route('bootstrap.login') }}" class="text-dark font-weight-bold">Already have an acocunt? Sign in</a>
                                 </p>
                             </div>
                             <div class="col-md-6 d-flex align-items-center">

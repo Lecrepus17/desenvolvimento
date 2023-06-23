@@ -35,8 +35,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                             <div class="dropdown-menu" aria-labelledby="pagesMenu">
                                 <a class="dropdown-item" href="blog.html">Blog</a>
-                                <a class="dropdown-item" href="login.html">Login</a>
-                                <a class="dropdown-item" href="register.html">Cadastro</a>
+                                <a class="dropdown-item" href="{{ route('bootstrap.login') }}">Login</a>
+                                <a class="dropdown-item" href="{{ route('bootstrap.register')}}">Cadastro</a>
                                 <a class="dropdown-item" href="faq.html">Perguntas Frequentes</a>
                                 <a class="dropdown-item" href="404.html">404</a>
                                 <a class="dropdown-item" href="careers.html">Carreiras</a>
@@ -50,10 +50,10 @@
                     </ul>
                     <ul class="navbar-nav mt-2 mt-lg-0">
                         <li class="nav-item mr-2 mb-3 mb-lg-0">
-                            <a class="btn btn-secondary" href="register.html">Cadastro</a>
+                            <a class="btn btn-secondary" href="{{ route('bootstrap.register')}}">Cadastro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-secondary" href="login.html">Login</a>
+                            <a class="btn btn-secondary" href="{{ route('bootstrap.login')}}">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -63,7 +63,8 @@
                     <div class="col-md-6">
                         <h1>Junte-se ao AmiGo!</h1>
                         <p class="text-dark">Torne-se um Amigo e descubra vários outros Amigos na nossa rede social maravilhosa!</p>
-                        <button class="btn btn-primary mb-4">Get Started</button>
+                        <a class="btn btn-primary mb-4" href="{{ route('bootstrap.register')}}">Started</a>
+
                         <div class="my-2">
                             <p class="header-app-download-title">GET OUR MOBILE APP</p>
                         </div>

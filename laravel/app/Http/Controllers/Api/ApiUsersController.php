@@ -8,18 +8,18 @@ use Illuminate\Http\Request;
 
 class ApiUsersController extends Controller
 {
-    public function index(){
-        return[];
-    }
     public function getAllUsers() {
         $users = User::all();
         // $users = User::withTrashed()->get(); ou $users = User::onlyTrashed()->get();
-        dd($users);
-        //return response($users, 200);
+        return response($users, 200);
     }
 
-    public function createUser(Request $request) {
-        // logic to create a User record goes here
+    public function createUser(Request $form, User $user) {
+        $dados = $form->validate([]);
+
+        User::create($dados);
+
+        return redirect()->route('produtos')->with('sucesso', 'Produto inserido com sucesso!');
     }
 
     public function getUser($id) {

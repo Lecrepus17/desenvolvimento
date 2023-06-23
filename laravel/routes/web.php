@@ -23,3 +23,5 @@ Route::get('/index', [UsersController::class, 'index'])->name('bootstrap.index')
 Route::get('/login', [UsersController::class, 'login'])->name('bootstrap.login');
 
 Route::get('/register', [UsersController::class, 'register'])->name('bootstrap.register');
+
+Route::get('/criar_blog', [UsersController::class, 'criar_blog'])->name('bootstrap.criar_blog');

@@ -14,8 +14,8 @@
     <header class="foi-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light foi-navbar">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo.svg" alt="FOI">
+                <a class="navbar-brand" href="index">
+                    <img src="assets/images/prof_de_bio.png" alt="logo">
                 </a>
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,34 +23,31 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('bootstrap.index') }}">Home</a>
+                            <a class="nav-link" href="{{ route('bootstrap.index') }}">Página Inicial</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="features.html">Features</a>
+                            <a class="nav-link" href="about.html">Sobre</a>
                         </li>
                         <li class="nav-item active dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Páginas</a>
                             <div class="dropdown-menu" aria-labelledby="pagesMenu">
                                 <a class="dropdown-item" href="blog.html">Blog</a>
-                                <a class="dropdown-item" href="{{ route('bootstrap.login') }}">Login</a>
-                                <a class="dropdown-item" href="{{ route('bootstrap.register') }}">Register <span class="sr-only">(current)</span></a>
+                                <a class="dropdown-item" href="{{ route('bootstrap.login') }}">Login <span class="sr-only">(current)</span></a>
+                                <a class="dropdown-item" href="{{ route('bootstrap.register') }}">Cadastro</a>
                                 <a class="dropdown-item" href="faq.html">FAQ</a>
                                 <a class="dropdown-item" href="404.html">404</a>
-                                <a class="dropdown-item" href="careers.html">Careers</a>
-                                <a class="dropdown-item" href="blog-single.html">Single blog</a>
-                                <a class="dropdown-item" href="privacy-policy.html">Privacy Policy</a>
+                                <a class="dropdown-item" href="careers.html">Carreiras</a>
+                                <a class="dropdown-item" href="blog-single.html">Blog (Teste)</a>
+                                <a class="dropdown-item" href="privacy-policy.html">Política de Privacidade</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">contact</a>
+                            <a class="nav-link" href="contact.html">Contato</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav mt-2 mt-lg-0">
                         <li class="nav-item mr-2 mb-3 mb-lg-0">
-                            <a class="btn btn-secondary" href="{{ route('bootstrap.register') }}">Sign up</a>
+                            <a class="btn btn-secondary" href="{{ route('bootstrap.register') }}">Cadastre-se</a>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-secondary" href="{{ route('bootstrap.login') }}">Login</a>
@@ -68,25 +65,25 @@
                     <section class="auth-wrapper">
                         <div class="row">
                             <div class="col-md-6 mb-4 mb-md-0">
-                                <h2 class="auth-section-title">Create account</h2>
-                                <p class="auth-section-subtitle">Create your account to continue.</p>
+                                <h2 class="auth-section-title">Criar conta</h2>
+                                <p class="auth-section-subtitle">Crie sua conta para continuar.</p>
                                 <form action="/login.html" method="POST">
                                     <div class="form-group">
-                                        <label for="email">Email <sup>*</sup></label>
+                                        <label for="email">Email</label>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                                     </div>
                                     <div class="form-group">
-                                        <label for="password">Password <sup>*</sup></label>
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                        <label for="password">Senha</label>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
                                     </div>
                                     <div class="form-group">
-                                        <label for="confirmPassword">Confirm Password <sup>*</sup></label>
-                                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                                        <label for="confirmPassword">Confirme sua senha</label>
+                                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirmação de Senha">
                                     </div>
-                                    <button class="btn btn-primary btn-auth-submit" type="submit">Create account</button>
+                                    <button class="btn btn-primary btn-auth-submit" type="submit">Criar conta</button>
                                 </form>
                                 <p class="mb-0">
-                                    <a href="{{ route('bootstrap.login') }}" class="text-dark font-weight-bold">Already have an acocunt? Sign in</a>
+                                    <a href="{{ route('bootstrap.login') }}" class="text-dark font-weight-bold">Já possui uma conta? Login</a>
                                 </p>
                             </div>
                             <div class="col-md-6 d-flex align-items-center">

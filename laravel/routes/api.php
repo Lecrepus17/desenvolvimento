@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ApiPostsController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\ApiUsersController;
 use Illuminate\Support\Facades\Route;
@@ -25,3 +26,7 @@ Route::get('/GetUsers/{id}', [ApiUsersController::class, 'getUser'])->name('get.
 Route::post('/CreateUser', [ApiUsersController::class, 'CreateUsers'])->name('create.users');
 Route::get('/UpdateUser/{id}', [ApiUsersController::class, 'updateUsers'])->name('update.users');
 Route::delete('/DeleteUser/{id}', [ApiUsersController::class, 'deleteUsers'])->name('deltete.users');
+
+
+Route::get('/Post', [ApiPostsController::class, 'getAllPost'])->name('post');
+Route::get('/createPost', [ApiPostsController::class, 'createPost'])->name('createPost');

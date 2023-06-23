@@ -9,4 +9,8 @@ class UsersController extends Controller
     public function index(){
         return view('bootstrap.index');
     }
+
+    public function login(){
+        return view('bootstrap.login');
+    }
 }

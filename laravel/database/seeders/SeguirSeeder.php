@@ -15,7 +15,8 @@ class SeguirSeeder extends Seeder
     {
         DB::table('seguirs')->insert([
             [
-
+                'seguido_fk' => 1,
+                'seguidor_fk' => 2,
             ],
     ]);
     }

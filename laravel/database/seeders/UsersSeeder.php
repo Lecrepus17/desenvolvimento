@@ -17,19 +17,19 @@ class UsersSeeder extends Seeder
             [
                 'name' => 'nome1',
                 'foto' => 'foto1',
-                'email' => 'email1@gmail.com',
+                'email' => 'email8@gmail.com',
                 'password' => '123',
             ],
             [
                 'name' => 'nome2',
                 'foto' => 'foto2',
-                'email' => 'email2@gmail.com',
+                'email' => 'email9@gmail.com',
                 'password' => '456',
             ],
             [
                 'name' => 'nome3',
                 'foto' => 'foto3',
-                'email' => 'email3@gmail.com',
+                'email' => 'email10@gmail.com',
                 'password' => '789',
             ],
         ]);

@@ -17,4 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', [UsersController::class, 'index'])->name('bootstrap');
+
+Route::get('/index', [UsersController::class, 'index'])->name('bootstrap.index');
+
+Route::get('/login', [UsersController::class, 'login'])->name('bootstrap.login');
+
+Route::get('/register', [UsersController::class, 'register'])->name('bootstrap.register');

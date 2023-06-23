@@ -76,107 +76,6 @@
     </header>
     <section class="py-5 mb-5">
         <div class="container">
-            <h2 class="section-title">Application Features</h2>
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5>Secure Data</h5>
-                    <p class="text-dark">No matter what kind of home you have to share, you can increase your earnings.</p>
-                    <p class="mb-5"><a href="#!" class="text-primary mb-5">Find out More</a></p>
-                    <h5>Fully functional</h5>
-                    <p class="text-dark">No matter what kind of home you have to share, you can increase your earnings.</p>
-                    <p class="mb-5"><a href="#!" class="text-primary mb-5">Find out More</a></p>
-                </div>
-                <div class="col-lg-4 mb-3 mb-lg-0">
-                    <h5>Live Chat</h5>
-                    <p class="text-dark">No matter what kind of home you have to share, you can increase your earnings.</p>
-                    <p class="mb-5"><a href="#!" class="text-primary mb-5">Find out More</a></p>
-                    <h5>Powerful dashboard</h5>
-                    <p class="text-dark">No matter what kind of home you have to share, you can increase your earnings.</p>
-                    <p class="mb-5"><a href="#!" class="text-primary mb-5">Find out More</a></p>
-                </div>
-                <div class="col-lg-4">
-                    <h6 class="text-gray font-os font-weight-semibold">Trusted by the world's best</h6>
-                    <div id="landingClientCarousel" class="carousel slide landing-client-carousel" data-ride="carousel">
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active">
-                                <div class="d-flex flex-wrap justify-content-center">
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/slack.svg" alt="Slack" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/spotify.svg" alt="Spotify" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/paypal.svg" alt="Paypal" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/amazon.svg" alt="Amazon" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/google.svg" alt="Google" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/samsung.svg" alt="Samsung" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="d-flex flex-wrap justify-content-center">
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/slack.svg" alt="Slack" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/spotify.svg" alt="Spotify" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/paypal.svg" alt="Paypal" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/amazon.svg" alt="Amazon" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/google.svg" alt="Google" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/samsung.svg" alt="Samsung" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="d-flex flex-wrap justify-content-center">
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/slack.svg" alt="Slack" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/spotify.svg" alt="Spotify" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/paypal.svg" alt="Paypal" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/amazon.svg" alt="Amazon" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/google.svg" alt="Google" class="img-fluid">
-                                    </div>
-                                    <div class="clients-logo">
-                                        <img src="assets/images/clients/samsung.svg" alt="Samsung" class="img-fluid">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <ol class="carousel-indicators">
-                            <li data-target="#landingClientCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#landingClientCarousel" data-slide-to="1"></li>
-                            <li data-target="#landingClientCarousel" data-slide-to="2"></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5 mb-5">
-        <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-5 mb-md-0">
                     <img src="assets/images/app_2.png" alt="special offers" class="img-fluid" width="492px">
@@ -213,112 +112,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5 mb-5">
-        <div class="container">
-            <h2>Choose the plan that’s right for yor business</h2>
-            <p class="text-muted mb-5">Thank you for your very professional and prompt response. I wished I had found you before </p>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="card pricing-card border-warning">
-                        <div class="card-body">
-                            <h3 class="mb-1">Starter</h3>
-                            <h3 class="mb-1 text-warning">Free</h3>
-                            <p class="payment-period">Per month</p>
-                            <p class="mb-4">Thank you for your very professional and prompt response.</p>
-                            <button class="btn btn-outline-warning btn-rounded">Get Started</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card pricing-card border-primary active">
-                        <div class="card-body">
-                            <h3>Popular</h3>
-                            <h3 class="text-primary">$23.00</h3>
-                            <p class="payment-period">Per month</p>
-                            <p class="mb-4">Thank you for your very professional and prompt response.</p>
-                            <button class="btn btn-primary btn-rounded">Get Started</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card pricing-card border-success">
-                        <div class="card-body">
-                            <h3>Enterprise</h3>
-                            <h3 class="text-success">$40.00</h3>
-                            <p class="payment-period">Per month</p>
-                            <p class="mb-4">Thank you for your very professional and prompt response.</p>
-                            <button class="btn btn-outline-success btn-rounded">Get Started</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5 mb-5">
-        <div class="container">
-            <h2>Satisfied Users</h2>
-            <p class="text-muted mb-5">Thank you for your very professional and prompt response. I wished I had found you before </p>
-            <div class="row">
-                <div class="col-md-4 foi-review mb-5 mb-md-0">
-                    <div class="foi-rating">
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                    </div>
-                    <h5 class="foi-review-heading">Great support available</h5>
-                    <p class="foi-review-content">Thank you for your very professional and prompt response. I wished I had found you before I spent money on a competitors theme.</p>
-                    <div class="media foi-review-user">
-                        <img src="assets/images/avatar/avatar_11.jpg" alt="user" class="avatar">
-                        <div class="media-body">
-                            <h6 class="mb-0">Amarachi Nkechi</h6>
-                            <p>UX Designer</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-4 foi-review mb-5 mb-md-0">
-                    <div class="foi-rating">
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                    </div>
-                    <h5 class="foi-review-heading">Great support available</h5>
-                    <p class="foi-review-content">Thank you for your very professional and prompt response. I wished I had found you before I spent money on a competitors theme.</p>
-                    <div class="media foi-review-user">
-                        <img src="assets/images/avatar/avatar_12.jpg" alt="user" class="avatar">
-                        <div class="media-body">
-                            <h6 class="mb-0">Margje Jutten</h6>
-                            <p>Developer</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-4 foi-review mb-5 mb-md-0">
-                    <div class="foi-rating">
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                        <span class="fas fa-star checked"></span>
-                    </div>
-                    <h5 class="foi-review-heading">Great support available</h5>
-                    <p class="foi-review-content">Thank you for your very professional and prompt response. I wished I had found you before I spent money on a competitors theme.</p>
-                    <div class="media foi-review-user">
-                        <img src="assets/images/avatar/avatar_13.jpg" alt="user" class="avatar">
-                        <div class="media-body">
-                            <h6 class="mb-0">Monica Böttger</h6>
-                            <p>UX Designer</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -411,64 +204,28 @@
         <div class="container">
             <div class="row footer-content">
                 <div class="col-xl-6 col-lg-7 col-md-8">
-                    <h2 class="mb-0">Do you want to know more or just have a question? write to us.</h2>
-                </div>
-                <div class="col-md-4 col-lg-5 col-xl-6 py-3 py-md-0 d-md-flex align-items-center justify-content-end">
-                    <a href="contact.html" class="btn btn-danger btn-lg">Contact form</a>
+                    <h2 class="mb-0">Entre em contato.</h2>
                 </div>
             </div>
             <div class="row footer-widget-area">
                 <div class="col-md-3">
                     <div class="py-3">
-                        <img src="assets/images/logo-white.svg" alt="FOI">
-                    </div>
-                    <p class="font-os font-weight-semibold mb3">Get our mobile app</p>
-                    <div>
-                        <button class="btn btn-app-download mr-2"><img src="assets/images/ios.svg" alt="App store"></button>
-                        <button class="btn btn-app-download"><img src="assets/images/android.svg" alt="play store"></button>
+                        <img src="assets/images/prof_de_bio.png" alt="logo">
                     </div>
                 </div>
                 <div class="col-md-3 mt-3 mt-md-0">
                     <nav>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a href="#!" class="nav-link">Account</a>
+                                <a href="#!" class="nav-link">Telefone</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#!" class="nav-link">My tasks</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Edit profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Activity</a>
+                                <a href="#!" class="nav-link">E-mail</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-md-3 mt-3 mt-md-0">
-                    <nav>
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Careers <span class="badge badge-pill badge-secondary ml-3">Hiring</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Shop with us</a>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
                 <div class="col-md-3 mt-3 mt-md-0">
                     <p>

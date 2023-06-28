@@ -35,8 +35,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais</a>
                             <div class="dropdown-menu" aria-labelledby="pagesMenu">
                                 <a class="dropdown-item" href="blog.html">Blog</a>
-                                <a class="dropdown-item" href="{{ route('bootstrap.login') }}">Login</a>
-                                <a class="dropdown-item" href="{{ route('bootstrap.register')}}">Cadastro</a>
+                                <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                                <a class="dropdown-item" href="{{ route('register')}}">Cadastro</a>
                                 <a class="dropdown-item" href="faq.html">Perguntas Frequentes</a>
                                 <a class="dropdown-item" href="404.html">404</a>
                                 <a class="dropdown-item" href="careers.html">Carreiras</a>
@@ -48,10 +48,10 @@
                     </ul>
                     <ul class="navbar-nav mt-2 mt-lg-0">
                         <li class="nav-item mr-2 mb-3 mb-lg-0">
-                            <a class="btn btn-secondary" href="{{ route('bootstrap.register')}}">Cadastro</a>
+                            <a class="btn btn-secondary" href="{{ route('register')}}">Cadastro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-secondary" href="{{ route('bootstrap.login')}}">Login</a>
+                            <a class="btn btn-secondary" href="{{ route('login')}}">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +61,7 @@
                     <div class="col-md-6">
                         <h1>Junte-se ao AmiGo!</h1>
                         <p class="text-dark">Torne-se um Amigo e encontre vários outros Amigos com os mesmos interesses e assuntos que você! Tudo isso na nossa rede social maravilhosa!</p>
-                        <a class="btn btn-primary mb-4" href="{{ route('bootstrap.register')}}">Torne-se AmiGo</a>
+                        <a class="btn btn-primary mb-4" href="{{ route('register')}}">Torne-se AmiGo</a>
 
                         <div class="my-2">
                             <p class="header-app-download-title"></p>
@@ -244,7 +244,7 @@
     </footer>
     <script src="assets/vendors/jquery/jquery.min.js"></script>
     <script src="assets/vendors/popper.js/popper.min.js"></script>
-    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/min.js"></script>
 </body>
 
 </html>

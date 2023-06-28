@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('bootstrap.index') }}">Página Inicial</a>
+                            <a class="nav-link" href="{{ route('index') }}">Página Inicial</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">Sobre</a>
@@ -32,8 +32,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais</a>
                             <div class="dropdown-menu" aria-labelledby="pagesMenu">
                                 <a class="dropdown-item" href="blog.html">Blog</a>
-                                <a class="dropdown-item" href="{{ route('bootstrap.login') }}">Login <span class="sr-only">(current)</span></a>
-                                <a class="dropdown-item" href="{{ route('bootstrap.register') }}">Cadastro</a>
+                                <a class="dropdown-item" href="{{ route('login') }}">Login <span class="sr-only">(current)</span></a>
+                                <a class="dropdown-item" href="{{ route('register') }}">Cadastro</a>
                                 <a class="dropdown-item" href="faq.html">FAQ</a>
                                 <a class="dropdown-item" href="404.html">404</a>
                                 <a class="dropdown-item" href="careers.html">Carreiras</a>
@@ -44,10 +44,10 @@
                     </ul>
                     <ul class="navbar-nav mt-2 mt-lg-0">
                         <li class="nav-item mr-2 mb-3 mb-lg-0">
-                            <a class="btn btn-secondary" href="{{ route('bootstrap.register') }}">Cadastre-se</a>
+                            <a class="btn btn-secondary" href="{{ route('register') }}">Cadastre-se</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-secondary" href="{{ route('bootstrap.login') }}">Login</a>
+                            <a class="btn btn-secondary" href="{{ route('login') }}">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -79,7 +79,7 @@
                                     <button class="btn btn-primary btn-auth-submit" type="submit">Enviar</button>
                                 </form>
                                 <p class="mb-0">
-                                    <a href="{{ route('bootstrap.register') }}" class="text-dark font-weight-bold">Não possui uma conta? Cadastre-se</a>
+                                    <a href="{{ route('register') }}" class="text-dark font-weight-bold">Não possui uma conta? Cadastre-se</a>
                                 </p>
                             </div>
                             <div class="col-md-6 d-flex align-items-center">
@@ -136,7 +136,7 @@
     </footer>
     <script src="assets/vendors/jquery/jquery.min.js"></script>
     <script src="assets/vendors/popper.js/popper.min.js"></script>
-    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/min.js"></script>
 </body>
 
 </html>

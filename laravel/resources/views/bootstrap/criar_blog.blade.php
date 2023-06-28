@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('bootstrap.index') }}">Home</a>
+                            <a class="nav-link" href="{{ route('index') }}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
@@ -35,8 +35,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mais</a>
                             <div class="dropdown-menu" aria-labelledby="pagesMenu">
                                 <a class="dropdown-item" href="blog.html">Blog</a>
-                                <a class="dropdown-item" href="{{ route('bootstrap.login') }}">Login</a>
-                                <a class="dropdown-item" href="{{ route('bootstrap.register') }}">Register</a>
+                                <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                                <a class="dropdown-item" href="{{ route('register') }}">Register</a>
                                 <a class="dropdown-item" href="faq.html">FAQ</a>
                                 <a class="dropdown-item" href="404.html">404</a>
                                 <a class="dropdown-item" href="careers.html">Careers</a>
@@ -45,7 +45,7 @@
                             </div>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('bootstrap.criar_blog') }}">contact <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ route('criar_blog') }}">contact <span class="sr-only">(current)</span></a>
                         </li>
                     </ul>
                     <ul class="navbar-nav mt-2 mt-lg-0">
@@ -164,7 +164,7 @@
     </footer>
     <script src="assets/vendors/jquery/jquery.min.js"></script>
     <script src="assets/vendors/popper.js/popper.min.js"></script>
-    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/min.js"></script>
 </body>
 
 </html>

@@ -33,7 +33,7 @@ class StoreUpdateUserRequest extends FormRequest
             ],
             'password' => [
                 'required',
-                'min:6',
+                'min:3',
                 'max:100',
             ],
         ];

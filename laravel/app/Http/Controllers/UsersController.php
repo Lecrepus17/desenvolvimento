@@ -21,4 +21,8 @@ class UsersController extends Controller
     public function criar_blog(){
         return view('bootstrap.criar_blog');
     }
+
+    public function perfil(){
+        return view('bootstrap.perfil');
+    }
 }

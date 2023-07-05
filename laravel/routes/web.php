@@ -25,3 +25,5 @@ Route::get('/login', [UsersController::class, 'login'])->name('login');
 Route::get('/register', [UsersController::class, 'register'])->name('register');
 
 Route::get('/criar_blog', [UsersController::class, 'criar_blog'])->name('criar_blog');
+
+Route::get('/perfil', [UsersController::class, 'perfil'])->name('perfil');

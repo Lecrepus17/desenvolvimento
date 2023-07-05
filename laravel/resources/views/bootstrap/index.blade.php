@@ -210,7 +210,7 @@
             <div class="row footer-widget-area">
                 <div class="col-md-3">
                     <div class="py-3">
-                        <img src="assets/images/prof_de_bio.png" alt="logo">
+                        <img src="assets/images/quokka.png" alt="logo">
                     </div>
                 </div>
                 <div class="col-md-3 mt-3 mt-md-0">

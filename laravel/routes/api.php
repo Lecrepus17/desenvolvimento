@@ -26,6 +26,7 @@ Route::get('/GetUsers/{id}', [ApiUsersController::class, 'getUser'])->name('get.
 Route::post('/CreateUser', [ApiUsersController::class, 'createUser'])->name('create.user');
 Route::get('/UpdateUser/{id}', [ApiUsersController::class, 'updateUsers'])->name('update.users');
 Route::delete('/DeleteUser/{id}', [ApiUsersController::class, 'deleteUsers'])->name('deltete.users');
+Route::post('/login', [ApiUsersController::class, 'login'])->name('login.user');
 
 
 Route::get('/Post', [ApiPostsController::class, 'getAllPost'])->name('post');

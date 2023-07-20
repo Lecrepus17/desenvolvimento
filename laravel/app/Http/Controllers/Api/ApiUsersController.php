@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateUserRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -19,16 +20,16 @@ class ApiUsersController extends Controller
     }
     public function getAllUsers() {
         $users = User::all();
-        // $users = User::withTrashed()->get(); ou $users = User::onlyTrashed()->get();
         return response($users, 200);
     }
 
     public function createUser(StoreUpdateUserRequest $request) {
-        $dados = $request->validated();
-        $dados['password'] = Hash::make($request['password']);
-        User::create($dados);
+        $data = $request->validated();
+        $data['password'] = bcrypt($request->password);
 
-        return redirect()->route('login')->with('sucesso', 'Produto inserido com sucesso!');
+        $user = $this->repository->create($data);
+
+        return new UserResource($user);
     }
     public function login(Request $request){
 
@@ -46,15 +47,31 @@ class ApiUsersController extends Controller
         Auth::logout();
         return redirect()->route('home');
     }
-    public function getUser($id) {
-        // logic to get a User record goes here
+    public function getUser(string $id) {
+        $user = $this->repository->findOrFail($id);
+
+        return new UserResource($user);
     }
 
-    public function updateUser(/*Request $request, $id*/) {
-        // logic to update a User record goes here
+
+
+    public function updateUser(StoreUpdateUserRequest $request, string $id){
+        $user = $this->repository->findOrFail($id);
+
+        $data = $request->validated();
+
+        if ($request->password)
+            $data['password'] = bcrypt($request->password);
+
+        $user->update($data);
+
+        return new UserResource($user);
     }
 
-    public function deleteUser ($id) {
-        // logic to delete a User record goes here
+    public function deleteUser (string $id){
+        $user = $this->repository->findOrFail($id);
+        $user->delete();
+
+        return response()->json([], Response::HTTP_NO_CONTENT);
     }
 }

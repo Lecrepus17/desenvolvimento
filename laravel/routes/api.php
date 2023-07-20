@@ -24,8 +24,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/Users', [ApiUsersController::class, 'getAllUsers'])->name('users');
 Route::get('/GetUsers/{id}', [ApiUsersController::class, 'getUser'])->name('get.users');
 Route::post('/CreateUser', [ApiUsersController::class, 'createUser'])->name('create.user');
-Route::get('/UpdateUser/{id}', [ApiUsersController::class, 'updateUsers'])->name('update.users');
-Route::delete('/DeleteUser/{id}', [ApiUsersController::class, 'deleteUsers'])->name('deltete.users');
+Route::patch('/UpdateUser/{id}', [ApiUsersController::class, 'updateUser'])->name('update.users');
+Route::delete('/DeleteUser/{id}', [ApiUsersController::class, 'deleteUser'])->name('deltete.users');
 Route::post('/login', [ApiUsersController::class, 'login'])->name('login.user');
 
 

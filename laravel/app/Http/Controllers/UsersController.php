@@ -18,11 +18,20 @@ class UsersController extends Controller
         return view('bootstrap.register');
     }
 
-    public function criar_blog(){
-        return view('bootstrap.criar_blog');
+    public function criar_post(){
+        return view('bootstrap.criar_post');
     }
 
     public function perfil(){
         return view('bootstrap.perfil');
+    }
+
+    public function postagens(){
+        return view('bootstrap.postagens');
+    }
+
+    public function postagens2(Request $request){
+
+        return redirect()->route('bootstrap.postagens');
     }
 }

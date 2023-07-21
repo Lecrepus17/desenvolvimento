@@ -24,6 +24,10 @@ Route::get('/login', [UsersController::class, 'login'])->name('login');
 
 Route::get('/register', [UsersController::class, 'register'])->name('register');
 
-Route::get('/criar_blog', [UsersController::class, 'criar_blog'])->name('criar_blog');
+Route::get('/criar_post', [UsersController::class, 'criar_post'])->name('criar_post');
 
 Route::get('/perfil', [UsersController::class, 'perfil'])->name('perfil');
+
+Route::post('/postagens', [UsersController::class, 'postagens'])->name('postagens');
+
+Route::get('/postagens', [UsersController::class, 'postagens'])->name('postagens');

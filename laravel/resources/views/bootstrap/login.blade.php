@@ -64,7 +64,8 @@
                             <div class="col-md-6 mb-4 mb-md-0">
                                 <h2 class="auth-section-title">Login</h2>
                                 <p class="auth-section-subtitle">Faça login na sua conta para continuar.</p>
-                                <form action="/login.html" method="POST">
+                                <form action="{{ route('postagens') }}" method="POST">
+                                    @csrf
                                     <div class="form-group">
                                         <label for="email">E-mail</label>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="E-mail *">

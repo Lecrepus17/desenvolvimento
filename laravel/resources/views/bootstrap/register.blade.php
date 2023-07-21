@@ -67,7 +67,7 @@
                             <div class="col-md-6 mb-4 mb-md-0">
                                 <h2 class="auth-section-title">Criar conta</h2>
                                 <p class="auth-section-subtitle">Crie sua conta para continuar.</p>
-                                <form action="/login.html" method="POST">
+                                <form action="{{ route('perfil') }}" method="POST">
                                     <div class="form-group">
                                         <label for="email">Email</label>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="Email">

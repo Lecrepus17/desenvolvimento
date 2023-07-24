@@ -36,7 +36,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
 <div class="d-flex align-items-center justify-content-between">
-  <a href="{{ route('index') }}" class="logo d-flex align-items-center">
+  <a href="{{ route('postagens') }}" class="logo d-flex align-items-center">
     <img src="assets/img/logo.png" alt="">
     <span class="d-none d-lg-block">AmiGo</span>
   </a>
@@ -216,7 +216,7 @@
         </li>
 
         <li>
-          <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+          <a class="dropdown-item d-flex align-items-center" href="{{route('perfil')}}">
             <i class="bi bi-person"></i>
             <span>Meu perfil</span>
           </a>
@@ -226,7 +226,7 @@
         </li>
 
         <li>
-          <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+          <a class="dropdown-item d-flex align-items-center" href="{{route('perfil')}}">
             <i class="bi bi-gear"></i>
             <span>Configurações da conta</span>
           </a>
@@ -236,9 +236,9 @@
         </li>
 
         <li>
-          <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+          <a class="dropdown-item d-flex align-items-center" href="{{route('criar_post')}}">
             <i class="bi bi-question-circle"></i>
-            <span>Need Help?</span>
+            <span>Criar um post</span>
           </a>
         </li>
         <li>

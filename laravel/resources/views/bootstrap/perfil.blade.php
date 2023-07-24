@@ -46,7 +46,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="{{route('postagens')}}" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">AmiGo</span>
       </a>
@@ -617,10 +617,7 @@
   <!-- Vendor JS Files -->
   <script src="assets/perfil/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="assets/perfil/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/perfil/vendor/chart.js/chart.umd.js"></script>
-  <script src="assets/perfil/vendor/echarts/echarts.min.js"></script>
   <script src="assets/perfil/vendor/quill/quill.min.js"></script>
-  <script src="assets/perfil/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/perfil/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/perfil/vendor/php-email-form/validate.js"></script>
 

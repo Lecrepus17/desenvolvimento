@@ -68,6 +68,7 @@
                                 <h2 class="auth-section-title">Criar conta</h2>
                                 <p class="auth-section-subtitle">Crie sua conta para continuar.</p>
                                 <form action="{{ route('perfil') }}" method="POST">
+                                    @csrf
                                     <div class="form-group">
                                         <label for="email">Email</label>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="Email">

@@ -26,6 +26,11 @@ class UsersController extends Controller
         return view('bootstrap.perfil');
     }
 
+    public function perfil2(Request $request){
+        
+        return redirect()->route('bootstrap.perfil');
+    }
+
     public function postagens(){
         return view('bootstrap.postagens');
     }
@@ -33,5 +38,9 @@ class UsersController extends Controller
     public function postagens2(Request $request){
 
         return redirect()->route('bootstrap.postagens');
+    }
+
+    public function post2(){
+        return view('bootstrap.post2');
     }
 }

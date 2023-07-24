@@ -57,7 +57,12 @@
         <i class="bi bi-search"></i>
       </a>
     </li><!-- End Search Icon-->
+    <li class="nav-item dropdown">
 
+<a class="nav-link nav-icon" href="{{route('criar_post')}}" >
+  <i class="bi bi-plus"></i>
+  <span class="badge bg-warning badge-number">Criar</span>
+</a><!-- End Notification Icon -->
     <li class="nav-item dropdown">
 
       <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
@@ -237,7 +242,7 @@
 
         <li>
           <a class="dropdown-item d-flex align-items-center" href="{{route('criar_post')}}">
-            <i class="bi bi-question-circle"></i>
+            <i class="bi bi-plus"></i>
             <span>Criar um post</span>
           </a>
         </li>

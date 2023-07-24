@@ -40,7 +40,7 @@
   ======================================================== -->
 </head>
 
-<body>
+<body class="toggle-sidebar">
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
@@ -50,7 +50,6 @@
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">AmiGo</span>
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
     <div class="search-bar">
@@ -68,6 +67,10 @@
             <i class="bi bi-search"></i>
           </a>
         </li><!-- End Search Icon-->
+        <a class="nav-link nav-icon" href="{{route('criar_post')}}" >
+  <i class="bi bi-plus"></i>
+  <span class="badge bg-warning badge-number">Criar</span>
+</a><!-- End Notification Icon -->
 
         <li class="nav-item dropdown">
 
@@ -247,9 +250,9 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
+              <a class="dropdown-item d-flex align-items-center" href="{{ route('criar_post')}}">
+                <i class="bi bi-plus"></i>
+                <span>Criar postagem</span>
               </a>
             </li>
             <li>

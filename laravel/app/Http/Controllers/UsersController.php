@@ -10,10 +10,6 @@ class UsersController extends Controller
         return view('bootstrap.index');
     }
 
-    public function login(){
-        return view('bootstrap.login');
-    }
-
     public function register(){
         return view('bootstrap.register');
     }
@@ -26,21 +22,31 @@ class UsersController extends Controller
         return view('bootstrap.perfil');
     }
 
-    public function perfil2(Request $request){
+
+    // MÉTODO GET
+    public function editar_perfil(){
+        return view('bootstrap.editar_perfil');
+    }
+    // MÉTODO POST
+    public function editar_perfil2(Request $request){
         
-        return redirect()->route('bootstrap.perfil');
+        return redirect()->route('bootstrap.editar_perfil');
     }
 
+
+    // MÉTODO GET
     public function postagens(){
         return view('bootstrap.postagens');
     }
-
+    // MÉTODO POST
     public function postagens2(Request $request){
 
         return redirect()->route('bootstrap.postagens');
     }
 
-    public function post2(){
-        return view('bootstrap.post2');
+
+    public function amigos(){
+        return view('bootstrap.amigos');
     }
+   
 }

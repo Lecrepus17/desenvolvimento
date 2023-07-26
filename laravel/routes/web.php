@@ -20,7 +20,6 @@ Route::get('/', function () {
 
 Route::get('/index', [UsersController::class, 'index'])->name('index');
 
-Route::get('/login', [UsersController::class, 'login'])->name('login');
 
 Route::get('/register', [UsersController::class, 'register'])->name('register');
 
@@ -29,11 +28,16 @@ Route::get('/criar_post', [UsersController::class, 'criar_post'])->name('criar_p
 
 Route::get('/perfil', [UsersController::class, 'perfil'])->name('perfil');
 
-Route::post('/perfil', [UsersController::class, 'perfil'])->name('perfil');
+Route::get('/editar_perfil', [UsersController::class, 'editar_perfil'])->name('editar_perfil');
+Route::post('/editar_perfil', [UsersController::class, 'editar_perfil'])->name('editar_perfil');
+
+
 
 
 Route::post('/postagens', [UsersController::class, 'postagens'])->name('postagens');
 
 Route::get('/postagens', [UsersController::class, 'postagens'])->name('postagens');
 
-Route::get('/post2', [UsersController::class, 'post2'])->name('post2');
+
+
+Route::get('/amigos', [UsersController::class, 'amigos'])->name('amigos');

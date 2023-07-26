@@ -1,632 +1,1436 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+	<title>Winku Social Network Toolkit</title>
+    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16"> 
+    
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
-  <title>Usuário / Perfil - AmiGo</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/perfil/img/favicon.png" rel="icon">
-  <link href="assets/perfil/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/perfil/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/perfil/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/perfil/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/perfil/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="assets/perfil/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="assets/perfil/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/perfil/vendor/simple-datatables/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-
-
-  <!-- Template Main CSS File -->
-  <link href="assets/perfil/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Updated: May 30 2023 with Bootstrap v5.3.0
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
-
-<body class="toggle-sidebar">
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="{{route('postagens')}}" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-        <span class="d-none d-lg-block">AmiGo</span>
-      </a>
-    </div><!-- End Logo -->
-
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
-    </div><!-- End Search Bar -->
-
-    <nav class="header-nav ms-auto">
-      <ul class="d-flex align-items-center">
-
-        <li class="nav-item d-block d-lg-none">
-          <a class="nav-link nav-icon search-bar-toggle " href="#">
-            <i class="bi bi-search"></i>
-          </a>
-        </li><!-- End Search Icon-->
-        <a class="nav-link nav-icon" href="{{route('criar_post')}}" >
-  <i class="bi bi-plus"></i>
-  <span class="badge bg-warning badge-number">Criar</span>
-</a><!-- End Notification Icon -->
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-bell"></i>
-            <span class="badge bg-primary badge-number">4</span>
-          </a><!-- End Notification Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-            <li class="dropdown-header">
-              You have 4 new notifications
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-exclamation-circle text-warning"></i>
-              <div>
-                <h4>Lorem Ipsum</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>30 min. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-x-circle text-danger"></i>
-              <div>
-                <h4>Atque rerum nesciunt</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>1 hr. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-check-circle text-success"></i>
-              <div>
-                <h4>Sit rerum fuga</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>2 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-info-circle text-primary"></i>
-              <div>
-                <h4>Dicta reprehenderit</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>4 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li class="dropdown-footer">
-              <a href="#">Show all notifications</a>
-            </li>
-
-          </ul><!-- End Notification Dropdown Items -->
-
-        </li><!-- End Notification Nav -->
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-chat-left-text"></i>
-            <span class="badge bg-success badge-number">3</span>
-          </a><!-- End Messages Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-            <li class="dropdown-header">
-              You have 3 new messages
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/perfil/img/messages-1.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Maria Hudson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>4 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/perfil/img/messages-2.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Anna Nelson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>6 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/perfil/img/messages-3.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>David Muldon</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>8 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="dropdown-footer">
-              <a href="#">Show all messages</a>
-            </li>
-
-          </ul><!-- End Messages Dropdown Items -->
-
-        </li><!-- End Messages Nav -->
-
-        <li class="nav-item dropdown pe-3">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/perfil/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-          </a><!-- End Profile Iamge Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-person"></i>
-                <span>Meu perfil</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Configurações da conta</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="{{ route('criar_post')}}">
-                <i class="bi bi-plus"></i>
-                <span>Criar postagem</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
-            </li>
-
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
-
-      </ul>
-    </nav><!-- End Icons Navigation -->
-
-  </header><!-- End Header -->
-
-  <!-- ======= Sidebar ======= -->
-
-
-  <main id="main" class="main">
-
-    <div class="pagetitle">
-      <h1>Perfil</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{ route('index')}}">Home</a></li>
-          <li class="breadcrumb-item">Users</li>
-          <li class="breadcrumb-item active">Perfil</li>
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
-
-    <section class="section profile">
-      <div class="row">
-        <div class="col-xl-4">
-
-          <div class="card">
-            <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-
-              <img src="assets/perfil/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-              <h2>Kevin Anderson</h2>
-              <h3>Web Designer</h3>
-              <div class="social-links mt-2">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-xl-8">
-
-          <div class="card">
-            <div class="card-body pt-3">
-              <!-- Bordered Tabs -->
-              <ul class="nav nav-tabs nav-tabs-bordered">
-
-                <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Overview</button>
-                </li>
-
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Editar perfil</button>
-                </li>
-
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Configurações</button>
-                </li>
-
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Alterar senha</button>
-                </li>
-
-              </ul>
-              <div class="tab-content pt-2">
-
-                <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                  <h5 class="card-title">Sobre mim</h5>
-                  <p class="small fst-italic">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</p>
-
-                  <h5 class="card-title">Profile Details</h5>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                    <div class="col-lg-9 col-md-8">Kevin Anderson</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Company</div>
-                    <div class="col-lg-9 col-md-8">Lueilwitz, Wisoky and Leuschke</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Job</div>
-                    <div class="col-lg-9 col-md-8">Web Designer</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Country</div>
-                    <div class="col-lg-9 col-md-8">USA</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Address</div>
-                    <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Phone</div>
-                    <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Email</div>
-                    <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
-                  </div>
-
-                </div>
-
-                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
-
-                  <!-- Profile Edit Form -->
-                  <form>
-                    <div class="row mb-3">
-                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
-                      <div class="col-md-8 col-lg-9">
-                        <img src="assets/img/profile-img.jpg" alt="Profile">
-                        <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
-                      <div class="col-md-8 col-lg-9">
-                        <textarea name="about" class="form-control" id="about" style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="company" type="text" class="form-control" id="company" value="Lueilwitz, Wisoky and Leuschke">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="job" type="text" class="form-control" id="Job" value="Web Designer">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="USA">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="twitter" type="text" class="form-control" id="Twitter" value="https://twitter.com/#">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="facebook" type="text" class="form-control" id="Facebook" value="https://facebook.com/#">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="instagram" type="text" class="form-control" id="Instagram" value="https://instagram.com/#">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin Profile</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="linkedin" type="text" class="form-control" id="Linkedin" value="https://linkedin.com/#">
-                      </div>
-                    </div>
-
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
-                    </div>
-                  </form><!-- End Profile Edit Form -->
-
-                </div>
-
-                <div class="tab-pane fade pt-3" id="profile-settings">
-
-                  <!-- Settings Form -->
-                  <form>
-
-                    <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Email Notifications</label>
-                      <div class="col-md-8 col-lg-9">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="changesMade" checked>
-                          <label class="form-check-label" for="changesMade">
-                            Changes made to your account
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="newProducts" checked>
-                          <label class="form-check-label" for="newProducts">
-                            Information on new products and services
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="proOffers">
-                          <label class="form-check-label" for="proOffers">
-                            Marketing and promo offers
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="securityNotify" checked disabled>
-                          <label class="form-check-label" for="securityNotify">
-                            Security alerts
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
-                    </div>
-                  </form><!-- End settings Form -->
-
-                </div>
-
-                <div class="tab-pane fade pt-3" id="profile-change-password">
-                  <!-- Change Password Form -->
-                  <form>
-
-                    <div class="row mb-3">
-                      <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="password" type="password" class="form-control" id="currentPassword">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="newpassword" type="password" class="form-control" id="newPassword">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="renewpassword" type="password" class="form-control" id="renewPassword">
-                      </div>
-                    </div>
-
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Change Password</button>
-                    </div>
-                  </form><!-- End Change Password Form -->
-
-                </div>
-
-              </div><!-- End Bordered Tabs -->
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer class="foi-footer text-white">
-    <div class="container">
-        <div class="row footer-content">
-            <div class="col-xl-6 col-lg-7 col-md-8">
-                <h2 class="mb-0">Entre em contato.</h2>
-            </div>
-        </div>
-        <div class="row footer-widget-area">
-            <div class="col-md-3">
-                <div class="py-3">
-                    <img src="assets/images/prof_de_bio.png" alt="logo">
-                </div>
-            </div>
-            <div class="col-md-3 mt-3 mt-md-0">
-                <nav>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link">Telefone</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#!" class="nav-link">E-mail</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-md-3 mt-3 mt-md-0">
-            </div>
-            <div class="col-md-3 mt-3 mt-md-0">
-                <p>
-                    &copy; foi. 2020 <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer" class="text-reset">BootstrapDash</a>.
-                </p>
-                <p>All rights reserved.</p>
-                <nav class="social-menu">
-                    <a href="#!"><img src="assets/images/facebook.svg" alt="facebook"></a>
-                    <a href="#!"><img src="assets/images/instagram.svg" alt="instagram"></a>
-                    <a href="#!"><img src="assets/images/twitter.svg" alt="twitter"></a>
-                    <a href="#!"><img src="assets/images/youtube.svg" alt="youtube"></a>
-                </nav>
-            </div>
-        </div>
-    </div>
-</footer>
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/perfil/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/perfil/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/perfil/vendor/quill/quill.min.js"></script>
-  <script src="assets/perfil/vendor/tinymce/tinymce.min.js"></script>
-  <script src="assets/perfil/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/perfil/js/main.js"></script>
-
-</body>
+<body>
+<!--<div class="se-pre-con"></div>-->
+<div class="theme-layout">
+	
+	<div class="responsive-header">
+		<div class="mh-head first Sticky">
+			<span class="mh-btns-left">
+				<a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
+			</span>
+			<span class="mh-text">
+				<a href="newsfeed.html" title=""><img src="images/logo2.png" alt=""></a>
+			</span>
+			<span class="mh-btns-right">
+				<a class="fa fa-sliders" href="#shoppingbag"></a>
+			</span>
+		</div>
+		<div class="mh-head second">
+			<form class="mh-form">
+				<input placeholder="search" />
+				<a href="#/" class="fa fa-search"></a>
+			</form>
+		</div>
+		<nav id="menu" class="res-menu">
+			<ul>
+				<li><span>Home</span>
+					<ul>
+						<li><a href="index-2.html" title="">Home Social</a></li>
+						<li><a href="index2.html" title="">Home Social 2</a></li>
+						<li><a href="index-company.html" title="">Home Company</a></li>
+						<li><a href="landing.html" title="">Login page</a></li>
+						<li><a href="logout.html" title="">Logout Page</a></li>
+						<li><a href="newsfeed.html" title="">news feed</a></li>
+					</ul>
+				</li>
+				<li><span>Time Line</span>
+					<ul>
+						<li><a href="time-line.html" title="">timeline</a></li>
+						<li><a href="timeline-friends.html" title="">timeline friends</a></li>
+						<li><a href="timeline-groups.html" title="">timeline groups</a></li>
+						<li><a href="timeline-pages.html" title="">timeline pages</a></li>
+						<li><a href="timeline-photos.html" title="">timeline photos</a></li>
+						<li><a href="timeline-videos.html" title="">timeline videos</a></li>
+						<li><a href="fav-page.html" title="">favourit page</a></li>
+						<li><a href="groups.html" title="">groups page</a></li>
+						<li><a href="page-likers.html" title="">Likes page</a></li>
+						<li><a href="people-nearby.html" title="">people nearby</a></li>
+						
+						
+					</ul>
+				</li>
+				<li><span>Account Setting</span>
+					<ul>
+						<li><a href="create-fav-page.html" title="">create fav page</a></li>
+						<li><a href="edit-account-setting.html" title="">edit account setting</a></li>
+						<li><a href="edit-interest.html" title="">edit-interest</a></li>
+						<li><a href="edit-password.html" title="">edit-password</a></li>
+						<li><a href="edit-profile-basic.html" title="">edit profile basics</a></li>
+						<li><a href="edit-work-eductation.html" title="">edit work educations</a></li>
+						<li><a href="messages.html" title="">message box</a></li>
+						<li><a href="inbox.html" title="">Inbox</a></li>
+						<li><a href="notifications.html" title="">notifications page</a></li>
+					</ul>
+				</li>
+				<li><span>forum</span>
+					<ul>
+						<li><a href="forum.html" title="">Forum Page</a></li>
+						<li><a href="forums-category.html" title="">Fourm Category</a></li>
+						<li><a href="forum-open-topic.html" title="">Forum Open Topic</a></li>
+						<li><a href="forum-create-topic.html" title="">Forum Create Topic</a></li>
+					</ul>
+				</li>
+				<li><span>Our Shop</span>
+					<ul>
+						<li><a href="shop.html" title="">Shop Products</a></li>
+						<li><a href="shop-masonry.html" title="">Shop Masonry Products</a></li>
+						<li><a href="shop-single.html" title="">Shop Detail Page</a></li>
+						<li><a href="shop-cart.html" title="">Shop Product Cart</a></li>
+						<li><a href="shop-checkout.html" title="">Product Checkout</a></li>
+					</ul>
+				</li>
+				<li><span>Our Blog</span>
+					<ul>
+						<li><a href="blog-grid-wo-sidebar.html" title="">Our Blog</a></li>
+						<li><a href="blog-grid-right-sidebar.html" title="">Blog with R-Sidebar</a></li>
+						<li><a href="blog-grid-left-sidebar.html" title="">Blog with L-Sidebar</a></li>
+						<li><a href="blog-masonry.html" title="">Blog Masonry Style</a></li>
+						<li><a href="blog-list-wo-sidebar.html" title="">Blog List Style</a></li>
+						<li><a href="blog-list-right-sidebar.html" title="">Blog List with R-Sidebar</a></li>
+						<li><a href="blog-list-left-sidebar.html" title="">Blog List with L-Sidebar</a></li>
+						<li><a href="blog-detail.html" title="">Blog Post Detail</a></li>
+					</ul>
+				</li>
+				<li><span>Portfolio</span>
+					<ul>
+						<li><a href="portfolio-2colm.html" title="">Portfolio 2col</a></li>
+						<li><a href="portfolio-3colm.html" title="">Portfolio 3col</a></li>
+						<li><a href="portfolio-4colm.html" title="">Portfolio 4col</a></li>
+					</ul>
+				</li>
+				<li><span>Support & Help</span>
+					<ul>
+						<li><a href="support-and-help.html" title="">Support & Help</a></li>
+						<li><a href="support-and-help-detail.html" title="">Support & Help Detail</a></li>
+						<li><a href="support-and-help-search-result.html" title="">Support & Help Search Result</a></li>
+					</ul>
+				</li>
+				<li><span>More pages</span>
+					<ul>
+						<li><a href="careers.html" title="">Careers</a></li>
+						<li><a href="career-detail.html" title="">Career Detail</a></li>
+						<li><a href="404.html" title="">404 error page</a></li>
+						<li><a href="404-2.html" title="">404 Style2</a></li>
+						<li><a href="faq.html" title="">faq's page</a></li>
+						<li><a href="insights.html" title="">insights</a></li>
+						<li><a href="knowledge-base.html" title="">knowledge base</a></li>
+					</ul>
+				</li>
+				<li><a href="about.html" title="">about</a></li>
+				<li><a href="about-company.html" title="">About Us2</a></li>
+				<li><a href="contact.html" title="">contact</a></li>
+				<li><a href="contact-branches.html" title="">Contact Us2</a></li>
+				<li><a href="widgets.html" title="">Widgts</a></li>
+			</ul>
+		</nav>
+		<nav id="shoppingbag">
+			<div>
+				<div class="">
+					<form method="post">
+						<div class="setting-row">
+							<span>use night mode</span>
+							<input type="checkbox" id="nightmode"/> 
+							<label for="nightmode" data-on-label="ON" data-off-label="OFF"></label>
+						</div>
+						<div class="setting-row">
+							<span>Notifications</span>
+							<input type="checkbox" id="switch2"/> 
+							<label for="switch2" data-on-label="ON" data-off-label="OFF"></label>
+						</div>
+						<div class="setting-row">
+							<span>Notification sound</span>
+							<input type="checkbox" id="switch3"/> 
+							<label for="switch3" data-on-label="ON" data-off-label="OFF"></label>
+						</div>
+						<div class="setting-row">
+							<span>My profile</span>
+							<input type="checkbox" id="switch4"/> 
+							<label for="switch4" data-on-label="ON" data-off-label="OFF"></label>
+						</div>
+						<div class="setting-row">
+							<span>Show profile</span>
+							<input type="checkbox" id="switch5"/> 
+							<label for="switch5" data-on-label="ON" data-off-label="OFF"></label>
+						</div>
+					</form>
+					<h4 class="panel-title">Account Setting</h4>
+					<form method="post">
+						<div class="setting-row">
+							<span>Sub users</span>
+							<input type="checkbox" id="switch6" /> 
+							<label for="switch6" data-on-label="ON" data-off-label="OFF"></label>
+						</div>
+						<div class="setting-row">
+							<span>personal account</span>
+							<input type="checkbox" id="switch7" /> 
+							<label for="switch7" data-on-label="ON" data-off-label="OFF"></label>
+						</div>
+						<div class="setting-row">
+							<span>Business account</span>
+							<input type="checkbox" id="switch8" /> 
+							<label for="switch8" data-on-label="ON" data-off-label="OFF"></label>
+						</div>
+						<div class="setting-row">
+							<span>Show me online</span>
+							<input type="checkbox" id="switch9" /> 
+							<label for="switch9" data-on-label="ON" data-off-label="OFF"></label>
+						</div>
+						<div class="setting-row">
+							<span>Delete history</span>
+							<input type="checkbox" id="switch10" /> 
+							<label for="switch10" data-on-label="ON" data-off-label="OFF"></label>
+						</div>
+						<div class="setting-row">
+							<span>Expose author name</span>
+							<input type="checkbox" id="switch11" /> 
+							<label for="switch11" data-on-label="ON" data-off-label="OFF"></label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</div><!-- responsive header -->
+	
+	<div class="topbar stick">
+		<div class="logo">
+			<a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
+		</div>
+		
+		<div class="top-area">
+			<ul class="main-menu">
+				<li>
+					<a href="#" title="">Home</a>
+					<ul>
+						<li><a href="index-2.html" title="">Home Social</a></li>
+						<li><a href="index2.html" title="">Home Social 2</a></li>
+						<li><a href="index-company.html" title="">Home Company</a></li>
+						<li><a href="landing.html" title="">Login page</a></li>
+						<li><a href="logout.html" title="">Logout Page</a></li>
+						<li><a href="newsfeed.html" title="">news feed</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="">timeline</a>
+					<ul>
+						<li><a href="time-line.html" title="">timeline</a></li>
+						<li><a href="timeline-friends.html" title="">timeline friends</a></li>
+						<li><a href="timeline-groups.html" title="">timeline groups</a></li>
+						<li><a href="timeline-pages.html" title="">timeline pages</a></li>
+						<li><a href="timeline-photos.html" title="">timeline photos</a></li>
+						<li><a href="timeline-videos.html" title="">timeline videos</a></li>
+						<li><a href="fav-page.html" title="">favourit page</a></li>
+						<li><a href="groups.html" title="">groups page</a></li>
+						<li><a href="page-likers.html" title="">Likes page</a></li>
+						<li><a href="people-nearby.html" title="">people nearby</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="">account settings</a>
+					<ul>
+						<li><a href="create-fav-page.html" title="">create fav page</a></li>
+						<li><a href="edit-account-setting.html" title="">edit account setting</a></li>
+						<li><a href="edit-interest.html" title="">edit-interest</a></li>
+						<li><a href="edit-password.html" title="">edit-password</a></li>
+						<li><a href="edit-profile-basic.html" title="">edit profile basics</a></li>
+						<li><a href="edit-work-eductation.html" title="">edit work educations</a></li>
+						<li><a href="messages.html" title="">message box</a></li>
+						<li><a href="inbox.html" title="">Inbox</a></li>
+						<li><a href="notifications.html" title="">notifications page</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="">more pages</a>
+					<ul>
+						<li><a href="404.html" title="">404 error page</a></li>
+						<li><a href="about.html" title="">about</a></li>
+						<li><a href="contact.html" title="">contact</a></li>
+						<li><a href="faq.html" title="">faq's page</a></li>
+						<li><a href="insights.html" title="">insights</a></li>
+						<li><a href="knowledge-base.html" title="">knowledge base</a></li>
+						<li><a href="widgets.html" title="">Widgts</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="setting-area">
+				<li>
+					<a href="#" title="Home" data-ripple=""><i class="ti-search"></i></a>
+					<div class="searched">
+						<form method="post" class="form-search">
+							<input type="text" placeholder="Search Friend">
+							<button data-ripple><i class="ti-search"></i></button>
+						</form>
+					</div>
+				</li>
+				<li><a href="newsfeed.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
+				<li>
+					<a href="#" title="Notification" data-ripple="">
+						<i class="ti-bell"></i><span>20</span>
+					</a>
+					<div class="dropdowns">
+						<span>4 New Notifications</span>
+						<ul class="drops-menu">
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/thumb-1.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>sarah Loren</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag green">New</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/thumb-2.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Jhon doe</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag red">Reply</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/thumb-3.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Andrew</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag blue">Unseen</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/thumb-4.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Tom cruse</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag">New</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/thumb-5.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Amy</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag">New</span>
+							</li>
+						</ul>
+						<a href="notifications.html" title="" class="more-mesg">view more</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>12</span></a>
+					<div class="dropdowns">
+						<span>5 New Messages</span>
+						<ul class="drops-menu">
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/thumb-1.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>sarah Loren</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag green">New</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/thumb-2.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Jhon doe</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag red">Reply</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/thumb-3.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Andrew</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag blue">Unseen</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/thumb-4.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Tom cruse</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag">New</span>
+							</li>
+							<li>
+								<a href="notifications.html" title="">
+									<img src="images/resources/thumb-5.jpg" alt="">
+									<div class="mesg-meta">
+										<h6>Amy</h6>
+										<span>Hi, how r u dear ...?</span>
+										<i>2 min ago</i>
+									</div>
+								</a>
+								<span class="tag">New</span>
+							</li>
+						</ul>
+						<a href="messages.html" title="" class="more-mesg">view more</a>
+					</div>
+				</li>
+				<li><a href="#" title="Languages" data-ripple=""><i class="fa fa-globe"></i></a>
+					<div class="dropdowns languages">
+						<a href="#" title=""><i class="ti-check"></i>English</a>
+						<a href="#" title="">Arabic</a>
+						<a href="#" title="">Dutch</a>
+						<a href="#" title="">French</a>
+					</div>
+				</li>
+			</ul>
+			<div class="user-img">
+				<img src="images/resources/admin.jpg" alt="">
+				<span class="status f-online"></span>
+				<div class="user-setting">
+					<a href="#" title=""><span class="status f-online"></span>online</a>
+					<a href="#" title=""><span class="status f-away"></span>away</a>
+					<a href="#" title=""><span class="status f-off"></span>offline</a>
+					<a href="#" title=""><i class="ti-user"></i> view profile</a>
+					<a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
+					<a href="#" title=""><i class="ti-target"></i>activity log</a>
+					<a href="#" title=""><i class="ti-settings"></i>account setting</a>
+					<a href="#" title=""><i class="ti-power-off"></i>log out</a>
+				</div>
+			</div>
+			<span class="ti-menu main-menu" data-ripple=""></span>
+		</div>
+	</div><!-- topbar -->	
+		
+	<section>
+		<div class="feature-photo">
+			<figure><img src="images/resources/timeline-1.jpg" alt=""></figure>
+			<div class="add-btn">
+				<span>1205 followers</span>
+				<a href="#" title="" data-ripple="">Add Friend</a>
+			</div>
+			<form class="edit-phto">
+				<i class="fa fa-camera-retro"></i>
+				<label class="fileContainer">
+					Edit Cover Photo
+				<input type="file"/>
+				</label>
+			</form>
+			<div class="container-fluid">
+				<div class="row merged">
+					<div class="col-lg-2 col-sm-3">
+						<div class="user-avatar">
+							<figure>
+								<img src="images/resources/user-avatar.jpg" alt="">
+								<form class="edit-phto">
+									<i class="fa fa-camera-retro"></i>
+									<label class="fileContainer">
+										Edit Display Photo
+										<input type="file"/>
+									</label>
+								</form>
+							</figure>
+						</div>
+					</div>
+					<div class="col-lg-10 col-sm-9">
+						<div class="timeline-info">
+							<ul>
+								<li class="admin-name">
+								  <h5>Janice Griffith</h5>
+								  <span>Group Admin</span>
+								</li>
+								<li>
+									<a class="active" href="time-line.html" title="" data-ripple="">time line</a>
+									<a class="" href="timeline-photos.html" title="" data-ripple="">Photos</a>
+									<a class="" href="timeline-videos.html" title="" data-ripple="">Videos</a>
+									<a class="" href="timeline-friends.html" title="" data-ripple="">Friends</a>
+									<a class="" href="timeline-groups.html" title="" data-ripple="">Groups</a>
+									<a class="" href="about.html" title="" data-ripple="">about</a>
+									<a class="" href="#" title="" data-ripple="">more</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- top area -->
+		
+	<section>
+		<div class="gap gray-bg">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="row" id="page-contents">
+							<div class="col-lg-3">
+								<aside class="sidebar static">
+									<div class="widget">
+											<h4 class="widget-title">Socials</h4>
+											<ul class="socials">
+												<li class="facebook">
+													<a title="" href="#"><i class="fa fa-facebook"></i> <span>facebook</span> <ins>45 likes</ins></a>
+												</li>
+												<li class="twitter">
+													<a title="" href="#"><i class="fa fa-twitter"></i> <span>twitter</span><ins>25 likes</ins></a>
+												</li>
+												<li class="google">
+													<a title="" href="#"><i class="fa fa-google"></i> <span>google</span><ins>35 likes</ins></a>
+												</li>
+											</ul>
+										</div>
+									<div class="widget">
+										<h4 class="widget-title">Shortcuts</h4>
+										<ul class="naves">
+											<li>
+												<i class="ti-clipboard"></i>
+												<a href="newsfeed.html" title="">News feed</a>
+											</li>
+											<li>
+												<i class="ti-mouse-alt"></i>
+												<a href="inbox.html" title="">Inbox</a>
+											</li>
+											<li>
+												<i class="ti-files"></i>
+												<a href="fav-page.html" title="">My pages</a>
+											</li>
+											<li>
+												<i class="ti-user"></i>
+												<a href="timeline-friends.html" title="">friends</a>
+											</li>
+											<li>
+												<i class="ti-image"></i>
+												<a href="timeline-photos.html" title="">images</a>
+											</li>
+											<li>
+												<i class="ti-video-camera"></i>
+												<a href="timeline-videos.html" title="">videos</a>
+											</li>
+											<li>
+												<i class="ti-comments-smiley"></i>
+												<a href="messages.html" title="">Messages</a>
+											</li>
+											<li>
+												<i class="ti-bell"></i>
+												<a href="notifications.html" title="">Notifications</a>
+											</li>
+											<li>
+												<i class="ti-share"></i>
+												<a href="people-nearby.html" title="">People Nearby</a>
+											</li>
+											<li>
+												<i class="fa fa-bar-chart-o"></i>
+												<a href="insights.html" title="">insights</a>
+											</li>
+											<li>
+												<i class="ti-power-off"></i>
+												<a href="landing.html" title="">Logout</a>
+											</li>
+										</ul>
+									</div><!-- Shortcuts -->
+									<div class="widget">
+										<h4 class="widget-title">Recent Activity</h4>
+										<ul class="activitiez">
+											<li>
+												<div class="activity-meta">
+													<i>10 hours Ago</i>
+													<span><a href="#" title="">Commented on Video posted </a></span>
+													<h6>by <a href="newsfeed.html">black demon.</a></h6>
+												</div>
+											</li>
+											<li>
+												<div class="activity-meta">
+													<i>30 Days Ago</i>
+													<span><a href="newsfeed.html" title="">Posted your status. “Hello guys, how are you?”</a></span>
+												</div>
+											</li>
+											<li>
+												<div class="activity-meta">
+													<i>2 Years Ago</i>
+													<span><a href="#" title="">Share a video on her timeline.</a></span>
+													<h6>"<a href="newsfeed.html">you are so funny mr.been.</a>"</h6>
+												</div>
+											</li>
+										</ul>
+									</div><!-- recent activites -->
+									<div class="widget stick-widget">
+										<h4 class="widget-title">Who's follownig</h4>
+										<ul class="followers">
+											<li>
+												<figure><img src="images/resources/friend-avatar2.jpg" alt=""></figure>
+												<div class="friend-meta">
+													<h4><a href="time-line.html" title="">Kelly Bill</a></h4>
+													<a href="#" title="" class="underline">Add Friend</a>
+												</div>
+											</li>
+											<li>
+												<figure><img src="images/resources/friend-avatar4.jpg" alt=""></figure>
+												<div class="friend-meta">
+													<h4><a href="time-line.html" title="">Issabel</a></h4>
+													<a href="#" title="" class="underline">Add Friend</a>
+												</div>
+											</li>
+											<li>
+												<figure><img src="images/resources/friend-avatar6.jpg" alt=""></figure>
+												<div class="friend-meta">
+													<h4><a href="time-line.html" title="">Andrew</a></h4>
+													<a href="#" title="" class="underline">Add Friend</a>
+												</div>
+											</li>
+											<li>
+												<figure><img src="images/resources/friend-avatar8.jpg" alt=""></figure>
+												<div class="friend-meta">
+													<h4><a href="time-line.html" title="">Sophia</a></h4>
+													<a href="#" title="" class="underline">Add Friend</a>
+												</div>
+											</li>
+											<li>
+												<figure><img src="images/resources/friend-avatar3.jpg" alt=""></figure>
+												<div class="friend-meta">
+													<h4><a href="time-line.html" title="">Allen</a></h4>
+													<a href="#" title="" class="underline">Add Friend</a>
+												</div>
+											</li>
+										</ul>
+									</div><!-- who's following -->
+								</aside>
+							</div><!-- sidebar -->
+							<div class="col-lg-6">
+								<div class="loadMore">
+									<div class="central-meta item">
+										<div class="new-postbox">
+											<figure>
+												<img src="images/resources/admin2.jpg" alt="">
+											</figure>
+											<div class="newpst-input">
+												<form method="post">
+													<textarea rows="2" placeholder="write something"></textarea>
+													<div class="attachments">
+														<ul>
+															<li>
+																<i class="fa fa-music"></i>
+																<label class="fileContainer">
+																	<input type="file">
+																</label>
+															</li>
+															<li>
+																<i class="fa fa-image"></i>
+																<label class="fileContainer">
+																	<input type="file">
+																</label>
+															</li>
+															<li>
+																<i class="fa fa-video-camera"></i>
+																<label class="fileContainer">
+																	<input type="file">
+																</label>
+															</li>
+															<li>
+																<i class="fa fa-camera"></i>
+																<label class="fileContainer">
+																	<input type="file">
+																</label>
+															</li>
+															<li>
+																<button type="submit">Publish</button>
+															</li>
+														</ul>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div><!-- add post new box -->
+									<div class="central-meta item">
+										<div class="user-post">
+											<div class="friend-info">
+												<figure>
+													<img src="images/resources/friend-avatar10.jpg" alt="">
+												</figure>
+												<div class="friend-name">
+													<ins><a href="time-line.html" title="">Janice Griffith</a></ins>
+													<span>published: june,2 2018 19:PM</span>
+												</div>
+												<div class="description">
+														
+														<p>
+															World's most beautiful car in Curabitur <a href="#" title="">#test drive booking !</a> the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website
+														</p>
+													</div>
+												<div class="post-meta">
+													<div class="linked-image align-left">
+														<a href="#" title=""><img src="images/resources/page1.jpg" alt=""></a>
+													</div>
+													<div class="detail">
+														<span>Love Maid - ChillGroves</span>
+														<p>Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... </p>
+														<a href="#" title="">www.sample.com</a>
+													</div>		
+													<div class="we-video-info">
+														<ul>
+															
+															<li>
+																<span class="views" data-toggle="tooltip" title="views">
+																	<i class="fa fa-eye"></i>
+																	<ins>1.2k</ins>
+																</span>
+															</li>
+															<li>
+																<span class="comment" data-toggle="tooltip" title="Comments">
+																	<i class="fa fa-comments-o"></i>
+																	<ins>52</ins>
+																</span>
+															</li>
+															<li>
+																<span class="like" data-toggle="tooltip" title="like">
+																	<i class="ti-heart"></i>
+																	<ins>2.2k</ins>
+																</span>
+															</li>
+															<li>
+																<span class="dislike" data-toggle="tooltip" title="dislike">
+																	<i class="ti-heart-broken"></i>
+																	<ins>200</ins>
+																</span>
+															</li>
+															<li class="social-media">
+																<div class="menu">
+																  <div class="btn trigger"><i class="fa fa-share-alt"></i></div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-html5"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-facebook"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-google-plus"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-twitter"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-css3"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-instagram"></i></a>
+																	</div>
+																  </div>
+																	<div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-dribbble"></i></a>
+																	</div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-pinterest"></i></a>
+																	</div>
+																  </div>
+
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="central-meta item">
+										<div class="user-post">
+											<div class="friend-info">
+												<figure>
+													<img src="images/resources/friend-avatar10.jpg" alt="">
+												</figure>
+												<div class="friend-name">
+													<ins><a href="time-line.html" title="">Janice Griffith</a></ins>
+													<span>published: june,2 2018 19:PM</span>
+												</div>
+												<div class="post-meta">
+													<img src="images/resources/user-post.jpg" alt="">
+													<div class="we-video-info">
+														<ul>
+															
+															<li>
+																<span class="views" data-toggle="tooltip" title="views">
+																	<i class="fa fa-eye"></i>
+																	<ins>1.2k</ins>
+																</span>
+															</li>
+															<li>
+																<span class="comment" data-toggle="tooltip" title="Comments">
+																	<i class="fa fa-comments-o"></i>
+																	<ins>52</ins>
+																</span>
+															</li>
+															<li>
+																<span class="like" data-toggle="tooltip" title="like">
+																	<i class="ti-heart"></i>
+																	<ins>2.2k</ins>
+																</span>
+															</li>
+															<li>
+																<span class="dislike" data-toggle="tooltip" title="dislike">
+																	<i class="ti-heart-broken"></i>
+																	<ins>200</ins>
+																</span>
+															</li>
+															<li class="social-media">
+																<div class="menu">
+																  <div class="btn trigger"><i class="fa fa-share-alt"></i></div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-html5"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-facebook"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-google-plus"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-twitter"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-css3"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-instagram"></i></a>
+																	</div>
+																  </div>
+																	<div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-dribbble"></i></a>
+																	</div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-pinterest"></i></a>
+																	</div>
+																  </div>
+
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="description">
+														
+														<p>
+															Curabitur world's most beautiful car in <a href="#" title="">#test drive booking !</a> the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="coment-area">
+												<ul class="we-comet">
+													<li>
+														<div class="comet-avatar">
+															<img src="images/resources/comet-1.jpg" alt="">
+														</div>
+														<div class="we-comment">
+															<div class="coment-head">
+																<h5><a href="time-line.html" title="">Jason borne</a></h5>
+																<span>1 year ago</span>
+																<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+															</div>
+															<p>we are working for the dance and sing songs. this car is very awesome for the youngster. please vote this car and like our post</p>
+														</div>
+														<ul>
+															<li>
+																<div class="comet-avatar">
+																	<img src="images/resources/comet-2.jpg" alt="">
+																</div>
+																<div class="we-comment">
+																	<div class="coment-head">
+																		<h5><a href="time-line.html" title="">alexendra dadrio</a></h5>
+																		<span>1 month ago</span>
+																		<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+																	</div>
+																	<p>yes, really very awesome car i see the features of this car in the official website of <a href="#" title="">#Mercedes-Benz</a> and really impressed :-)</p>
+																</div>
+															</li>
+															<li>
+																<div class="comet-avatar">
+																	<img src="images/resources/comet-3.jpg" alt="">
+																</div>
+																<div class="we-comment">
+																	<div class="coment-head">
+																		<h5><a href="time-line.html" title="">Olivia</a></h5>
+																		<span>16 days ago</span>
+																		<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+																	</div>
+																	<p>i like lexus cars, lexus cars are most beautiful with the awesome features, but this car is really outstanding than lexus</p>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<div class="comet-avatar">
+															<img src="images/resources/comet-1.jpg" alt="">
+														</div>
+														<div class="we-comment">
+															<div class="coment-head">
+																<h5><a href="time-line.html" title="">Donald Trump</a></h5>
+																<span>1 week ago</span>
+																<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+															</div>
+															<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel
+																<i class="em em-smiley"></i>
+															</p>
+														</div>
+													</li>
+													<li>
+														<a href="#" title="" class="showmore underline">more comments</a>
+													</li>
+													<li class="post-comment">
+														<div class="comet-avatar">
+															<img src="images/resources/comet-1.jpg" alt="">
+														</div>
+														<div class="post-comt-box">
+															<form method="post">
+																<textarea placeholder="Post your comment"></textarea>
+																<div class="add-smiles">
+																	<span class="em em-expressionless" title="add icon"></span>
+																</div>
+																<div class="smiles-bunch">
+																	<i class="em em---1"></i>
+																	<i class="em em-smiley"></i>
+																	<i class="em em-anguished"></i>
+																	<i class="em em-laughing"></i>
+																	<i class="em em-angry"></i>
+																	<i class="em em-astonished"></i>
+																	<i class="em em-blush"></i>
+																	<i class="em em-disappointed"></i>
+																	<i class="em em-worried"></i>
+																	<i class="em em-kissing_heart"></i>
+																	<i class="em em-rage"></i>
+																	<i class="em em-stuck_out_tongue"></i>
+																</div>
+																<button type="submit"></button>
+															</form>	
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="central-meta item">
+										<div class="user-post">
+											<div class="friend-info">
+												<figure>
+													<img src="images/resources/friend-avatar10.jpg" alt="">
+												</figure>
+												<div class="friend-name">
+													<ins><a href="time-line.html" title="">Janice Griffith</a></ins>
+													<span>published: june,2 2018 19:PM</span>
+												</div>
+												<div class="post-meta">
+													<iframe src="https://player.vimeo.com/video/15232052" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+													<div class="we-video-info">
+														<ul>
+															
+															<li>
+																<span class="views" data-toggle="tooltip" title="views">
+																	<i class="fa fa-eye"></i>
+																	<ins>1.2k</ins>
+																</span>
+															</li>
+															<li>
+																<span class="comment" data-toggle="tooltip" title="Comments">
+																	<i class="fa fa-comments-o"></i>
+																	<ins>52</ins>
+																</span>
+															</li>
+															<li>
+																<span class="like" data-toggle="tooltip" title="like">
+																	<i class="ti-heart"></i>
+																	<ins>2.2k</ins>
+																</span>
+															</li>
+															<li>
+																<span class="dislike" data-toggle="tooltip" title="dislike">
+																	<i class="ti-heart-broken"></i>
+																	<ins>200</ins>
+																</span>
+															</li>
+															<li class="social-media">
+																<div class="menu">
+																  <div class="btn trigger"><i class="fa fa-share-alt"></i></div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-html5"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-facebook"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-google-plus"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-twitter"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-css3"></i></a></div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-instagram"></i></a>
+																	</div>
+																  </div>
+																	<div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-dribbble"></i></a>
+																	</div>
+																  </div>
+																  <div class="rotater">
+																	<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-pinterest"></i></a>
+																	</div>
+																  </div>
+
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="description">
+														
+														<p>
+															Lonely Cat Enjoying in Summer Curabitur <a href="#" title="">#mypage</a> ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc,
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="coment-area">
+												<ul class="we-comet">
+													<li>
+														<div class="comet-avatar">
+															<img src="images/resources/comet-1.jpg" alt="">
+														</div>
+														<div class="we-comment">
+															<div class="coment-head">
+																<h5><a href="time-line.html" title="">Jason borne</a></h5>
+																<span>1 year ago</span>
+																<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+															</div>
+															<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel</p>
+														</div>
+
+													</li>
+													<li>
+														<div class="comet-avatar">
+															<img src="images/resources/comet-2.jpg" alt="">
+														</div>
+														<div class="we-comment">
+															<div class="coment-head">
+																<h5><a href="time-line.html" title="">Sophia</a></h5>
+																<span>1 week ago</span>
+																<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
+															</div>
+															<p>we are working for the dance and sing songs. this video is very awesome for the youngster.
+																<i class="em em-smiley"></i>
+															</p>
+														</div>
+													</li>
+													<li>
+														<a href="#" title="" class="showmore underline">more comments</a>
+													</li>
+													<li class="post-comment">
+														<div class="comet-avatar">
+															<img src="images/resources/comet-2.jpg" alt="">
+														</div>
+														<div class="post-comt-box">
+															<form method="post">
+																<textarea placeholder="Post your comment"></textarea>
+																<div class="add-smiles">
+																	<span class="em em-expressionless" title="add icon"></span>
+																</div>
+																<div class="smiles-bunch">
+																	<i class="em em---1"></i>
+																	<i class="em em-smiley"></i>
+																	<i class="em em-anguished"></i>
+																	<i class="em em-laughing"></i>
+																	<i class="em em-angry"></i>
+																	<i class="em em-astonished"></i>
+																	<i class="em em-blush"></i>
+																	<i class="em em-disappointed"></i>
+																	<i class="em em-worried"></i>
+																	<i class="em em-kissing_heart"></i>
+																	<i class="em em-rage"></i>
+																	<i class="em em-stuck_out_tongue"></i>
+																</div>
+																<button type="submit"></button>
+															</form>	
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- centerl meta -->
+							<div class="col-lg-3">
+								<aside class="sidebar static">
+									<div class="widget">
+										<div class="banner medium-opacity bluesh">
+											<div style="background-image: url(images/resources/baner-widgetbg.jpg)" class="bg-image"></div>
+											<div class="baner-top">
+												<span><img src="images/book-icon.png" alt=""></span>
+												<i class="fa fa-ellipsis-h"></i>
+											</div>
+											<div class="banermeta">
+												<p>
+													create your own favourit page.
+												</p>
+												<span>like them all</span>
+												<a href="#" title="" data-ripple="">start now!</a>
+											</div>
+										</div>											
+									</div>
+									<div class="widget friend-list stick-widget">
+										<h4 class="widget-title">Friends</h4>
+										<div id="searchDir"></div>
+										<ul id="people-list" class="friendz-list">
+											<li>
+												<figure>
+													<img src="images/resources/friend-avatar.jpg" alt="">
+													<span class="status f-online"></span>
+												</figure>
+												<div class="friendz-meta">
+													<a href="time-line.html">bucky barnes</a>
+													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4136282f352433322e2d25243301262c20282d6f222e2c">[email&#160;protected]</a></i>
+												</div>
+											</li>
+											<li>
+												<figure>
+													<img src="images/resources/friend-avatar2.jpg" alt="">
+													<span class="status f-away"></span>
+												</figure>
+												<div class="friendz-meta">
+													<a href="time-line.html">Sarah Loren</a>
+													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3a585b48545f497a5d575b535614595557">[email&#160;protected]</a></i>
+												</div>
+											</li>
+											<li>
+												<figure>
+													<img src="images/resources/friend-avatar3.jpg" alt="">
+													<span class="status f-off"></span>
+												</figure>
+												<div class="friendz-meta">
+													<a href="time-line.html">jason borne</a>
+													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="127873617d7c7052757f737b7e3c717d7f">[email&#160;protected]</a></i>
+												</div>
+											</li>
+											<li>
+												<figure>
+													<img src="images/resources/friend-avatar4.jpg" alt="">
+													<span class="status f-off"></span>
+												</figure>
+												<div class="friendz-meta">
+													<a href="time-line.html">Cameron diaz</a>
+													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="620803110d0c0022050f030b0e4c010d0f">[email&#160;protected]</a></i>
+												</div>
+											</li>
+											<li>
+												
+												<figure>
+													<img src="images/resources/friend-avatar5.jpg" alt="">
+													<span class="status f-online"></span>
+												</figure>
+												<div class="friendz-meta">
+													<a href="time-line.html">daniel warber</a>
+													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0963687a66676b496e64686065276a6664">[email&#160;protected]</a></i>
+												</div>
+											</li>
+											<li>
+												
+												<figure>
+													<img src="images/resources/friend-avatar6.jpg" alt="">
+													<span class="status f-away"></span>
+												</figure>
+												<div class="friendz-meta">
+													<a href="time-line.html">andrew</a>
+													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5b313a283435391b3c363a323775383436">[email&#160;protected]</a></i>
+												</div>
+											</li>
+											<li>
+												
+												<figure>
+													<img src="images/resources/friend-avatar7.jpg" alt="">
+													<span class="status f-off"></span>
+												</figure>
+												<div class="friendz-meta">
+													<a href="time-line.html">amy watson</a>
+													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="472d263428292507202a262e2b6924282a">[email&#160;protected]</a></i>
+												</div>
+											</li>
+											<li>
+												
+												<figure>
+													<img src="images/resources/friend-avatar5.jpg" alt="">
+													<span class="status f-online"></span>
+												</figure>
+												<div class="friendz-meta">
+													<a href="time-line.html">daniel warber</a>
+													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7a101b091514183a1d171b131654191517">[email&#160;protected]</a></i>
+												</div>
+											</li>
+											<li>
+												
+												<figure>
+													<img src="images/resources/friend-avatar2.jpg" alt="">
+													<span class="status f-away"></span>
+												</figure>
+												<div class="friendz-meta">
+													<a href="time-line.html">Sarah Loren</a>
+													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c1e1d0e12190f3c1b111d1510521f1311">[email&#160;protected]</a></i>
+												</div>
+											</li>
+										</ul>
+										<div class="chat-box">
+											<div class="chat-head">
+												<span class="status f-online"></span>
+												<h6>Bucky Barnes</h6>
+												<div class="more">
+													<span><i class="ti-more-alt"></i></span>
+													<span class="close-mesage"><i class="ti-close"></i></span>
+												</div>
+											</div>
+											<div class="chat-list">
+												<ul>
+													<li class="me">
+														<div class="chat-thumb"><img src="images/resources/chatlist1.jpg" alt=""></div>
+														<div class="notification-event">
+															<span class="chat-message-item">
+																Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
+															</span>
+															<span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Yesterday at 8:10pm</time></span>
+														</div>
+													</li>
+													<li class="you">
+														<div class="chat-thumb"><img src="images/resources/chatlist2.jpg" alt=""></div>
+														<div class="notification-event">
+															<span class="chat-message-item">
+																Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
+															</span>
+															<span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Yesterday at 8:10pm</time></span>
+														</div>
+													</li>
+													<li class="me">
+														<div class="chat-thumb"><img src="images/resources/chatlist1.jpg" alt=""></div>
+														<div class="notification-event">
+															<span class="chat-message-item">
+																Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
+															</span>
+															<span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Yesterday at 8:10pm</time></span>
+														</div>
+													</li>
+												</ul>
+												<form class="text-box">
+													<textarea placeholder="Post enter to post..."></textarea>
+													<div class="add-smiles">
+														<span title="add icon" class="em em-expressionless"></span>
+													</div>
+													<div class="smiles-bunch">
+														<i class="em em---1"></i>
+														<i class="em em-smiley"></i>
+														<i class="em em-anguished"></i>
+														<i class="em em-laughing"></i>
+														<i class="em em-angry"></i>
+														<i class="em em-astonished"></i>
+														<i class="em em-blush"></i>
+														<i class="em em-disappointed"></i>
+														<i class="em em-worried"></i>
+														<i class="em em-kissing_heart"></i>
+														<i class="em em-rage"></i>
+														<i class="em em-stuck_out_tongue"></i>
+													</div>
+													<button type="submit"></button>
+												</form>
+											</div>
+										</div>
+									</div><!-- friends list sidebar -->
+								</aside>
+							</div><!-- sidebar -->
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4">
+					<div class="widget">
+						<div class="foot-logo">
+							<div class="logo">
+								<a href="index-2.html" title=""><img src="images/logo.png" alt=""></a>
+							</div>	
+							<p>
+								The trio took this simple idea and built it into the world’s leading carpooling platform.
+							</p>
+						</div>
+						<ul class="location">
+							<li>
+								<i class="ti-map-alt"></i>
+								<p>33 new montgomery st.750 san francisco, CA USA 94105.</p>
+							</li>
+							<li>
+								<i class="ti-mobile"></i>
+								<p>+1-56-346 345</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4">
+					<div class="widget">
+						<div class="widget-title"><h4>follow</h4></div>
+						<ul class="list-style">
+							<li><i class="fa fa-facebook-square"></i> <a href="https://web.facebook.com/shopcircut/" title="">facebook</a></li>
+							<li><i class="fa fa-twitter-square"></i><a href="https://twitter.com/login?lang=en" title="">twitter</a></li>
+							<li><i class="fa fa-instagram"></i><a href="https://www.instagram.com/?hl=en" title="">instagram</a></li>
+							<li><i class="fa fa-google-plus-square"></i> <a href="https://plus.google.com/discover" title="">Google+</a></li>
+							<li><i class="fa fa-pinterest-square"></i> <a href="https://www.pinterest.com/" title="">Pintrest</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4">
+					<div class="widget">
+						<div class="widget-title"><h4>Navigate</h4></div>
+						<ul class="list-style">
+							<li><a href="about.html" title="">about us</a></li>
+							<li><a href="contact.html" title="">contact us</a></li>
+							<li><a href="terms.html" title="">terms & Conditions</a></li>
+							<li><a href="#" title="">RSS syndication</a></li>
+							<li><a href="sitemap.html" title="">Sitemap</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4">
+					<div class="widget">
+						<div class="widget-title"><h4>useful links</h4></div>
+						<ul class="list-style">
+							<li><a href="#" title="">leasing</a></li>
+							<li><a href="#" title="">submit route</a></li>
+							<li><a href="#" title="">how does it work?</a></li>
+							<li><a href="#" title="">agent listings</a></li>
+							<li><a href="#" title="">view All</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4">
+					<div class="widget">
+						<div class="widget-title"><h4>download apps</h4></div>
+						<ul class="colla-apps">
+							<li><a href="https://play.google.com/store?hl=en" title=""><i class="fa fa-android"></i>android</a></li>
+							<li><a href="https://www.apple.com/lae/ios/app-store/" title=""><i class="ti-apple"></i>iPhone</a></li>
+							<li><a href="https://www.microsoft.com/store/apps" title=""><i class="fa fa-windows"></i>Windows</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer><!-- footer -->
+	<div class="bottombar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<span class="copyright"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
+					<i><img src="images/credit-cards.png" alt=""></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="side-panel">
+		<h4 class="panel-title">General Setting</h4>
+		<form method="post">
+			<div class="setting-row">
+				<span>use night mode</span>
+				<input type="checkbox" id="nightmode1"/> 
+				<label for="nightmode1" data-on-label="ON" data-off-label="OFF"></label>
+			</div>
+			<div class="setting-row">
+				<span>Notifications</span>
+				<input type="checkbox" id="switch22" /> 
+				<label for="switch22" data-on-label="ON" data-off-label="OFF"></label>
+			</div>
+			<div class="setting-row">
+				<span>Notification sound</span>
+				<input type="checkbox" id="switch33" /> 
+				<label for="switch33" data-on-label="ON" data-off-label="OFF"></label>
+			</div>
+			<div class="setting-row">
+				<span>My profile</span>
+				<input type="checkbox" id="switch44" /> 
+				<label for="switch44" data-on-label="ON" data-off-label="OFF"></label>
+			</div>
+			<div class="setting-row">
+				<span>Show profile</span>
+				<input type="checkbox" id="switch55" /> 
+				<label for="switch55" data-on-label="ON" data-off-label="OFF"></label>
+			</div>
+		</form>
+		<h4 class="panel-title">Account Setting</h4>
+		<form method="post">
+			<div class="setting-row">
+				<span>Sub users</span>
+				<input type="checkbox" id="switch66" /> 
+				<label for="switch66" data-on-label="ON" data-off-label="OFF"></label>
+			</div>
+			<div class="setting-row">
+				<span>personal account</span>
+				<input type="checkbox" id="switch77" /> 
+				<label for="switch77" data-on-label="ON" data-off-label="OFF"></label>
+			</div>
+			<div class="setting-row">
+				<span>Business account</span>
+				<input type="checkbox" id="switch88" /> 
+				<label for="switch88" data-on-label="ON" data-off-label="OFF"></label>
+			</div>
+			<div class="setting-row">
+				<span>Show me online</span>
+				<input type="checkbox" id="switch99" /> 
+				<label for="switch99" data-on-label="ON" data-off-label="OFF"></label>
+			</div>
+			<div class="setting-row">
+				<span>Delete history</span>
+				<input type="checkbox" id="switch101" /> 
+				<label for="switch101" data-on-label="ON" data-off-label="OFF"></label>
+			</div>
+			<div class="setting-row">
+				<span>Expose author name</span>
+				<input type="checkbox" id="switch111" /> 
+				<label for="switch111" data-on-label="ON" data-off-label="OFF"></label>
+			</div>
+		</form>
+	</div><!-- side panel -->		
+	
+	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
+	<script src="js/script.js"></script>
+
+</body>	
 
 </html>

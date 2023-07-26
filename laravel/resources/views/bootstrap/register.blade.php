@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-	<title>Winku Social Network Toolkit</title>
+	<title>AmiGo</title>
     <link rel="icon" href="assets/images/fav.png" type="image/png" sizes="16x16"> 
     
     <link rel="stylesheet" href="assets/css/main.min.css">
@@ -37,7 +37,7 @@
 					<div class="log-reg-area sign">
 						<h2 class="log-title">Cadastre-se</h2>
 							<p>
-								Já tem uma conta? <a href="{{ route('index')}}" title="">Entre</a>
+								Bem-vindo ao AmiGo!
 							</p>
 							<form method="post" action="{{ route('editar_perfil')}}">
 								@csrf
@@ -74,11 +74,12 @@
 								<input type="checkbox" checked="checked"/><i class="check-box"></i>Accept Terms & Conditions ?
 							  </label>
 							</div>
-							<a href="#" title="" class="already-have">Already have an account</a>
+							<a href="{{route('index')}}" title="" class="already-have">Já tem uma conta?</a>
 							<div class="submit-btns">
 								<input type="submit" value="Cadastrar">
 							</div>
 						</form>
+						
 					</div>
 					
 				</div>

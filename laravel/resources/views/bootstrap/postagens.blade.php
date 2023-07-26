@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-	<title>Winku Social Network Toolkit</title>
+	<title>AmiGo</title>
     <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16"> 
     
     <link rel="stylesheet" href="css/main.min.css">
@@ -53,7 +53,7 @@
 				<li><span>Time Line</span>
 					<ul>
 						<li><a href="time-line.html" title="">timeline</a></li>
-						<li><a href="timeline-friends.html" title="">timeline friends</a></li>
+						<li><a href="{{route('amigos')}}" title="">Amigos</a></li>
 						<li><a href="timeline-groups.html" title="">timeline groups</a></li>
 						<li><a href="timeline-pages.html" title="">timeline pages</a></li>
 						<li><a href="timeline-photos.html" title="">timeline photos</a></li>
@@ -219,8 +219,6 @@
 					<a href="#" title="">Home</a>
 					<ul>
 						<li><a href="index-2.html" title="">Home Social</a></li>
-						<li><a href="index2.html" title="">Home Social 2</a></li>
-						<li><a href="index-company.html" title="">Home Company</a></li>
 						<li><a href="landing.html" title="">Login page</a></li>
 						<li><a href="logout.html" title="">Logout Page</a></li>
 						<li><a href="newsfeed.html" title="">news feed</a></li>
@@ -230,25 +228,19 @@
 					<a href="#" title="">timeline</a>
 					<ul>
 						<li><a href="time-line.html" title="">timeline</a></li>
-						<li><a href="timeline-friends.html" title="">timeline friends</a></li>
-						<li><a href="timeline-groups.html" title="">timeline groups</a></li>
+						<li><a href="{{route('amigos')}}" title="">Amigos</a></li>
 						<li><a href="timeline-pages.html" title="">timeline pages</a></li>
 						<li><a href="timeline-photos.html" title="">timeline photos</a></li>
 						<li><a href="timeline-videos.html" title="">timeline videos</a></li>
-						<li><a href="fav-page.html" title="">favourit page</a></li>
-						<li><a href="groups.html" title="">groups page</a></li>
 						<li><a href="page-likers.html" title="">Likes page</a></li>
-						<li><a href="people-nearby.html" title="">people nearby</a></li>
 					</ul>
 				</li>
 				<li>
-					<a href="#" title="">account settings</a>
+					<a href="#" title="">Configurações da conta</a>
 					<ul>
 						<li><a href="create-fav-page.html" title="">create fav page</a></li>
-						<li><a href="edit-account-setting.html" title="">edit account setting</a></li>
-						<li><a href="edit-interest.html" title="">edit-interest</a></li>
+						<li><a href="{{route('editar_perfil')}}" title="">Editar perfil</a></li>
 						<li><a href="edit-password.html" title="">edit-password</a></li>
-						<li><a href="edit-profile-basic.html" title="">edit profile basics</a></li>
 						<li><a href="edit-work-eductation.html" title="">edit work educations</a></li>
 						<li><a href="messages.html" title="">message box</a></li>
 						<li><a href="inbox.html" title="">Inbox</a></li>
@@ -261,9 +253,6 @@
 						<li><a href="404.html" title="">404 error page</a></li>
 						<li><a href="about.html" title="">about</a></li>
 						<li><a href="contact.html" title="">contact</a></li>
-						<li><a href="faq.html" title="">faq's page</a></li>
-						<li><a href="insights.html" title="">insights</a></li>
-						<li><a href="knowledge-base.html" title="">knowledge base</a></li>
 						<li><a href="widgets.html" title="">Widgts</a></li>
 					</ul>
 				</li>
@@ -461,7 +450,7 @@
 											</li>
 											<li>
 												<i class="ti-user"></i>
-												<a href="timeline-friends.html" title="">friends</a>
+												<a href="{{route('amigos')}}" title="">Amigos</a>
 											</li>
 											<li>
 												<i class="ti-image"></i>

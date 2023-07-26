@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-	<title>Winku Social Network Toolkit</title>
+	<title>AmiGo</title>
     <link rel="icon" href="assets/images/fav.png" type="image/png" sizes="16x16"> 
     
     <link rel="stylesheet" href="assets/css/main.min.css">
@@ -37,7 +37,7 @@
 					<div class="log-reg-area sign">
 						<h2 class="log-title">Login</h2>
 							<p>
-								Ainda não usa AmiGo? <a href="#" title="">Dê uma olhada</a> ou <a href="{{ route('register')}}" title="">Cadastre-se</a>
+								Ainda não usa AmiGo? <a href="{{route ('postagens')}}" title="">Dê uma olhada</a> ou <a href="{{ route('register')}}" title="">Cadastre-se</a>
 							</p>
 						<form method="post" action="{{ route('postagens')}}">
 							@csrf

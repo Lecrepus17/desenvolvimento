@@ -495,7 +495,7 @@ header.sticky {
 }
 
 .land-featurearea {
-    background: #1fb6ff none repeat scroll 0 0;
+    background: #9400D3 none repeat scroll 0 0;
     color: #fff;
     float: left;
     height: 100vh;
@@ -539,8 +539,6 @@ header.sticky {
 
 .friend-logo > span::before,
 .friend-logo > span::after {
-    background: #0a98dc none repeat scroll 0 0;
-    border: 16px solid rgba(255, 255, 255, 0.1);
     border-radius: 100%;
     content: "";
     height: 180px;
@@ -600,10 +598,26 @@ header.sticky {
     font-size: 13px;
 }
 
+.highlight-paragraph a.highlight {
+    color: #9400D3;
+  }
+
 .submit-btns {
+
     display: inline-block;
     margin-top: 20px;
     width: 100%;
+}
+
+.submit-button {
+    background-color: #9400D3;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .form-radio > .radio {

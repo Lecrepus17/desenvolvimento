@@ -6,7 +6,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 	<title>AmiGo</title>
-    <link rel="icon" href="assets/images/fav.png" type="image/png" sizes="16x16"> 
+    <link rel="logo" href="assets/images/logo.png" type="image/png" sizes="16x16"> 
     
     <link rel="stylesheet" href="assets/css/main.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -24,10 +24,10 @@
 					<div class="land-meta">
 						<h1>AmiGo</h1>
 						<p>
-							AmiGo is free to use for as long as you want with two active projects.
+							Torne-se um AmiGo e encontre vários outros amigos.
 						</p>
 						<div class="friend-logo">
-							<span><img src="assets/images/wink.png" alt=""></span>
+							<span><img src="assets/images/logo-cadastro.png" alt=""></span>
 						</div>
 					</div>	
 				</div>
@@ -36,47 +36,25 @@
 				<div class="login-reg-bg">
 					<div class="log-reg-area sign">
 						<h2 class="log-title">Cadastre-se</h2>
-							<p>
-								Bem-vindo ao AmiGo!
+							<p class="highlight-paragraph">
+								Já é um amigo? Entre na sua conta <a href="{{ route('index')}}" title="" class="highlight">aqui.</a>
 							</p>
 							<form method="post" action="{{ route('editar_perfil')}}">
 								@csrf
 							<div class="form-group">	
-							  <input type="text" required="required"/>
-							  <label class="control-label" for="input">First & Last Name</label><i class="mtrl-select"></i>
+							  <input type="email" required="required"/>
+							  <label class="control-label" for="input">E-mail</label><i class="mtrl-select"></i>
 							</div>
 							<div class="form-group">	
 							  <input type="text" required="required"/>
-							  <label class="control-label" for="input">User Name</label><i class="mtrl-select"></i>
+							  <label class="control-label" for="input">Nome de usuário</label><i class="mtrl-select"></i>
 							</div>
 							<div class="form-group">	
 							  <input type="password" required="required"/>
-							  <label class="control-label" for="input">Password</label><i class="mtrl-select"></i>
+							  <label class="control-label" for="input">Senha</label><i class="mtrl-select"></i>
 							</div>
-							<div class="form-radio">
-							  <div class="radio">
-								<label>
-								  <input type="radio" name="radio" checked="checked"/><i class="check-box"></i>Male
-								</label>
-							  </div>
-							  <div class="radio">
-								<label>
-								  <input type="radio" name="radio"/><i class="check-box"></i>Female
-								</label>
-							  </div>
-							</div>
-							<div class="form-group">	
-							  <input type="text" required="required"/>
-							  <label class="control-label" for="input"><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6c29010d05002c">[email&#160;protected]</a></label><i class="mtrl-select"></i>
-							</div>
-							<div class="checkbox">
-							  <label>
-								<input type="checkbox" checked="checked"/><i class="check-box"></i>Accept Terms & Conditions ?
-							  </label>
-							</div>
-							<a href="{{route('index')}}" title="" class="already-have">Já tem uma conta?</a>
 							<div class="submit-btns">
-								<input type="submit" value="Cadastrar">
+								<input type="submit" value="Criar conta" class="submit-button">
 							</div>
 						</form>
 						

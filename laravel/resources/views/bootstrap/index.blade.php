@@ -6,7 +6,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 	<title>AmiGo</title>
-    <link rel="icon" href="assets/images/fav.png" type="image/png" sizes="16x16"> 
+    <link rel="logo" href="assets/images/logo.png" type="image/png" sizes="16x16"> 
     
     <link rel="stylesheet" href="assets/css/main.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -24,10 +24,10 @@
 					<div class="land-meta">
 						<h1>AmiGo</h1>
 						<p>
-							AmiGo is free to use for as long as you want with two active projects.
+							Seja bem-vindo AmiGo!
 						</p>
 						<div class="friend-logo">
-							<span><img src="assets/images/wink.png" alt=""></span>
+						<span><img src="assets/images/logo.png" alt=""></span>
 						</div>
 					</div>	
 				</div>
@@ -36,28 +36,22 @@
 				<div class="login-reg-bg">
 					<div class="log-reg-area sign">
 						<h2 class="log-title">Login</h2>
-							<p>
-								Ainda não usa AmiGo? <a href="{{route ('postagens')}}" title="">Dê uma olhada</a> ou <a href="{{ route('register')}}" title="">Cadastre-se</a>
-							</p>
+						<p class="highlight-paragraph">
+          Ainda não é um AmiGo? Torne-se um amigo <a href="{{ route('register')}}" title="" class="highlight">aqui.</a>
+        </p>
 						<form method="post" action="{{ route('postagens')}}">
 							@csrf
 							<div class="form-group" >	
 							  <input type="text" id="input" required="required"/>
-							  <label class="control-label" for="input">Username</label><i class="mtrl-select"></i>
+							  <label class="control-label" for="input">Nome de usuário</label><i class="mtrl-select"></i>
 							</div>
 							<div class="form-group">	
 							  <input type="password" required="required"/>
-							  <label class="control-label" for="input">Password</label><i class="mtrl-select"></i>
+							  <label class="control-label" for="input">Senha</label><i class="mtrl-select"></i>
 							</div>
-							<div class="checkbox">
-							  <label>
-								<input type="checkbox" checked="checked"/><i class="check-box"></i>Always Remember Me.
-							  </label>
-							</div>
-							<a href="#" title="" class="forgot-pwd">Forgot Password?</a>
 							<div class="submit-btns">
-								
-								<input type="submit" value="Login">
+							
+								<input type="submit" value="Entrar na conta" class="submit-button">
 								
 							</div>
 						</form>

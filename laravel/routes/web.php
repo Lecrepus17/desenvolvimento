@@ -41,3 +41,7 @@ Route::get('/postagens', [UsersController::class, 'postagens'])->name('postagens
 
 
 Route::get('/amigos', [UsersController::class, 'amigos'])->name('amigos');
+
+Route::get('/sobre_perfil', [UsersController::class, 'sobre_perfil'])->name('sobre_perfil');
+
+Route::get('/fotos', [UsersController::class, 'fotos'])->name('fotos');

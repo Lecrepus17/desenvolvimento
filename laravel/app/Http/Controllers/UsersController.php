@@ -49,4 +49,11 @@ class UsersController extends Controller
         return view('bootstrap.amigos');
     }
    
+    public function sobre_perfil(){
+        return view('bootstrap.sobre_perfil');
+    }
+
+    public function fotos(){
+        return view('bootstrap.fotos');
+    }
 }

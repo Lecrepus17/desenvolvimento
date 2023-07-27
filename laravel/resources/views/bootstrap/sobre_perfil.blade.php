@@ -473,13 +473,12 @@
 								  <span>Group Admin</span>
 								</li>
 								<li>
-									<a class="" href="time-line.html" title="" data-ripple="">time line</a>
-									<a class="" href="timeline-photos.html" title="" data-ripple="">Photos</a>
-									<a class="" href="timeline-videos.html" title="" data-ripple="">Videos</a>
-									<a class="" href="timeline-friends.html" title="" data-ripple="">Friends</a>
-									<a class="" href="timeline-groups.html" title="" data-ripple="">Groups</a>
-									<a class="active" href="about.html" title="" data-ripple="">about</a>
-									<a class="" href="#" title="" data-ripple="">more</a>
+									<a class="" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
+									<a class="" href="{{route('fotos')}}" title="" data-ripple="">Fotos</a>
+									<a class="" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
+									<a class="active" href="{{route('sobre_perfil')}}" title="" data-ripple="">Informações</a>
+									<a class="" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
+
 								</li>
 							</ul>
 						</div>

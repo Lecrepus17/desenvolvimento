@@ -8,8 +8,8 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 	<title>Winku Social Network Toolkit</title>
-    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16"> 
-    
+    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
+
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/color.css">
@@ -19,12 +19,12 @@
 <body>
 <!--<div class="se-pre-con"></div>-->
 <div class="theme-layout">
-	
+
 <div class="topbar stick">
 		<div class="logo">
 			<a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
 		</div>
-		
+
 		<div class="top-area">
 			<ul class="main-menu">
 				<li>
@@ -69,156 +69,7 @@
 					</ul>
 				</li>
 			</ul>
-			<ul class="setting-area">
-				<li>
-					<a href="#" title="Home" data-ripple=""><i class="ti-search"></i></a>
-					<div class="searched">
-						<form method="post" class="form-search">
-							<input type="text" placeholder="Search Friend">
-							<button data-ripple><i class="ti-search"></i></button>
-						</form>
-					</div>
-				</li>
-				<li><a href="newsfeed.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
-				<li>
-					<a href="#" title="Notification" data-ripple="">
-						<i class="ti-bell"></i><span>20</span>
-					</a>
-					<div class="dropdowns">
-						<span>4 New Notifications</span>
-						<ul class="drops-menu">
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-1.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>sarah Loren</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag green">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-2.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Jhon doe</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag red">Reply</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-3.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Andrew</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag blue">Unseen</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-4.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Tom cruse</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-5.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Amy</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-						</ul>
-						<a href="notifications.html" title="" class="more-mesg">view more</a>
-					</div>
-				</li>
-				<li>
-					<a href="#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>12</span></a>
-					<div class="dropdowns">
-						<span>5 New Messages</span>
-						<ul class="drops-menu">
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-1.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>sarah Loren</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag green">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-2.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Jhon doe</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag red">Reply</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-3.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Andrew</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag blue">Unseen</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-4.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Tom cruse</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-5.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Amy</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-						</ul>
-						<a href="messages.html" title="" class="more-mesg">view more</a>
-					</div>
-				</li>
-				<li><a href="#" title="Languages" data-ripple=""><i class="fa fa-globe"></i></a>
-					<div class="dropdowns languages">
-						<a href="#" title=""><i class="ti-check"></i>English</a>
-						<a href="#" title="">Arabic</a>
-						<a href="#" title="">Dutch</a>
-						<a href="#" title="">French</a>
-					</div>
-				</li>
-			</ul>
+
 			<div class="user-img">
 				<img src="images/resources/admin.jpg" alt="">
 				<span class="status f-online"></span>
@@ -236,7 +87,7 @@
 			<span class="ti-menu main-menu" data-ripple=""></span>
 		</div>
 	</div><!-- topbar -->
-		
+
 	<section>
 		<div class="feature-photo">
 			<figure><img src="images/resources/timeline-1.jpg" alt=""></figure>
@@ -276,7 +127,6 @@
 								</li>
 								<li>
 									<a class="active" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
-									<a class="" href="{{route('fotos')}}" title="" data-ripple="">Fotos</a>
 									<a class="" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
 									<a class="" href="{{route('sobre_perfil')}}" title="" data-ripple="">Informações</a>
 									<a class="" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
@@ -289,7 +139,7 @@
 			</div>
 		</div>
 	</section><!-- top area -->
-		
+
 	<section>
 		<div class="gap gray-bg">
 			<div class="container-fluid">
@@ -484,7 +334,7 @@
 													<span>published: june,2 2018 19:PM</span>
 												</div>
 												<div class="description">
-														
+
 														<p>
 															World's most beautiful car in Curabitur <a href="#" title="">#test drive booking !</a> the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website
 														</p>
@@ -497,10 +347,10 @@
 														<span>Love Maid - ChillGroves</span>
 														<p>Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... </p>
 														<a href="#" title="">www.sample.com</a>
-													</div>		
+													</div>
 													<div class="we-video-info">
 														<ul>
-															
+
 															<li>
 																<span class="views" data-toggle="tooltip" title="views">
 																	<i class="fa fa-eye"></i>
@@ -578,7 +428,7 @@
 													<img src="images/resources/user-post.jpg" alt="">
 													<div class="we-video-info">
 														<ul>
-															
+
 															<li>
 																<span class="views" data-toggle="tooltip" title="views">
 																	<i class="fa fa-eye"></i>
@@ -639,7 +489,7 @@
 														</ul>
 													</div>
 													<div class="description">
-														
+
 														<p>
 															Curabitur world's most beautiful car in <a href="#" title="">#test drive booking !</a> the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website
 														</p>
@@ -732,7 +582,7 @@
 																	<i class="em em-stuck_out_tongue"></i>
 																</div>
 																<button type="submit"></button>
-															</form>	
+															</form>
 														</div>
 													</li>
 												</ul>
@@ -753,7 +603,7 @@
 													<iframe src="https://player.vimeo.com/video/15232052" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 													<div class="we-video-info">
 														<ul>
-															
+
 															<li>
 																<span class="views" data-toggle="tooltip" title="views">
 																	<i class="fa fa-eye"></i>
@@ -814,7 +664,7 @@
 														</ul>
 													</div>
 													<div class="description">
-														
+
 														<p>
 															Lonely Cat Enjoying in Summer Curabitur <a href="#" title="">#mypage</a> ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc,
 														</p>
@@ -880,7 +730,7 @@
 																	<i class="em em-stuck_out_tongue"></i>
 																</div>
 																<button type="submit"></button>
-															</form>	
+															</form>
 														</div>
 													</li>
 												</ul>
@@ -905,7 +755,7 @@
 												<span>like them all</span>
 												<a href="#" title="" data-ripple="">start now!</a>
 											</div>
-										</div>											
+										</div>
 									</div>
 									<div class="widget friend-list stick-widget">
 										<h4 class="widget-title">Friends</h4>
@@ -952,7 +802,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar5.jpg" alt="">
 													<span class="status f-online"></span>
@@ -963,7 +813,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar6.jpg" alt="">
 													<span class="status f-away"></span>
@@ -974,7 +824,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar7.jpg" alt="">
 													<span class="status f-off"></span>
@@ -985,7 +835,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar5.jpg" alt="">
 													<span class="status f-online"></span>
@@ -996,7 +846,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar2.jpg" alt="">
 													<span class="status f-away"></span>
@@ -1072,11 +922,11 @@
 									</div><!-- friends list sidebar -->
 								</aside>
 							</div><!-- sidebar -->
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</section>
 
 	<footer>
@@ -1087,7 +937,7 @@
 						<div class="foot-logo">
 							<div class="logo">
 								<a href="index-2.html" title=""><img src="images/logo.png" alt=""></a>
-							</div>	
+							</div>
 							<p>
 								The trio took this simple idea and built it into the world’s leading carpooling platform.
 							</p>
@@ -1169,27 +1019,27 @@
 		<form method="post">
 			<div class="setting-row">
 				<span>use night mode</span>
-				<input type="checkbox" id="nightmode1"/> 
+				<input type="checkbox" id="nightmode1"/>
 				<label for="nightmode1" data-on-label="ON" data-off-label="OFF"></label>
 			</div>
 			<div class="setting-row">
 				<span>Notifications</span>
-				<input type="checkbox" id="switch22" /> 
+				<input type="checkbox" id="switch22" />
 				<label for="switch22" data-on-label="ON" data-off-label="OFF"></label>
 			</div>
 			<div class="setting-row">
 				<span>Notification sound</span>
-				<input type="checkbox" id="switch33" /> 
+				<input type="checkbox" id="switch33" />
 				<label for="switch33" data-on-label="ON" data-off-label="OFF"></label>
 			</div>
 			<div class="setting-row">
 				<span>My profile</span>
-				<input type="checkbox" id="switch44" /> 
+				<input type="checkbox" id="switch44" />
 				<label for="switch44" data-on-label="ON" data-off-label="OFF"></label>
 			</div>
 			<div class="setting-row">
 				<span>Show profile</span>
-				<input type="checkbox" id="switch55" /> 
+				<input type="checkbox" id="switch55" />
 				<label for="switch55" data-on-label="ON" data-off-label="OFF"></label>
 			</div>
 		</form>
@@ -1197,40 +1047,40 @@
 		<form method="post">
 			<div class="setting-row">
 				<span>Sub users</span>
-				<input type="checkbox" id="switch66" /> 
+				<input type="checkbox" id="switch66" />
 				<label for="switch66" data-on-label="ON" data-off-label="OFF"></label>
 			</div>
 			<div class="setting-row">
 				<span>personal account</span>
-				<input type="checkbox" id="switch77" /> 
+				<input type="checkbox" id="switch77" />
 				<label for="switch77" data-on-label="ON" data-off-label="OFF"></label>
 			</div>
 			<div class="setting-row">
 				<span>Business account</span>
-				<input type="checkbox" id="switch88" /> 
+				<input type="checkbox" id="switch88" />
 				<label for="switch88" data-on-label="ON" data-off-label="OFF"></label>
 			</div>
 			<div class="setting-row">
 				<span>Show me online</span>
-				<input type="checkbox" id="switch99" /> 
+				<input type="checkbox" id="switch99" />
 				<label for="switch99" data-on-label="ON" data-off-label="OFF"></label>
 			</div>
 			<div class="setting-row">
 				<span>Delete history</span>
-				<input type="checkbox" id="switch101" /> 
+				<input type="checkbox" id="switch101" />
 				<label for="switch101" data-on-label="ON" data-off-label="OFF"></label>
 			</div>
 			<div class="setting-row">
 				<span>Expose author name</span>
-				<input type="checkbox" id="switch111" /> 
+				<input type="checkbox" id="switch111" />
 				<label for="switch111" data-on-label="ON" data-off-label="OFF"></label>
 			</div>
 		</form>
-	</div><!-- side panel -->		
-	
+	</div><!-- side panel -->
+
 	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
 	<script src="js/script.js"></script>
 
-</body>	
+</body>
 
 </html>

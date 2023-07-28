@@ -7,8 +7,8 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 	<title>Winku Social Network Toolkit</title>
-    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16"> 
-    
+    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
+
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/color.css">
@@ -18,12 +18,12 @@
 <body>
 <!--<div class="se-pre-con"></div>-->
 <div class="theme-layout">
-	
+
 <div class="topbar stick">
 		<div class="logo">
 			<a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
 		</div>
-		
+
 		<div class="top-area">
 			<ul class="main-menu">
 				<li>
@@ -235,7 +235,7 @@
 			<span class="ti-menu main-menu" data-ripple=""></span>
 		</div>
 	</div><!-- topbar -->
-	
+
 	<section>
 		<div class="feature-photo">
 			<figure><img src="images/resources/timeline-1.jpg" alt=""></figure>
@@ -275,7 +275,6 @@
 								</li>
 								<li>
 									<a class="" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
-									<a class="" href="{{route('fotos')}}" title="" data-ripple="">Fotos</a>
 									<a class="" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
 									<a class="" href="{{route('sobre_perfil')}}" title="" data-ripple="">Informações</a>
 									<a class="active" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
@@ -345,7 +344,7 @@
 												<a href="edit-password.html" title="">change password</a>
 											</li>
 										</ul>
-									</div><!-- settings widget -->										
+									</div><!-- settings widget -->
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
@@ -354,19 +353,19 @@
 										<h5 class="f-title"><i class="ti-info-alt"></i> Edit Basic Information</h5>
 
 										<form method="post">
-											<div class="form-group half">	
+											<div class="form-group half">
 											  <input type="text" id="input" required="required"/>
 											  <label class="control-label" for="input">First Name</label><i class="mtrl-select"></i>
 											</div>
-											<div class="form-group half">	
+											<div class="form-group half">
 											  <input type="text" required="required"/>
 											  <label class="control-label" for="input">Last Name</label><i class="mtrl-select"></i>
 											</div>
-											<div class="form-group">	
+											<div class="form-group">
 											  <input type="text" required="required"/>
 											  <label class="control-label" for="input"><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b0e262a22270b">[email&#160;protected]</a></label><i class="mtrl-select"></i>
 											</div>
-											<div class="form-group">	
+											<div class="form-group">
 											  <input type="text" required="required"/>
 											  <label class="control-label" for="input">Phone No.</label><i class="mtrl-select"></i>
 											</div>
@@ -454,11 +453,11 @@
 												</label>
 											  </div>
 											</div>
-											<div class="form-group">	
+											<div class="form-group">
 											  <input type="text" required="required"/>
 											  <label class="control-label" for="input">City</label><i class="mtrl-select"></i>
 											</div>
-											<div class="form-group">	
+											<div class="form-group">
 											  <select>
 												<option value="country">Country</option>
 												  <option value="AFG">Afghanistan</option>
@@ -712,22 +711,36 @@
 												  <option value="ZWE">Zimbabwe</option>
 											  </select>
 											</div>
-											<div class="form-group">	
+											<div class="form-group">
 											  <textarea rows="4" id="textarea" required="required"></textarea>
 											  <label class="control-label" for="textarea">About Me</label><i class="mtrl-select"></i>
-											</div>
-											<div class="submit-btns">
-												<button type="button" class="mtr-btn"><span>Cancel</span></button>
-												<button type="button" class="mtr-btn"><span>Update</span></button>
-											</div>
+											</div><br><br>
+                                            <p><i>Editar senha</i></p>
+                                            <div class="form-group">
+                                                <input type="password" id="input" required="required"/>
+                                                <label class="control-label" for="input">New password</label><i class="mtrl-select"></i>
+                                              </div>
+                                              <div class="form-group">
+                                                <input type="password" required="required"/>
+                                                <label class="control-label" for="input">Confirm password</label><i class="mtrl-select"></i>
+                                              </div>
+                                              <div class="form-group">
+                                                <input type="password" required="required"/>
+                                                <label class="control-label" for="input">Current password</label><i class="mtrl-select"></i>
+                                              </div>
+                                              <a class="forgot-pwd underline" title="" href="#">Forgot Password?</a>
+                                              <div class="submit-btns">
+                                                  <button type="button" class="mtr-btn"><span>Cancel</span></button>
+                                                  <button type="button" class="mtr-btn"><span>Update</span></button>
+                                              </div>
 										</form>
 									</div>
-								</div>	
+								</div>
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
 									<div class="widget">
-											<h4 class="widget-title">Your page</h4>	
+											<h4 class="widget-title">Your page</h4>
 											<div class="your-page">
 												<figure>
 													<a title="" href="#"><img alt="" src="images/resources/friend-avatar9.jpg"></a>
@@ -749,26 +762,26 @@
 														  <a title="weekly-likes" href="#">35 new likes this week</a>
 														  <div class="users-thumb-list">
 														  	<a data-toggle="tooltip" title="" href="#" data-original-title="Anderw">
-																<img alt="" src="images/resources/userlist-1.jpg">  
+																<img alt="" src="images/resources/userlist-1.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="frank">
-																<img alt="" src="images/resources/userlist-2.jpg">  
+																<img alt="" src="images/resources/userlist-2.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Sara">
-																<img alt="" src="images/resources/userlist-3.jpg">  
+																<img alt="" src="images/resources/userlist-3.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Amy">
-																<img alt="" src="images/resources/userlist-4.jpg">  
+																<img alt="" src="images/resources/userlist-4.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Ema">
-																<img alt="" src="images/resources/userlist-5.jpg">  
+																<img alt="" src="images/resources/userlist-5.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Sophie">
-																<img alt="" src="images/resources/userlist-6.jpg">  
+																<img alt="" src="images/resources/userlist-6.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Maria">
-																<img alt="" src="images/resources/userlist-7.jpg">  
-															</a>  
+																<img alt="" src="images/resources/userlist-7.jpg">
+															</a>
 														  </div>
 													  </div>
 													  <div id="link2" class="tab-pane fade">
@@ -776,26 +789,26 @@
 														  <a title="weekly-likes" href="#">440 new views this week</a>
 														  <div class="users-thumb-list">
 														  	<a data-toggle="tooltip" title="" href="#" data-original-title="Anderw">
-																<img alt="" src="images/resources/userlist-1.jpg">  
+																<img alt="" src="images/resources/userlist-1.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="frank">
-																<img alt="" src="images/resources/userlist-2.jpg">  
+																<img alt="" src="images/resources/userlist-2.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Sara">
-																<img alt="" src="images/resources/userlist-3.jpg">  
+																<img alt="" src="images/resources/userlist-3.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Amy">
-																<img alt="" src="images/resources/userlist-4.jpg">  
+																<img alt="" src="images/resources/userlist-4.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Ema">
-																<img alt="" src="images/resources/userlist-5.jpg">  
+																<img alt="" src="images/resources/userlist-5.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Sophie">
-																<img alt="" src="images/resources/userlist-6.jpg">  
+																<img alt="" src="images/resources/userlist-6.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Maria">
-																<img alt="" src="images/resources/userlist-7.jpg">  
-															</a>  
+																<img alt="" src="images/resources/userlist-7.jpg">
+															</a>
 														  </div>
 													  </div>
 													</div>
@@ -844,11 +857,11 @@
 									</div><!-- who's following -->
 								</aside>
 							</div><!-- sidebar -->
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</section>
 
 	<footer>
@@ -859,7 +872,7 @@
 						<div class="foot-logo">
 							<div class="logo">
 								<a href="index-2.html" title=""><img src="images/logo.png" alt=""></a>
-							</div>	
+							</div>
 							<p>
 								The trio took this simple idea and built it into the world’s leading carpooling platform.
 							</p>
@@ -941,27 +954,27 @@
 			<form method="post">
 				<div class="setting-row">
 					<span>use night mode</span>
-					<input type="checkbox" id="nightmode1"/> 
+					<input type="checkbox" id="nightmode1"/>
 					<label for="nightmode1" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Notifications</span>
-					<input type="checkbox" id="switch22" /> 
+					<input type="checkbox" id="switch22" />
 					<label for="switch22" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Notification sound</span>
-					<input type="checkbox" id="switch33" /> 
+					<input type="checkbox" id="switch33" />
 					<label for="switch33" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>My profile</span>
-					<input type="checkbox" id="switch44" /> 
+					<input type="checkbox" id="switch44" />
 					<label for="switch44" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Show profile</span>
-					<input type="checkbox" id="switch55" /> 
+					<input type="checkbox" id="switch55" />
 					<label for="switch55" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 			</form>
@@ -969,42 +982,42 @@
 			<form method="post">
 				<div class="setting-row">
 					<span>Sub users</span>
-					<input type="checkbox" id="switch66" /> 
+					<input type="checkbox" id="switch66" />
 					<label for="switch66" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>personal account</span>
-					<input type="checkbox" id="switch77" /> 
+					<input type="checkbox" id="switch77" />
 					<label for="switch77" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Business account</span>
-					<input type="checkbox" id="switch88" /> 
+					<input type="checkbox" id="switch88" />
 					<label for="switch88" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Show me online</span>
-					<input type="checkbox" id="switch99" /> 
+					<input type="checkbox" id="switch99" />
 					<label for="switch99" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Delete history</span>
-					<input type="checkbox" id="switch101" /> 
+					<input type="checkbox" id="switch101" />
 					<label for="switch101" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Expose author name</span>
-					<input type="checkbox" id="switch111" /> 
+					<input type="checkbox" id="switch111" />
 					<label for="switch111" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 			</form>
-		</div><!-- side panel -->		
-	
+		</div><!-- side panel -->
+
 	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/map-init.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 
-</body>	
+</body>
 
 </html>

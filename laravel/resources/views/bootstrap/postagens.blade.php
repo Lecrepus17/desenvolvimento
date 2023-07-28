@@ -8,8 +8,8 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 	<title>AmiGo</title>
-    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16"> 
-    
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="16x16">
+
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/color.css">
@@ -19,57 +19,18 @@
 <body>
 <!--<div class="se-pre-con"></div>-->
 <div class="theme-layout">
-	
-	
-	
+
+
+
 	<div class="topbar stick">
 		<div class="logo">
-			<a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
+			<a title="" href=""><img src="assets/images/logo2.png" alt=""></a>
 		</div>
-		
+
 		<div class="top-area">
 			<ul class="main-menu">
-				<li>
-					<a href="#" title="">Home</a>
-					<ul>
-						<li><a href="index-2.html" title="">Home Social</a></li>
-						<li><a href="landing.html" title="">Login page</a></li>
-						<li><a href="logout.html" title="">Logout Page</a></li>
-						<li><a href="newsfeed.html" title="">news feed</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#" title="">timeline</a>
-					<ul>
-						<li><a href="time-line.html" title="">timeline</a></li>
-						<li><a href="{{route('amigos')}}" title="">Amigos</a></li>
-						<li><a href="timeline-pages.html" title="">timeline pages</a></li>
-						<li><a href="timeline-photos.html" title="">timeline photos</a></li>
-						<li><a href="timeline-videos.html" title="">timeline videos</a></li>
-						<li><a href="page-likers.html" title="">Likes page</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#" title="">Configurações da conta</a>
-					<ul>
-						<li><a href="create-fav-page.html" title="">create fav page</a></li>
-						<li><a href="{{route('editar_perfil')}}" title="">Editar perfil</a></li>
-						<li><a href="edit-password.html" title="">edit-password</a></li>
-						<li><a href="edit-work-eductation.html" title="">edit work educations</a></li>
-						<li><a href="messages.html" title="">message box</a></li>
-						<li><a href="inbox.html" title="">Inbox</a></li>
-						<li><a href="notifications.html" title="">notifications page</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#" title="">more pages</a>
-					<ul>
-						<li><a href="404.html" title="">404 error page</a></li>
-						<li><a href="about.html" title="">about</a></li>
-						<li><a href="contact.html" title="">contact</a></li>
-						<li><a href="widgets.html" title="">Widgts</a></li>
-					</ul>
-				</li>
+
+					<a href="#" title="">Sobre</a>
 			</ul>
 			<ul class="setting-area">
 				<li>
@@ -82,144 +43,6 @@
 					</div>
 				</li>
 				<li><a href="newsfeed.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
-				<li>
-					<a href="#" title="Notification" data-ripple="">
-						<i class="ti-bell"></i><span>20</span>
-					</a>
-					<div class="dropdowns">
-						<span>4 New Notifications</span>
-						<ul class="drops-menu">
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-1.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>sarah Loren</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag green">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-2.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Jhon doe</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag red">Reply</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-3.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Andrew</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag blue">Unseen</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-4.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Tom cruse</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-5.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Amy</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-						</ul>
-						<a href="notifications.html" title="" class="more-mesg">view more</a>
-					</div>
-				</li>
-				<li>
-					<a href="#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>12</span></a>
-					<div class="dropdowns">
-						<span>5 New Messages</span>
-						<ul class="drops-menu">
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-1.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>sarah Loren</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag green">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-2.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Jhon doe</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag red">Reply</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-3.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Andrew</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag blue">Unseen</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-4.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Tom cruse</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-5.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Amy</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-						</ul>
-						<a href="messages.html" title="" class="more-mesg">view more</a>
-					</div>
-				</li>
-				<li><a href="#" title="Languages" data-ripple=""><i class="fa fa-globe"></i></a>
-					<div class="dropdowns languages">
-						<a href="#" title=""><i class="ti-check"></i>English</a>
-						<a href="#" title="">Arabic</a>
-						<a href="#" title="">Dutch</a>
-						<a href="#" title="">French</a>
-					</div>
-				</li>
 			</ul>
 			<div class="user-img">
 				<img src="images/resources/admin.jpg" alt="">
@@ -238,7 +61,7 @@
 			<span class="ti-menu main-menu" data-ripple=""></span>
 		</div>
 	</div><!-- topbar -->
-		
+
 	<section>
 		<div class="gap gray-bg">
 			<div class="container-fluid">
@@ -482,7 +305,7 @@
 													</ul>
 												</div>
 												<div class="description">
-													
+
 													<p>
 														World's most beautiful car in Curabitur <a href="#" title="">#test drive booking !</a> the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website
 													</p>
@@ -575,7 +398,7 @@
 																<i class="em em-stuck_out_tongue"></i>
 															</div>
 															<button type="submit"></button>
-														</form>	
+														</form>
 													</div>
 												</li>
 											</ul>
@@ -594,7 +417,7 @@
 											</div>
 											<div class="post-meta">
 												<iframe src="https://player.vimeo.com/video/15232052" height="315" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-												
+
 												<div class="we-video-info">
 													<ul>
 														<li>
@@ -657,7 +480,7 @@
 													</ul>
 												</div>
 												<div class="description">
-													
+
 													<p>
 														Lonely Cat Enjoying in Summer Curabitur <a href="#" title="">#mypage</a> ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc,
 													</p>
@@ -723,7 +546,7 @@
 																<i class="em em-stuck_out_tongue"></i>
 															</div>
 															<button type="submit"></button>
-														</form>	
+														</form>
 													</div>
 												</li>
 											</ul>
@@ -808,7 +631,7 @@
 													</ul>
 												</div>
 												<div class="description">
-													
+
 													<p>
 														Curabitur Lonely Cat Enjoying in Summer <a href="#" title="">#mypage</a> ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc,
 													</p>
@@ -874,7 +697,7 @@
 																<i class="em em-stuck_out_tongue"></i>
 															</div>
 															<button type="submit"></button>
-														</form>	
+														</form>
 													</div>
 												</li>
 											</ul>
@@ -892,7 +715,7 @@
 												<span>published: june,2 2018 19:PM</span>
 											</div>
 											<div class="description">
-													
+
 													<p>
 														Curabitur World's most beautiful car in <a title="" href="#">#test drive booking !</a> the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website
 													</p>
@@ -905,7 +728,7 @@
 													<span>Love Maid - ChillGroves</span>
 													<p>Lorem ipsum dolor sit amet, consectetur ipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... </p>
 													<a title="" href="#">www.sample.com</a>
-												</div>		
+												</div>
 												<div class="we-video-info">
 													<ul>
 														<li>
@@ -976,7 +799,7 @@
 							<div class="col-lg-3">
 								<aside class="sidebar static">
 									<div class="widget">
-										<h4 class="widget-title">Your page</h4>	
+										<h4 class="widget-title">Your page</h4>
 										<div class="your-page">
 											<figure>
 												<a href="#" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
@@ -998,26 +821,26 @@
 													  <a href="#" title="weekly-likes">35 new likes this week</a>
 													  <div class="users-thumb-list">
 														<a href="#" title="Anderw" data-toggle="tooltip">
-															<img src="images/resources/userlist-1.jpg" alt="">  
+															<img src="images/resources/userlist-1.jpg" alt="">
 														</a>
 														<a href="#" title="frank" data-toggle="tooltip">
-															<img src="images/resources/userlist-2.jpg" alt="">  
+															<img src="images/resources/userlist-2.jpg" alt="">
 														</a>
 														<a href="#" title="Sara" data-toggle="tooltip">
-															<img src="images/resources/userlist-3.jpg" alt="">  
+															<img src="images/resources/userlist-3.jpg" alt="">
 														</a>
 														<a href="#" title="Amy" data-toggle="tooltip">
-															<img src="images/resources/userlist-4.jpg" alt="">  
+															<img src="images/resources/userlist-4.jpg" alt="">
 														</a>
 														<a href="#" title="Ema" data-toggle="tooltip">
-															<img src="images/resources/userlist-5.jpg" alt="">  
+															<img src="images/resources/userlist-5.jpg" alt="">
 														</a>
 														<a href="#" title="Sophie" data-toggle="tooltip">
-															<img src="images/resources/userlist-6.jpg" alt="">  
+															<img src="images/resources/userlist-6.jpg" alt="">
 														</a>
 														<a href="#" title="Maria" data-toggle="tooltip">
-															<img src="images/resources/userlist-7.jpg" alt="">  
-														</a>  
+															<img src="images/resources/userlist-7.jpg" alt="">
+														</a>
 													  </div>
 												  </div>
 												  <div class="tab-pane fade" id="link2" >
@@ -1025,26 +848,26 @@
 													  <a href="#" title="weekly-likes">440 new views this week</a>
 													  <div class="users-thumb-list">
 														<a href="#" title="Anderw" data-toggle="tooltip">
-															<img src="images/resources/userlist-1.jpg" alt="">  
+															<img src="images/resources/userlist-1.jpg" alt="">
 														</a>
 														<a href="#" title="frank" data-toggle="tooltip">
-															<img src="images/resources/userlist-2.jpg" alt="">  
+															<img src="images/resources/userlist-2.jpg" alt="">
 														</a>
 														<a href="#" title="Sara" data-toggle="tooltip">
-															<img src="images/resources/userlist-3.jpg" alt="">  
+															<img src="images/resources/userlist-3.jpg" alt="">
 														</a>
 														<a href="#" title="Amy" data-toggle="tooltip">
-															<img src="images/resources/userlist-4.jpg" alt="">  
+															<img src="images/resources/userlist-4.jpg" alt="">
 														</a>
 														<a href="#" title="Ema" data-toggle="tooltip">
-															<img src="images/resources/userlist-5.jpg" alt="">  
+															<img src="images/resources/userlist-5.jpg" alt="">
 														</a>
 														<a href="#" title="Sophie" data-toggle="tooltip">
-															<img src="images/resources/userlist-6.jpg" alt="">  
+															<img src="images/resources/userlist-6.jpg" alt="">
 														</a>
 														<a href="#" title="Maria" data-toggle="tooltip">
-															<img src="images/resources/userlist-7.jpg" alt="">  
-														</a>  
+															<img src="images/resources/userlist-7.jpg" alt="">
+														</a>
 													  </div>
 												  </div>
 												</div>
@@ -1065,7 +888,7 @@
 												<span>like them all</span>
 												<a data-ripple="" title="" href="#">start now!</a>
 											</div>
-										</div>											
+										</div>
 									</div>
 									<div class="widget friend-list stick-widget">
 										<h4 class="widget-title">Friends</h4>
@@ -1112,7 +935,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar5.jpg" alt="">
 													<span class="status f-online"></span>
@@ -1123,7 +946,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar6.jpg" alt="">
 													<span class="status f-away"></span>
@@ -1134,7 +957,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar7.jpg" alt="">
 													<span class="status f-off"></span>
@@ -1145,7 +968,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar5.jpg" alt="">
 													<span class="status f-online"></span>
@@ -1156,7 +979,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar2.jpg" alt="">
 													<span class="status f-away"></span>
@@ -1232,11 +1055,11 @@
 									</div><!-- friends list sidebar -->
 								</aside>
 							</div><!-- sidebar -->
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</section>
 
 	<footer>
@@ -1247,7 +1070,7 @@
 						<div class="foot-logo">
 							<div class="logo">
 								<a href="index-2.html" title=""><img src="images/logo.png" alt=""></a>
-							</div>	
+							</div>
 							<p>
 								The trio took this simple idea and built it into the world’s leading carpooling platform.
 							</p>
@@ -1324,75 +1147,12 @@
 		</div>
 	</div>
 </div>
-	<div class="side-panel">
-			<h4 class="panel-title">General Setting</h4>
-			<form method="post">
-				<div class="setting-row">
-					<span>use night mode</span>
-					<input type="checkbox" id="nightmode1"/> 
-					<label for="nightmode1" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Notifications</span>
-					<input type="checkbox" id="switch22" /> 
-					<label for="switch22" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Notification sound</span>
-					<input type="checkbox" id="switch33" /> 
-					<label for="switch33" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>My profile</span>
-					<input type="checkbox" id="switch44" /> 
-					<label for="switch44" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Show profile</span>
-					<input type="checkbox" id="switch55" /> 
-					<label for="switch55" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-			</form>
-			<h4 class="panel-title">Account Setting</h4>
-			<form method="post">
-				<div class="setting-row">
-					<span>Sub users</span>
-					<input type="checkbox" id="switch66" /> 
-					<label for="switch66" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>personal account</span>
-					<input type="checkbox" id="switch77" /> 
-					<label for="switch77" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Business account</span>
-					<input type="checkbox" id="switch88" /> 
-					<label for="switch88" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Show me online</span>
-					<input type="checkbox" id="switch99" /> 
-					<label for="switch99" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Delete history</span>
-					<input type="checkbox" id="switch101" /> 
-					<label for="switch101" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Expose author name</span>
-					<input type="checkbox" id="switch111" /> 
-					<label for="switch111" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-			</form>
-		</div><!-- side panel -->		
-	
+
 	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/map-init.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 
-</body>	
+</body>
 
 </html>

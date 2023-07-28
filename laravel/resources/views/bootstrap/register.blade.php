@@ -6,7 +6,9 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 	<title>AmiGo</title>
+
     <link rel="logo" href="assets/images/logo.png" type="image/png" sizes="16x16">
+
 
     <link rel="stylesheet" href="assets/css/main.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -42,15 +44,17 @@
 							<form method="post" action="/api/CreateUser">
 								@csrf
 							<div class="form-group">
-							  <input type="email" required="required" name="email"/>
+
+							  <input type="email" required="required"/>
 							  <label class="control-label" for="input">E-mail</label><i class="mtrl-select"></i>
 							</div>
 							<div class="form-group">
-							  <input type="text" required="required" name="name"/>
+							  <input type="text" required="required"/>
 							  <label class="control-label" for="input">Nome de usuário</label><i class="mtrl-select"></i>
 							</div>
 							<div class="form-group">
-							  <input type="password" required="required" name="password"/>
+							  <input type="password" required="required"/>
+
 							  <label class="control-label" for="input">Senha</label><i class="mtrl-select"></i>
 							</div>
 							<div class="submit-btns">

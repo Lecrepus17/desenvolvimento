@@ -45,4 +45,4 @@ Route::get('/amigos', [UsersController::class, 'amigos'])->name('amigos');
 
 Route::get('/sobre_perfil', [UsersController::class, 'sobre_perfil'])->name('sobre_perfil');
 
-Route::get('/fotos', [UsersController::class, 'fotos'])->name('fotos');
+Route::get('/feedSeguindo', [UsersController::class, 'feedSeguindo'])->name('feedSeguindo');

@@ -8,8 +8,8 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 	<title>Winku Social Network Toolkit</title>
-    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16"> 
-    
+    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
+
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/color.css">
@@ -19,12 +19,12 @@
 <body>
 <!--<div class="se-pre-con"></div>-->
 <div class="theme-layout">
-	
+
 <div class="topbar stick">
 		<div class="logo">
 			<a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
 		</div>
-		
+
 		<div class="top-area">
 			<ul class="main-menu">
 				<li>
@@ -236,7 +236,7 @@
 			<span class="ti-menu main-menu" data-ripple=""></span>
 		</div>
 	</div><!-- topbar -->
-	
+
 	<section>
 			<div class="feature-photo">
 				<figure><img src="images/resources/timeline-1.jpg" alt=""></figure>
@@ -276,7 +276,6 @@
 									</li>
 									<li>
 									<a class="" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
-									<a class="" href="{{route('fotos')}}" title="" data-ripple="">Fotos</a>
 									<a class="active" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
 									<a class="" href="{{route('sobre_perfil')}}" title="" data-ripple="">Informações</a>
 									<a class="" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
@@ -500,7 +499,7 @@
 														<a href="#" title="" class="add-butn" data-ripple="">Confirm</a>
 													</div>
 												</div>
-											</li>	
+											</li>
 
 											<li>
 												<div class="nearly-pepls">
@@ -593,12 +592,12 @@
 													</div>
 												</div>
 											</li>
-										</ul>	
+										</ul>
 											  <button class="btn-view btn-load-more"></button>
 										  </div>
 										</div>
 									</div>
-								</div>	
+								</div>
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
@@ -687,7 +686,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar5.jpg" alt="">
 													<span class="status f-online"></span>
@@ -698,7 +697,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar6.jpg" alt="">
 													<span class="status f-away"></span>
@@ -709,7 +708,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar7.jpg" alt="">
 													<span class="status f-off"></span>
@@ -720,7 +719,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar5.jpg" alt="">
 													<span class="status f-online"></span>
@@ -731,7 +730,7 @@
 												</div>
 											</li>
 											<li>
-												
+
 												<figure>
 													<img src="images/resources/friend-avatar2.jpg" alt="">
 													<span class="status f-away"></span>
@@ -805,14 +804,14 @@
 											</div>
 										</div>
 									</div><!-- friends list sidebar -->
-									
+
 								</aside>
 							</div><!-- sidebar -->
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</section>
 
 	<footer>
@@ -823,7 +822,7 @@
 						<div class="foot-logo">
 							<div class="logo">
 								<a href="index-2.html" title=""><img src="images/logo.png" alt=""></a>
-							</div>	
+							</div>
 							<p>
 								The trio took this simple idea and built it into the world’s leading carpooling platform.
 							</p>
@@ -905,27 +904,27 @@
 			<form method="post">
 				<div class="setting-row">
 					<span>use night mode</span>
-					<input type="checkbox" id="nightmode1"/> 
+					<input type="checkbox" id="nightmode1"/>
 					<label for="nightmode1" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Notifications</span>
-					<input type="checkbox" id="switch22" /> 
+					<input type="checkbox" id="switch22" />
 					<label for="switch22" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Notification sound</span>
-					<input type="checkbox" id="switch33" /> 
+					<input type="checkbox" id="switch33" />
 					<label for="switch33" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>My profile</span>
-					<input type="checkbox" id="switch44" /> 
+					<input type="checkbox" id="switch44" />
 					<label for="switch44" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Show profile</span>
-					<input type="checkbox" id="switch55" /> 
+					<input type="checkbox" id="switch55" />
 					<label for="switch55" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 			</form>
@@ -933,43 +932,43 @@
 			<form method="post">
 				<div class="setting-row">
 					<span>Sub users</span>
-					<input type="checkbox" id="switch66" /> 
+					<input type="checkbox" id="switch66" />
 					<label for="switch66" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>personal account</span>
-					<input type="checkbox" id="switch77" /> 
+					<input type="checkbox" id="switch77" />
 					<label for="switch77" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Business account</span>
-					<input type="checkbox" id="switch88" /> 
+					<input type="checkbox" id="switch88" />
 					<label for="switch88" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Show me online</span>
-					<input type="checkbox" id="switch99" /> 
+					<input type="checkbox" id="switch99" />
 					<label for="switch99" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Delete history</span>
-					<input type="checkbox" id="switch101" /> 
+					<input type="checkbox" id="switch101" />
 					<label for="switch101" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Expose author name</span>
-					<input type="checkbox" id="switch111" /> 
+					<input type="checkbox" id="switch111" />
 					<label for="switch111" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 			</form>
-		</div><!-- side panel -->		
-	
+		</div><!-- side panel -->
+
 	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/map-init.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 
-</body>	
+</body>
 
 
 </html>

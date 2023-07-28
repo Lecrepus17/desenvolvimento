@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\ApiPostsController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\ApiUsersController;
+use App\Http\Controllers\Api\ApiSeguirsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +28,8 @@ Route::post('/CreateUser', [ApiUsersController::class, 'createUser'])->name('cre
 Route::patch('/UpdateUser/{id}', [ApiUsersController::class, 'updateUser'])->name('update.users');
 Route::delete('/DeleteUser/{id}', [ApiUsersController::class, 'deleteUser'])->name('deltete.users');
 Route::post('/login', [ApiUsersController::class, 'login'])->name('login.user');
-
+Route::post('/CreateSeguirs', [ApiSeguirsController::class, 'createSeguirs'])->name('create.seguirs');
+Route::post('/DeleteSeguirs', [ApiSeguirsController::class, 'deleteSeguirs'])->name('delete.seguirs');
 
 Route::get('/Post', [ApiPostsController::class, 'getAllPost'])->name('post');
 Route::get('/createPost', [ApiPostsController::class, 'createPost'])->name('createPost');

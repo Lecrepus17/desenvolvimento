@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,14 +30,14 @@ Route::get('/criar_post', [UsersController::class, 'criar_post'])->name('criar_p
 Route::get('/perfil', [UsersController::class, 'perfil'])->name('perfil');
 
 Route::get('/editar_perfil', [UsersController::class, 'editar_perfil'])->name('editar_perfil');
-Route::post('/editar_perfil', [UsersController::class, 'editar_perfil'])->name('editar_perfil');
+Route::post('/editar_perfil', [UsersController::class, 'editar_perfil']);
 
 
 
 
 Route::post('/postagens', [UsersController::class, 'postagens'])->name('postagens');
 
-Route::get('/postagens', [UsersController::class, 'postagens'])->name('postagens');
+Route::get('/postagens', [UsersController::class, 'postagens']);
 
 
 

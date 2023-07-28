@@ -24,6 +24,7 @@ class ApiUsersController extends Controller
     }
 
     public function createUser(StoreUpdateUserRequest $request) {
+
         $data = $request->validated();
         $data['password'] = bcrypt($request->password);
 

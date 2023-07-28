@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ApiComentariosController;
 use App\Http\Controllers\Api\ApiPostsController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\ApiUsersController;
@@ -29,5 +30,13 @@ Route::delete('/DeleteUser/{id}', [ApiUsersController::class, 'deleteUser'])->na
 Route::post('/login', [ApiUsersController::class, 'login'])->name('login.user');
 
 
+Route::get('/getPost/{id}', [ApiPostsController::class, 'getPost'])->name('getPost');
 Route::get('/Post', [ApiPostsController::class, 'getAllPost'])->name('post');
-Route::get('/createPost', [ApiPostsController::class, 'createPost'])->name('createPost');
+Route::post('/createPost', [ApiPostsController::class, 'createPost'])->name('createPost');
+Route::delete('/deletePost/{id}', [ApiPostsController::class, 'deletePost'])->name('deletePost');
+
+
+Route::get('/getComent/{id}', [ApiComentariosController::class, 'getComent'])->name('getComent');
+Route::get('/coment', [ApiComentariosController::class, 'getAllComent'])->name('coment');
+Route::post('/createComent', [ApiComentariosController::class, 'createComent'])->name('createComent');
+Route::delete('/deleteComent/{id}', [ApiComentariosController::class, 'deleteComent'])->name('deleteComent');

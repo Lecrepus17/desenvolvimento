@@ -29,7 +29,7 @@ class UsersController extends Controller
     }
     // MÉTODO POST
     public function editar_perfil2(Request $request){
-        
+
         return redirect()->route('bootstrap.editar_perfil');
     }
 
@@ -48,12 +48,12 @@ class UsersController extends Controller
     public function amigos(){
         return view('bootstrap.amigos');
     }
-   
+
     public function sobre_perfil(){
         return view('bootstrap.sobre_perfil');
     }
 
-    public function fotos(){
-        return view('bootstrap.fotos');
+    public function feedSeguindo(){
+        return view('bootstrap.feedSeguindo');
     }
 }

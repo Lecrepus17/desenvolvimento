@@ -17,8 +17,8 @@ class ApiPostsController extends Controller
     }
     public function getAllPost() {
         $post = Post::all();
+        return $post;
         // $users = User::withTrashed()->get(); ou $users = User::onlyTrashed()->get();
-        dd($post);
         //return response($users, 200);
     }
 
@@ -44,6 +44,6 @@ class ApiPostsController extends Controller
         $post = $this->repository->findOrFail($id);
         $post->delete();
 
-        return response()->json([], Response::HTTP_NO_CONTENT);
+        return response($post, 200);
     }
 }

@@ -24,7 +24,8 @@ class ApiComentariosController extends Controller
     public function getAllComent() {
         $coment = Comentario::all();
         // $users = User::withTrashed()->get(); ou $users = User::onlyTrashed()->get();
-        dd($coment);
+
+        return $coment;
         //return response($users, 200);
     }
     public function createComent(StoreComentarioRequest $request) {
@@ -39,6 +40,6 @@ class ApiComentariosController extends Controller
         $coment = $this->repository->findOrFail($id);
         $coment->delete();
 
-        return response()->json([], Response::HTTP_NO_CONTENT);
+        return $coment;
     }
 }

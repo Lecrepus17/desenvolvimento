@@ -24,7 +24,7 @@ class StoreUpdateUserRequest extends FormRequest
     {
         $rules = [
             'name' => 'required|min:3|max:255',
-            'foto' => 'required|min:3|max:255',
+            'foto' => 'min:3|max:255',
             'email' => [
                 'required',
                 'email',

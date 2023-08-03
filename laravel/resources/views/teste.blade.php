@@ -1,4 +1,4 @@
-<form method="post" action="{{route('api.create.user')}}">
+<form method="post" action="{{route('create.user')}}">
     @csrf
 
   <input type="email" required="required" name="email"/>

@@ -14,8 +14,8 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-Route::get('/teste', function () {
-    return view('teste');
+Route::get('/', function () {
+    return view('index');
 });
 
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUpdateUserRequest;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Resources\UserResource;
@@ -26,9 +27,9 @@ class ApiUsersController extends Controller
     public function createUser(StoreUpdateUserRequest $request) {
         $data = $request->validated();
         $data['password'] = bcrypt($request->password);
-
         $user = $this->repository->create($data);
-        return new UserResource($user);
+        event(new Registered($user));
+        return redirect()->route('index')->with('sucesso', 'Usuario inserido com sucesso!');
     }
     public function login(Request $request){
 

@@ -24,12 +24,10 @@ class ApiUsersController extends Controller
     }
 
     public function createUser(StoreUpdateUserRequest $request) {
-
         $data = $request->validated();
         $data['password'] = bcrypt($request->password);
 
         $user = $this->repository->create($data);
-
         return new UserResource($user);
     }
     public function login(Request $request){

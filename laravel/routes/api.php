@@ -33,7 +33,7 @@ Route::post('/CreateSeguirs', [ApiSeguirsController::class, 'createSeguirs'])->n
 Route::post('/DeleteSeguirs', [ApiSeguirsController::class, 'deleteSeguirs'])->name('delete.seguirs');
 
 Route::get('/getPost/{id}', [ApiPostsController::class, 'getPost'])->name('getPost');
-Route::get('/Post', [ApiPostsController::class, 'getAllPost'])->name('post');
+Route::get('/post', [ApiPostsController::class, 'getAllPost'])->name('post');
 Route::post('/createPost', [ApiPostsController::class, 'createPost'])->name('createPost');
 Route::delete('/deletePost/{id}', [ApiPostsController::class, 'deletePost'])->name('deletePost');
 

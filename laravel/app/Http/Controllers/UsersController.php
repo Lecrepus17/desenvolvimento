@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Http;
 class UsersController extends Controller
 {
     public function index(){
@@ -36,14 +36,13 @@ class UsersController extends Controller
 
     // MÉTODO GET
     public function postagens(){
-        $response = 1;// \Http::get(route('users'));
-//dd($response);
-        // Verifica se a requisição foi bem-sucedida e se o status é 200
+        \Log::info('Entrou na função postagens()');
+        $response = Http::get(route('Users'));
+        \Log::info('Resposta recebida: ' . $response->status());
         if ($response->successful()) {
             $users = $response->json(); // Obtém os dados dos usuários
             return view('bootstrap.postagens', ['users' => $users]); // Passa os dados para a view
         } else {
-            // Trate o erro, se necessário
             abort(500, 'Erro ao obter os usuários da API');
         }
     }

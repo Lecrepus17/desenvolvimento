@@ -20,7 +20,8 @@ class ApiUsersController extends Controller
 
     }
     public function getAllUsers() {
-        $users = User::all();
+        $users = ['pesro', 'al'];
+        \Log::info('Usuários obtidos com sucesso: ' . count($users));
         return response()->json($users, 200);
     }
 

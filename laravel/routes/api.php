@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 
-Route::get('/Users', [ApiUsersController::class, 'getAllUsers'])->name('users');
+Route::get('/getAllUsers', [ApiUsersController::class, 'getAllUsers'])->name('Users');
 Route::get('/GetUsers/{id}', [ApiUsersController::class, 'getUser'])->name('get.users');
 Route::post('/CreateUser', [ApiUsersController::class, 'createUser'])->name('create.user');
 Route::patch('/UpdateUser/{id}', [ApiUsersController::class, 'updateUser'])->name('update.users');

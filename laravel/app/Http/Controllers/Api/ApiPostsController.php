@@ -7,6 +7,8 @@ use App\Models\Post;
 use App\Http\Resources\PostResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
+
 
 class ApiPostsController extends Controller
 {
@@ -14,6 +16,15 @@ class ApiPostsController extends Controller
         protected Post $repository,
     ){
 
+    }
+    public function getAllPostIfSeguir(){
+        $follower = Auth::user();
+
+
+        $post = Post::whereHas('user', function($querry) use ($follower){
+            $querry->where('user_fk', $follower->seguidor_fk);
+        })->get();
+        return $post;
     }
     public function getAllPost() {
         $post = Post::all();

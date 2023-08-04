@@ -352,7 +352,7 @@
 									<div class="editing-info">
 										<h5 class="f-title"><i class="ti-info-alt"></i> Edit Basic Information</h5>
 
-										<form method="post">
+										<form method="post" action="{{ route('update.user') }}">
 											<div class="form-group half">
 											  <input type="text" id="input" required="required"/>
 											  <label class="control-label" for="input">First Name</label><i class="mtrl-select"></i>

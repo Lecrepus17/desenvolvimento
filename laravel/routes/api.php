@@ -29,6 +29,7 @@ Route::post('/CreateUser', [ApiUsersController::class, 'createUser'])->name('cre
 Route::patch('/UpdateUser/{id}', [ApiUsersController::class, 'updateUser'])->name('update.users');
 Route::delete('/DeleteUser/{id}', [ApiUsersController::class, 'deleteUser'])->name('deltete.users');
 Route::post('/login', [ApiUsersController::class, 'login'])->name('login.user');
+
 Route::post('/CreateSeguirs', [ApiSeguirsController::class, 'createSeguirs'])->name('create.seguirs');
 Route::post('/DeleteSeguirs', [ApiSeguirsController::class, 'deleteSeguirs'])->name('delete.seguirs');
 
@@ -36,6 +37,7 @@ Route::get('/getPost/{id}', [ApiPostsController::class, 'getPost'])->name('getPo
 Route::get('/post', [ApiPostsController::class, 'getAllPost'])->name('post');
 Route::post('/createPost', [ApiPostsController::class, 'createPost'])->name('createPost');
 Route::delete('/deletePost/{id}', [ApiPostsController::class, 'deletePost'])->name('deletePost');
+Route::get('/getAllPostIfSeguir', [ApiPostsController::class, 'getAllPostIfSeguir'])->name('postIfSeguir');
 
 
 Route::get('/getComent/{id}', [ApiComentariosController::class, 'getComent'])->name('getComent');

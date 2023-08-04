@@ -14,7 +14,10 @@ use App\Http\Controllers\UsersController;
 |
 */
 
+
+
 Route::get('/',[UsersController::class, 'postagens']);
+
 
 
 Route::get('/index', [UsersController::class, 'index'])->name('index');

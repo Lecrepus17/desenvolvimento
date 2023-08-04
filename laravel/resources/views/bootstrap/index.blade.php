@@ -39,7 +39,7 @@
 						<p class="highlight-paragraph">
           Ainda não é um AmiGo? Torne-se um amigo <a href="{{ route('register')}}" title="" class="highlight">aqui.</a>
         </p>
-						<form method="post" action="{{ route('postagens')}}">
+						<form method="post" action="{{ route('login.user')}}">
 							@csrf
 							<div class="form-group" >
 							  <input type="text" id="input" required="required"/>

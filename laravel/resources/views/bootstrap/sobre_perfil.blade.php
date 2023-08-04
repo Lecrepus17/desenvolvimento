@@ -7,8 +7,8 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 	<title>Winku Social Network Toolkit</title>
-    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16"> 
-    
+    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
+
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/color.css">
@@ -18,7 +18,7 @@
 <body>
 <!--<div class="se-pre-con"></div>-->
 <div class="theme-layout">
-	
+
 	<div class="responsive-header">
 		<div class="mh-head first Sticky">
 			<span class="mh-btns-left">
@@ -61,8 +61,8 @@
 						<li><a href="groups.html" title="">groups page</a></li>
 						<li><a href="page-likers.html" title="">Likes page</a></li>
 						<li><a href="people-nearby.html" title="">people nearby</a></li>
-						
-						
+
+
 					</ul>
 				</li>
 				<li><span>Account Setting</span>
@@ -145,27 +145,27 @@
 					<form method="post">
 						<div class="setting-row">
 							<span>use night mode</span>
-							<input type="checkbox" id="nightmode"/> 
+							<input type="checkbox" id="nightmode"/>
 							<label for="nightmode" data-on-label="ON" data-off-label="OFF"></label>
 						</div>
 						<div class="setting-row">
 							<span>Notifications</span>
-							<input type="checkbox" id="switch2"/> 
+							<input type="checkbox" id="switch2"/>
 							<label for="switch2" data-on-label="ON" data-off-label="OFF"></label>
 						</div>
 						<div class="setting-row">
 							<span>Notification sound</span>
-							<input type="checkbox" id="switch3"/> 
+							<input type="checkbox" id="switch3"/>
 							<label for="switch3" data-on-label="ON" data-off-label="OFF"></label>
 						</div>
 						<div class="setting-row">
 							<span>My profile</span>
-							<input type="checkbox" id="switch4"/> 
+							<input type="checkbox" id="switch4"/>
 							<label for="switch4" data-on-label="ON" data-off-label="OFF"></label>
 						</div>
 						<div class="setting-row">
 							<span>Show profile</span>
-							<input type="checkbox" id="switch5"/> 
+							<input type="checkbox" id="switch5"/>
 							<label for="switch5" data-on-label="ON" data-off-label="OFF"></label>
 						</div>
 					</form>
@@ -173,32 +173,32 @@
 					<form method="post">
 						<div class="setting-row">
 							<span>Sub users</span>
-							<input type="checkbox" id="switch6" /> 
+							<input type="checkbox" id="switch6" />
 							<label for="switch6" data-on-label="ON" data-off-label="OFF"></label>
 						</div>
 						<div class="setting-row">
 							<span>personal account</span>
-							<input type="checkbox" id="switch7" /> 
+							<input type="checkbox" id="switch7" />
 							<label for="switch7" data-on-label="ON" data-off-label="OFF"></label>
 						</div>
 						<div class="setting-row">
 							<span>Business account</span>
-							<input type="checkbox" id="switch8" /> 
+							<input type="checkbox" id="switch8" />
 							<label for="switch8" data-on-label="ON" data-off-label="OFF"></label>
 						</div>
 						<div class="setting-row">
 							<span>Show me online</span>
-							<input type="checkbox" id="switch9" /> 
+							<input type="checkbox" id="switch9" />
 							<label for="switch9" data-on-label="ON" data-off-label="OFF"></label>
 						</div>
 						<div class="setting-row">
 							<span>Delete history</span>
-							<input type="checkbox" id="switch10" /> 
+							<input type="checkbox" id="switch10" />
 							<label for="switch10" data-on-label="ON" data-off-label="OFF"></label>
 						</div>
 						<div class="setting-row">
 							<span>Expose author name</span>
-							<input type="checkbox" id="switch11" /> 
+							<input type="checkbox" id="switch11" />
 							<label for="switch11" data-on-label="ON" data-off-label="OFF"></label>
 						</div>
 					</form>
@@ -206,12 +206,12 @@
 			</div>
 		</nav>
 	</div><!-- responsive header -->
-	
+
 	<div class="topbar stick">
 		<div class="logo">
 			<a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
 		</div>
-		
+
 		<div class="top-area">
 			<ul class="main-menu">
 				<li>
@@ -434,7 +434,7 @@
 			<span class="ti-menu main-menu" data-ripple=""></span>
 		</div>
 	</div><!-- topbar -->
-	
+
 	<section>
 		<div class="feature-photo">
 			<figure><img src="images/resources/timeline-1.jpg" alt=""></figure>
@@ -474,7 +474,7 @@
 								</li>
 								<li>
 									<a class="" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
-									<a class="" href="{{route('fotos')}}" title="" data-ripple="">Fotos</a>
+									<a class="" href="#" title="" data-ripple="">Fotos</a>
 									<a class="" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
 									<a class="active" href="{{route('sobre_perfil')}}" title="" data-ripple="">Informações</a>
 									<a class="" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
@@ -487,7 +487,7 @@
 			</div>
 		</div>
 	</section><!-- top area -->
-		
+
 	<section>
 		<div class="gap gray-bg">
 			<div class="container-fluid">
@@ -495,7 +495,7 @@
 					<div class="col-lg-12">
 						<div class="row" id="page-contents">
 							<div class="col-lg-3">
-								
+
 								<aside class="sidebar static">
 									<div class="widget">
 									<h4 class="widget-title">Edit info</h4>
@@ -535,7 +535,7 @@
 													<a title="" href="#"><i class="fa fa-google"></i> <span>google</span><ins>35 likes</ins></a>
 												</li>
 											</ul>
-										</div>									
+										</div>
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
@@ -582,9 +582,9 @@
 												</div>
 												<div class="tab-pane fade" id="work" role="tabpanel">
 													<div>
-														
+
 														<a href="#" title="">Envato</a>
-														<p>work as autohr in envato themeforest from 2013</p> 
+														<p>work as autohr in envato themeforest from 2013</p>
 														<ul class="education">
 															<li><i class="ti-facebook"></i> BSCS from Oxford University</li>
 															<li><i class="ti-twitter"></i> MSCS from Harvard Unversity</li>
@@ -608,12 +608,12 @@
 											</div>
 										</div>
 									</div>
-								</div>	
+								</div>
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
 									<div class="widget">
-											<h4 class="widget-title">Your page</h4>	
+											<h4 class="widget-title">Your page</h4>
 											<div class="your-page">
 												<figure>
 													<a title="" href="#"><img alt="" src="images/resources/friend-avatar9.jpg"></a>
@@ -635,26 +635,26 @@
 														  <a title="weekly-likes" href="#">35 new likes this week</a>
 														  <div class="users-thumb-list">
 														  	<a data-toggle="tooltip" title="" href="#" data-original-title="Anderw">
-																<img alt="" src="images/resources/userlist-1.jpg">  
+																<img alt="" src="images/resources/userlist-1.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="frank">
-																<img alt="" src="images/resources/userlist-2.jpg">  
+																<img alt="" src="images/resources/userlist-2.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Sara">
-																<img alt="" src="images/resources/userlist-3.jpg">  
+																<img alt="" src="images/resources/userlist-3.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Amy">
-																<img alt="" src="images/resources/userlist-4.jpg">  
+																<img alt="" src="images/resources/userlist-4.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Ema">
-																<img alt="" src="images/resources/userlist-5.jpg">  
+																<img alt="" src="images/resources/userlist-5.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Sophie">
-																<img alt="" src="images/resources/userlist-6.jpg">  
+																<img alt="" src="images/resources/userlist-6.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Maria">
-																<img alt="" src="images/resources/userlist-7.jpg">  
-															</a>  
+																<img alt="" src="images/resources/userlist-7.jpg">
+															</a>
 														  </div>
 													  </div>
 													  <div id="link2" class="tab-pane fade">
@@ -662,26 +662,26 @@
 														  <a title="weekly-likes" href="#">440 new views this week</a>
 														  <div class="users-thumb-list">
 														  	<a data-toggle="tooltip" title="" href="#" data-original-title="Anderw">
-																<img alt="" src="images/resources/userlist-1.jpg">  
+																<img alt="" src="images/resources/userlist-1.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="frank">
-																<img alt="" src="images/resources/userlist-2.jpg">  
+																<img alt="" src="images/resources/userlist-2.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Sara">
-																<img alt="" src="images/resources/userlist-3.jpg">  
+																<img alt="" src="images/resources/userlist-3.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Amy">
-																<img alt="" src="images/resources/userlist-4.jpg">  
+																<img alt="" src="images/resources/userlist-4.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Ema">
-																<img alt="" src="images/resources/userlist-5.jpg">  
+																<img alt="" src="images/resources/userlist-5.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Sophie">
-																<img alt="" src="images/resources/userlist-6.jpg">  
+																<img alt="" src="images/resources/userlist-6.jpg">
 															</a>
 															<a data-toggle="tooltip" title="" href="#" data-original-title="Maria">
-																<img alt="" src="images/resources/userlist-7.jpg">  
-															</a>  
+																<img alt="" src="images/resources/userlist-7.jpg">
+															</a>
 														  </div>
 													  </div>
 													</div>
@@ -730,11 +730,11 @@
 									</div><!-- who's following -->
 								</aside>
 							</div><!-- sidebar -->
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</section>
 
 	<footer>
@@ -745,7 +745,7 @@
 						<div class="foot-logo">
 							<div class="logo">
 								<a href="index-2.html" title=""><img src="images/logo.png" alt=""></a>
-							</div>	
+							</div>
 							<p>
 								The trio took this simple idea and built it into the world’s leading carpooling platform.
 							</p>
@@ -827,27 +827,27 @@
 			<form method="post">
 				<div class="setting-row">
 					<span>use night mode</span>
-					<input type="checkbox" id="nightmode1"/> 
+					<input type="checkbox" id="nightmode1"/>
 					<label for="nightmode1" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Notifications</span>
-					<input type="checkbox" id="switch22" /> 
+					<input type="checkbox" id="switch22" />
 					<label for="switch22" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Notification sound</span>
-					<input type="checkbox" id="switch33" /> 
+					<input type="checkbox" id="switch33" />
 					<label for="switch33" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>My profile</span>
-					<input type="checkbox" id="switch44" /> 
+					<input type="checkbox" id="switch44" />
 					<label for="switch44" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Show profile</span>
-					<input type="checkbox" id="switch55" /> 
+					<input type="checkbox" id="switch55" />
 					<label for="switch55" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 			</form>
@@ -855,42 +855,42 @@
 			<form method="post">
 				<div class="setting-row">
 					<span>Sub users</span>
-					<input type="checkbox" id="switch66" /> 
+					<input type="checkbox" id="switch66" />
 					<label for="switch66" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>personal account</span>
-					<input type="checkbox" id="switch77" /> 
+					<input type="checkbox" id="switch77" />
 					<label for="switch77" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Business account</span>
-					<input type="checkbox" id="switch88" /> 
+					<input type="checkbox" id="switch88" />
 					<label for="switch88" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Show me online</span>
-					<input type="checkbox" id="switch99" /> 
+					<input type="checkbox" id="switch99" />
 					<label for="switch99" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Delete history</span>
-					<input type="checkbox" id="switch101" /> 
+					<input type="checkbox" id="switch101" />
 					<label for="switch101" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 				<div class="setting-row">
 					<span>Expose author name</span>
-					<input type="checkbox" id="switch111" /> 
+					<input type="checkbox" id="switch111" />
 					<label for="switch111" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 			</form>
-		</div><!-- side panel -->		
-	
+		</div><!-- side panel -->
+
 	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/map-init.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 
-</body>	
+</body>
 
 </html>

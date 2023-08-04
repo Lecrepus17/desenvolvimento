@@ -1,11 +1,19 @@
-<form method="post" action="{{route('create.user')}}">
-    @csrf
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Integração Laravel API com Frontend</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Postagens</h1>
+        <ul>
+          <li >
+            {{ $user->name }} - {{ $user->email }}
+          </li>
+        </ul>
+      </div>
 
-  <input type="email" required="required" name="email"/>
 
-  <input type="text" required="required" name="name"/>
-  <input type="password" required="required" name="password"/>
 
-    <input type="submit" value="Criar conta" class="submit-button">
-
-</form>
+</body>
+</html>

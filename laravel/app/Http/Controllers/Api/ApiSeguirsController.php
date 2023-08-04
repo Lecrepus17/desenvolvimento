@@ -19,7 +19,6 @@ class ApiSeguirsController extends Controller
     public function createSeguirs(StoreSeguirs $request) {
         $data = $request->validated();
         $seguirs = $this->repository->create($data);
-
         return new SeguirsResource($seguirs);
     }
     public function deleteSeguirs (string $id){

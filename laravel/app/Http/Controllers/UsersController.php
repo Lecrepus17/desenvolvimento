@@ -36,15 +36,15 @@ class UsersController extends Controller
 
     // MÉTODO GET
     public function postagens(){
-        \Log::info('Entrou na função postagens()');
-        $response = Http::get(route('Users'));
-        \Log::info('Resposta recebida: ' . $response->status());
-        if ($response->successful()) {
-            $users = $response->json(); // Obtém os dados dos usuários
-            return view('bootstrap.postagens', ['users' => $users]); // Passa os dados para a view
-        } else {
-            abort(500, 'Erro ao obter os usuários da API');
-        }
+       // \Log::info('Entrou na função postagens()');
+        //$response = Http::get(route('Users'));
+        //\Log::info('Resposta recebida: ' . $response->status());
+        //if ($response->successful()) {
+          //  $users = $response->json(); // Obtém os dados dos usuários
+            return view('bootstrap.postagens'); // Passa os dados para a view
+       // } else {
+         //   abort(500, 'Erro ao obter os usuários da API');
+       // }
     }
     // MÉTODO POST
     public function postagens2(Request $request){

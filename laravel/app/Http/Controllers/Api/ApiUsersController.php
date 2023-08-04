@@ -21,7 +21,7 @@ class ApiUsersController extends Controller
     }
     public function getAllUsers() {
         $users = User::all();
-        return response($users, 200);
+        return response()->json($users, 200);
     }
 
     public function createUser(StoreUpdateUserRequest $request) {
@@ -29,7 +29,7 @@ class ApiUsersController extends Controller
         $data['password'] = bcrypt($request->password);
         $user = $this->repository->create($data);
         event(new Registered($user));
-        return redirect()->route('index')->with('sucesso', 'Usuario inserido com sucesso!');
+        return redirect()->route('index');
     }
     public function login(Request $request){
 
@@ -40,7 +40,7 @@ class ApiUsersController extends Controller
             if (Auth::attempt($data)){
                 return redirect()->route('home');
             } else {
-                return redirect()->route('usuarios.login')->with('erro', 'Deu ruim');
+                return redirect()->route('index');
             }
     }
     public function logout(){

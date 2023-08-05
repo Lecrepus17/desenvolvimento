@@ -16,7 +16,7 @@ use App\Http\Controllers\UsersController;
 
 
 
-Route::get('/',[UsersController::class, 'postagens']);
+Route::get('/',[UsersController::class, 'index']);
 
 
 

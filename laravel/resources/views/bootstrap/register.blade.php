@@ -61,6 +61,7 @@
 							<div class="form-group">
 								<input type="file" id="foto" name="foto" accept="image/png, image/jpeg" />
 								<label class="control-label" for="input">Foto</label><i class="mtrl-select"></i>
+							</div>
 							<div class="submit-btns">
 								<input type="submit" value="Criar conta" class="submit-button">
 							</div>

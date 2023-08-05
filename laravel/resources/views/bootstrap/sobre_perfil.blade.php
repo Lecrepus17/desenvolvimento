@@ -474,7 +474,6 @@
 								</li>
 								<li>
 									<a class="" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
-									<a class="" href="#" title="" data-ripple="">Fotos</a>
 									<a class="" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
 									<a class="active" href="{{route('sobre_perfil')}}" title="" data-ripple="">Informações</a>
 									<a class="" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
@@ -522,20 +521,46 @@
 										</li>
 									</ul>
 								</div>
-									<div class="widget">
-											<h4 class="widget-title">Socials</h4>
-											<ul class="socials">
-												<li class="facebook">
-													<a title="" href="#"><i class="fa fa-facebook"></i> <span>facebook</span> <ins>45 likes</ins></a>
-												</li>
-												<li class="twitter">
-													<a title="" href="#"><i class="fa fa-twitter"></i> <span>twitter</span><ins>25 likes</ins></a>
-												</li>
-												<li class="google">
-													<a title="" href="#"><i class="fa fa-google"></i> <span>google</span><ins>35 likes</ins></a>
-												</li>
-											</ul>
-										</div>
+								<div class="widget stick-widget">
+										<h4 class="widget-title">Who's follownig</h4>
+										<ul class="followers">
+											<li>
+												<figure><img src="images/resources/friend-avatar2.jpg" alt=""></figure>
+												<div class="friend-meta">
+													<h4><a href="time-line.html" title="">Kelly Bill</a></h4>
+													<a href="#" title="" class="underline">Add Friend</a>
+												</div>
+											</li>
+											<li>
+												<figure><img src="images/resources/friend-avatar4.jpg" alt=""></figure>
+												<div class="friend-meta">
+													<h4><a href="time-line.html" title="">Issabel</a></h4>
+													<a href="#" title="" class="underline">Add Friend</a>
+												</div>
+											</li>
+											<li>
+												<figure><img src="images/resources/friend-avatar6.jpg" alt=""></figure>
+												<div class="friend-meta">
+													<h4><a href="time-line.html" title="">Andrew</a></h4>
+													<a href="#" title="" class="underline">Add Friend</a>
+												</div>
+											</li>
+											<li>
+												<figure><img src="images/resources/friend-avatar8.jpg" alt=""></figure>
+												<div class="friend-meta">
+													<h4><a href="time-line.html" title="">Sophia</a></h4>
+													<a href="#" title="" class="underline">Add Friend</a>
+												</div>
+											</li>
+											<li>
+												<figure><img src="images/resources/friend-avatar3.jpg" alt=""></figure>
+												<div class="friend-meta">
+													<h4><a href="time-line.html" title="">Allen</a></h4>
+													<a href="#" title="" class="underline">Add Friend</a>
+												</div>
+											</li>
+										</ul>
+									</div><!-- who's following -->
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
@@ -688,46 +713,7 @@
 												</div>
 											</div>
 										</div>
-									<div class="widget stick-widget">
-										<h4 class="widget-title">Who's follownig</h4>
-										<ul class="followers">
-											<li>
-												<figure><img src="images/resources/friend-avatar2.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Kelly Bill</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar4.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Issabel</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar6.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Andrew</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar8.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Sophia</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar3.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Allen</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-										</ul>
-									</div><!-- who's following -->
+									
 								</aside>
 							</div><!-- sidebar -->
 						</div>

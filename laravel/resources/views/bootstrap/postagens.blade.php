@@ -29,20 +29,47 @@
 
 		<div class="top-area">
 			<ul class="main-menu">
-
-					<a href="#" title="">Sobre</a>
-			</ul>
-			<ul class="setting-area">
 				<li>
-					<a href="#" title="Home" data-ripple=""><i class="ti-search"></i></a>
-					<div class="searched">
-						<form method="post" class="form-search">
-							<input type="text" placeholder="Search Friend">
-							<button data-ripple><i class="ti-search"></i></button>
-						</form>
-					</div>
+					<a href="#" title="">Home</a>
+					<ul>
+						<li><a href="index-2.html" title="">Home Social</a></li>
+						<li><a href="landing.html" title="">Login page</a></li>
+						<li><a href="logout.html" title="">Logout Page</a></li>
+						<li><a href="newsfeed.html" title="">news feed</a></li>
+					</ul>
 				</li>
-				<li><a href="newsfeed.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
+				<li>
+					<a href="#" title="">timeline</a>
+					<ul>
+						<li><a href="time-line.html" title="">timeline</a></li>
+						<li><a href="{{route('amigos')}}" title="">Amigos</a></li>
+						<li><a href="timeline-pages.html" title="">timeline pages</a></li>
+						<li><a href="timeline-photos.html" title="">timeline photos</a></li>
+						<li><a href="timeline-videos.html" title="">timeline videos</a></li>
+						<li><a href="page-likers.html" title="">Likes page</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="">Configurações da conta</a>
+					<ul>
+						<li><a href="create-fav-page.html" title="">create fav page</a></li>
+						<li><a href="{{route('editar_perfil')}}" title="">Editar perfil</a></li>
+						<li><a href="edit-password.html" title="">edit-password</a></li>
+						<li><a href="edit-work-eductation.html" title="">edit work educations</a></li>
+						<li><a href="messages.html" title="">message box</a></li>
+						<li><a href="inbox.html" title="">Inbox</a></li>
+						<li><a href="notifications.html" title="">notifications page</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="">more pages</a>
+					<ul>
+						<li><a href="404.html" title="">404 error page</a></li>
+						<li><a href="about.html" title="">about</a></li>
+						<li><a href="contact.html" title="">contact</a></li>
+						<li><a href="widgets.html" title="">Widgts</a></li>
+					</ul>
+				</li>
 			</ul>
 			<div class="user-img">
 				<img src="images/resources/admin.jpg" alt="">
@@ -90,60 +117,11 @@
 												<a href="{{route('amigos')}}" title="">Amigos</a>
 											</li>
 											<li>
-												<i class="ti-image"></i>
-												<a href="timeline-photos.html" title="">images</a>
-											</li>
-											<li>
-												<i class="ti-video-camera"></i>
-												<a href="timeline-videos.html" title="">videos</a>
-											</li>
-											<li>
-												<i class="ti-comments-smiley"></i>
-												<a href="messages.html" title="">Messages</a>
-											</li>
-											<li>
-												<i class="ti-bell"></i>
-												<a href="notifications.html" title="">Notifications</a>
-											</li>
-											<li>
-												<i class="ti-share"></i>
-												<a href="people-nearby.html" title="">People Nearby</a>
-											</li>
-											<li>
-												<i class="fa fa-bar-chart-o"></i>
-												<a href="insights.html" title="">insights</a>
-											</li>
-											<li>
 												<i class="ti-power-off"></i>
 												<a href="landing.html" title="">Logout</a>
 											</li>
 										</ul>
 									</div><!-- Shortcuts -->
-									<div class="widget">
-										<h4 class="widget-title">Recent Activity</h4>
-										<ul class="activitiez">
-											<li>
-												<div class="activity-meta">
-													<i>10 hours Ago</i>
-													<span><a href="#" title="">Commented on Video posted </a></span>
-													<h6>by <a href="time-line.html">black demon.</a></h6>
-												</div>
-											</li>
-											<li>
-												<div class="activity-meta">
-													<i>30 Days Ago</i>
-													<span><a href="#" title="">Posted your status. “Hello guys, how are you?”</a></span>
-												</div>
-											</li>
-											<li>
-												<div class="activity-meta">
-													<i>2 Years Ago</i>
-													<span><a href="#" title="">Share a video on her timeline.</a></span>
-													<h6>"<a href="#">you are so funny mr.been.</a>"</h6>
-												</div>
-											</li>
-										</ul>
-									</div><!-- recent activites -->
 									<div class="widget stick-widget">
 										<h4 class="widget-title">Who's follownig</h4>
 										<ul class="followers">
@@ -874,22 +852,7 @@
 											</div>
 										</div>
 									</div><!-- page like widget -->
-									<div class="widget">
-										<div class="banner medium-opacity bluesh">
-											<div class="bg-image" style="background-image: url(images/resources/baner-widgetbg.jpg)"></div>
-											<div class="baner-top">
-												<span><img alt="" src="images/book-icon.png"></span>
-												<i class="fa fa-ellipsis-h"></i>
-											</div>
-											<div class="banermeta">
-												<p>
-													create your own favourit page.
-												</p>
-												<span>like them all</span>
-												<a data-ripple="" title="" href="#">start now!</a>
-											</div>
-										</div>
-									</div>
+									
 									<div class="widget friend-list stick-widget">
 										<h4 class="widget-title">Friends</h4>
 										<div id="searchDir"></div>

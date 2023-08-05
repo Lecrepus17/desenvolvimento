@@ -149,20 +149,6 @@
 							<div class="col-lg-3">
 								<aside class="sidebar static">
 									<div class="widget">
-											<h4 class="widget-title">Socials</h4>
-											<ul class="socials">
-												<li class="facebook">
-													<a title="" href="#"><i class="fa fa-facebook"></i> <span>facebook</span> <ins>45 likes</ins></a>
-												</li>
-												<li class="twitter">
-													<a title="" href="#"><i class="fa fa-twitter"></i> <span>twitter</span><ins>25 likes</ins></a>
-												</li>
-												<li class="google">
-													<a title="" href="#"><i class="fa fa-google"></i> <span>google</span><ins>35 likes</ins></a>
-												</li>
-											</ul>
-										</div>
-									<div class="widget">
 										<h4 class="widget-title">Shortcuts</h4>
 										<ul class="naves">
 											<li>
@@ -182,60 +168,12 @@
 												<a href="timeline-friends.html" title="">friends</a>
 											</li>
 											<li>
-												<i class="ti-image"></i>
-												<a href="timeline-photos.html" title="">images</a>
-											</li>
-											<li>
-												<i class="ti-video-camera"></i>
-												<a href="timeline-videos.html" title="">videos</a>
-											</li>
-											<li>
-												<i class="ti-comments-smiley"></i>
-												<a href="messages.html" title="">Messages</a>
-											</li>
-											<li>
-												<i class="ti-bell"></i>
-												<a href="notifications.html" title="">Notifications</a>
-											</li>
-											<li>
-												<i class="ti-share"></i>
-												<a href="people-nearby.html" title="">People Nearby</a>
-											</li>
-											<li>
-												<i class="fa fa-bar-chart-o"></i>
-												<a href="insights.html" title="">insights</a>
-											</li>
-											<li>
 												<i class="ti-power-off"></i>
 												<a href="landing.html" title="">Logout</a>
 											</li>
 										</ul>
 									</div><!-- Shortcuts -->
-									<div class="widget">
-										<h4 class="widget-title">Recent Activity</h4>
-										<ul class="activitiez">
-											<li>
-												<div class="activity-meta">
-													<i>10 hours Ago</i>
-													<span><a href="#" title="">Commented on Video posted </a></span>
-													<h6>by <a href="newsfeed.html">black demon.</a></h6>
-												</div>
-											</li>
-											<li>
-												<div class="activity-meta">
-													<i>30 Days Ago</i>
-													<span><a href="newsfeed.html" title="">Posted your status. “Hello guys, how are you?”</a></span>
-												</div>
-											</li>
-											<li>
-												<div class="activity-meta">
-													<i>2 Years Ago</i>
-													<span><a href="#" title="">Share a video on her timeline.</a></span>
-													<h6>"<a href="newsfeed.html">you are so funny mr.been.</a>"</h6>
-												</div>
-											</li>
-										</ul>
-									</div><!-- recent activites -->
+									
 									<div class="widget stick-widget">
 										<h4 class="widget-title">Who's follownig</h4>
 										<ul class="followers">
@@ -741,22 +679,6 @@
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
-									<div class="widget">
-										<div class="banner medium-opacity bluesh">
-											<div style="background-image: url(images/resources/baner-widgetbg.jpg)" class="bg-image"></div>
-											<div class="baner-top">
-												<span><img src="images/book-icon.png" alt=""></span>
-												<i class="fa fa-ellipsis-h"></i>
-											</div>
-											<div class="banermeta">
-												<p>
-													create your own favourit page.
-												</p>
-												<span>like them all</span>
-												<a href="#" title="" data-ripple="">start now!</a>
-											</div>
-										</div>
-									</div>
 									<div class="widget friend-list stick-widget">
 										<h4 class="widget-title">Friends</h4>
 										<div id="searchDir"></div>

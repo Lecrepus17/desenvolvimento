@@ -22,7 +22,7 @@
 
 <div class="topbar stick">
 		<div class="logo">
-			<a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
+			<a title="" href="{{route('postagens')}}"><img src="assets/images/logo2.png" alt=""></a>
 		</div>
 
 		<div class="top-area">
@@ -69,7 +69,6 @@
 					</ul>
 				</li>
 			</ul>
-
 			<div class="user-img">
 				<img src="images/resources/admin.jpg" alt="">
 				<span class="status f-online"></span>
@@ -77,7 +76,7 @@
 					<a href="#" title=""><span class="status f-online"></span>online</a>
 					<a href="#" title=""><span class="status f-away"></span>away</a>
 					<a href="#" title=""><span class="status f-off"></span>offline</a>
-					<a href="#" title=""><i class="ti-user"></i> view profile</a>
+					<a href="{{route('perfil')}}" title=""><i class="ti-user"></i> view profile</a>
 					<a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
 					<a href="#" title=""><i class="ti-target"></i>activity log</a>
 					<a href="#" title=""><i class="ti-settings"></i>account setting</a>

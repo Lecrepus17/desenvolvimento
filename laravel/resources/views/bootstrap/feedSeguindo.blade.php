@@ -22,11 +22,11 @@
 	
 	
 	
-	<div class="topbar stick">
+<div class="topbar stick">
 		<div class="logo">
-			<a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
+			<a title="" href="{{route('postagens')}}"><img src="assets/images/logo2.png" alt=""></a>
 		</div>
-		
+
 		<div class="top-area">
 			<ul class="main-menu">
 				<li>
@@ -71,156 +71,6 @@
 					</ul>
 				</li>
 			</ul>
-			<ul class="setting-area">
-				<li>
-					<a href="#" title="Home" data-ripple=""><i class="ti-search"></i></a>
-					<div class="searched">
-						<form method="post" class="form-search">
-							<input type="text" placeholder="Search Friend">
-							<button data-ripple><i class="ti-search"></i></button>
-						</form>
-					</div>
-				</li>
-				<li><a href="newsfeed.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
-				<li>
-					<a href="#" title="Notification" data-ripple="">
-						<i class="ti-bell"></i><span>20</span>
-					</a>
-					<div class="dropdowns">
-						<span>4 New Notifications</span>
-						<ul class="drops-menu">
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-1.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>sarah Loren</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag green">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-2.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Jhon doe</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag red">Reply</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-3.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Andrew</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag blue">Unseen</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-4.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Tom cruse</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-5.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Amy</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-						</ul>
-						<a href="notifications.html" title="" class="more-mesg">view more</a>
-					</div>
-				</li>
-				<li>
-					<a href="#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>12</span></a>
-					<div class="dropdowns">
-						<span>5 New Messages</span>
-						<ul class="drops-menu">
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-1.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>sarah Loren</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag green">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-2.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Jhon doe</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag red">Reply</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-3.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Andrew</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag blue">Unseen</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-4.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Tom cruse</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-							<li>
-								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-5.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>Amy</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag">New</span>
-							</li>
-						</ul>
-						<a href="messages.html" title="" class="more-mesg">view more</a>
-					</div>
-				</li>
-				<li><a href="#" title="Languages" data-ripple=""><i class="fa fa-globe"></i></a>
-					<div class="dropdowns languages">
-						<a href="#" title=""><i class="ti-check"></i>English</a>
-						<a href="#" title="">Arabic</a>
-						<a href="#" title="">Dutch</a>
-						<a href="#" title="">French</a>
-					</div>
-				</li>
-			</ul>
 			<div class="user-img">
 				<img src="images/resources/admin.jpg" alt="">
 				<span class="status f-online"></span>
@@ -228,7 +78,7 @@
 					<a href="#" title=""><span class="status f-online"></span>online</a>
 					<a href="#" title=""><span class="status f-away"></span>away</a>
 					<a href="#" title=""><span class="status f-off"></span>offline</a>
-					<a href="#" title=""><i class="ti-user"></i> view profile</a>
+					<a href="{{route('perfil')}}" title=""><i class="ti-user"></i> view profile</a>
 					<a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
 					<a href="#" title=""><i class="ti-target"></i>activity log</a>
 					<a href="#" title=""><i class="ti-settings"></i>account setting</a>
@@ -238,6 +88,7 @@
 			<span class="ti-menu main-menu" data-ripple=""></span>
 		</div>
 	</div><!-- topbar -->
+
 		
 	<section>
 		<div class="gap gray-bg">
@@ -928,82 +779,7 @@
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
-									<div class="widget">
-										<h4 class="widget-title">Your page</h4>	
-										<div class="your-page">
-											<figure>
-												<a href="#" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
-											</figure>
-											<div class="page-meta">
-												<a href="#" title="" class="underline">My page</a>
-												<span><i class="ti-comment"></i><a href="insight.html" title="">Messages <em>9</em></a></span>
-												<span><i class="ti-bell"></i><a href="insight.html" title="">Notifications <em>2</em></a></span>
-											</div>
-											<div class="page-likes">
-												<ul class="nav nav-tabs likes-btn">
-													<li class="nav-item"><a class="active" href="#link1" data-toggle="tab">likes</a></li>
-													 <li class="nav-item"><a class="" href="#link2" data-toggle="tab">views</a></li>
-												</ul>
-												<!-- Tab panes -->
-												<div class="tab-content">
-												  <div class="tab-pane active fade show " id="link1" >
-													<span><i class="ti-heart"></i>884</span>
-													  <a href="#" title="weekly-likes">35 new likes this week</a>
-													  <div class="users-thumb-list">
-														<a href="#" title="Anderw" data-toggle="tooltip">
-															<img src="images/resources/userlist-1.jpg" alt="">  
-														</a>
-														<a href="#" title="frank" data-toggle="tooltip">
-															<img src="images/resources/userlist-2.jpg" alt="">  
-														</a>
-														<a href="#" title="Sara" data-toggle="tooltip">
-															<img src="images/resources/userlist-3.jpg" alt="">  
-														</a>
-														<a href="#" title="Amy" data-toggle="tooltip">
-															<img src="images/resources/userlist-4.jpg" alt="">  
-														</a>
-														<a href="#" title="Ema" data-toggle="tooltip">
-															<img src="images/resources/userlist-5.jpg" alt="">  
-														</a>
-														<a href="#" title="Sophie" data-toggle="tooltip">
-															<img src="images/resources/userlist-6.jpg" alt="">  
-														</a>
-														<a href="#" title="Maria" data-toggle="tooltip">
-															<img src="images/resources/userlist-7.jpg" alt="">  
-														</a>  
-													  </div>
-												  </div>
-												  <div class="tab-pane fade" id="link2" >
-													  <span><i class="ti-eye"></i>440</span>
-													  <a href="#" title="weekly-likes">440 new views this week</a>
-													  <div class="users-thumb-list">
-														<a href="#" title="Anderw" data-toggle="tooltip">
-															<img src="images/resources/userlist-1.jpg" alt="">  
-														</a>
-														<a href="#" title="frank" data-toggle="tooltip">
-															<img src="images/resources/userlist-2.jpg" alt="">  
-														</a>
-														<a href="#" title="Sara" data-toggle="tooltip">
-															<img src="images/resources/userlist-3.jpg" alt="">  
-														</a>
-														<a href="#" title="Amy" data-toggle="tooltip">
-															<img src="images/resources/userlist-4.jpg" alt="">  
-														</a>
-														<a href="#" title="Ema" data-toggle="tooltip">
-															<img src="images/resources/userlist-5.jpg" alt="">  
-														</a>
-														<a href="#" title="Sophie" data-toggle="tooltip">
-															<img src="images/resources/userlist-6.jpg" alt="">  
-														</a>
-														<a href="#" title="Maria" data-toggle="tooltip">
-															<img src="images/resources/userlist-7.jpg" alt="">  
-														</a>  
-													  </div>
-												  </div>
-												</div>
-											</div>
-										</div>
-									</div><!-- page like widget -->
+									
 									<div class="widget">
 																			
 									</div>
@@ -1107,67 +883,7 @@
 												</div>
 											</li>
 										</ul>
-										<div class="chat-box">
-											<div class="chat-head">
-												<span class="status f-online"></span>
-												<h6>Bucky Barnes</h6>
-												<div class="more">
-													<span><i class="ti-more-alt"></i></span>
-													<span class="close-mesage"><i class="ti-close"></i></span>
-												</div>
-											</div>
-											<div class="chat-list">
-												<ul>
-													<li class="me">
-														<div class="chat-thumb"><img src="images/resources/chatlist1.jpg" alt=""></div>
-														<div class="notification-event">
-															<span class="chat-message-item">
-																Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
-															</span>
-															<span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Yesterday at 8:10pm</time></span>
-														</div>
-													</li>
-													<li class="you">
-														<div class="chat-thumb"><img src="images/resources/chatlist2.jpg" alt=""></div>
-														<div class="notification-event">
-															<span class="chat-message-item">
-																Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
-															</span>
-															<span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Yesterday at 8:10pm</time></span>
-														</div>
-													</li>
-													<li class="me">
-														<div class="chat-thumb"><img src="images/resources/chatlist1.jpg" alt=""></div>
-														<div class="notification-event">
-															<span class="chat-message-item">
-																Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
-															</span>
-															<span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Yesterday at 8:10pm</time></span>
-														</div>
-													</li>
-												</ul>
-												<form class="text-box">
-													<textarea placeholder="Post enter to post..."></textarea>
-													<div class="add-smiles">
-														<span title="add icon" class="em em-expressionless"></span>
-													</div>
-													<div class="smiles-bunch">
-														<i class="em em---1"></i>
-														<i class="em em-smiley"></i>
-														<i class="em em-anguished"></i>
-														<i class="em em-laughing"></i>
-														<i class="em em-angry"></i>
-														<i class="em em-astonished"></i>
-														<i class="em em-blush"></i>
-														<i class="em em-disappointed"></i>
-														<i class="em em-worried"></i>
-														<i class="em em-kissing_heart"></i>
-														<i class="em em-rage"></i>
-														<i class="em em-stuck_out_tongue"></i>
-													</div>
-													<button type="submit"></button>
-												</form>
-											</div>
+										
 										</div>
 									</div><!-- friends list sidebar -->
 								</aside>

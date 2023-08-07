@@ -31,12 +31,11 @@ class UsersController extends Controller
         return view('bootstrap.register');
     }
 
-    public function criar_post(){
-        return view('bootstrap.criar_post');
-    }
 
     public function perfil(){
+        
         return view('bootstrap.perfil');
+        
     }
 
 

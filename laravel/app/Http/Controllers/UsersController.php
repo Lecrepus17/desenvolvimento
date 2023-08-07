@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Api\ApiUsersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-class UsersController extends Controller
+class UsersController extends ApiUsersController
 {
     public function index(){
         return view('bootstrap.index');

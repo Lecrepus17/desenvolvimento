@@ -2,11 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Api\ApiComentariosController;
+use App\Http\Controllers\Api\ApiPostsController;
+use App\Http\Controllers\Api\ApiSeguirsController;
 use App\Http\Controllers\Api\ApiUsersController;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
-class UsersController extends ApiUsersController
+
+class UsersController extends Controller
 {
+    protected ApiUsersController $apiUsersController;
+
+    public function __construct(ApiUsersController $api1, ApiSeguirsController $api2, ApiPostsController $api3, ApiComentariosController $api4)
+    {
+        $this->apiUsersController = $api1;
+        $this->apiSeguirsController = $api2;
+        $this->apiPostsController = $api3;
+        $this->apiComentariosController = $api4;
+    }
+
+ 
+        
+
     public function index(){
         return view('bootstrap.index');
     }
@@ -35,32 +51,15 @@ class UsersController extends ApiUsersController
     }
 
 
-    // MÉTODO GET
-
-  /**   public function postagens()
+    public function postagens()
     {
         \Log::info('Entrou na função postagens()');
-        try {
-            $response = Http::timeout(3)->retry(3, 100)->acceptJson()->get(route('Users'));
-            \Log::info('Resposta recebida: ' . $response->status());
 
-            if ($response->successful()) {
-                $users = $response->json(); // Obtém os dados dos usuários
-                return view('bootstrap.postagens', ['users' => $users]); // Passa os dados para a view
-            } else {
-                abort(500, 'Erro ao obter os usuários da API');
-            }
-        } catch (\Exception $e) {
-            \Log::error('Erro ao fazer a requisição HTTP: ' . $e->getMessage());
-            abort(500, 'Erro ao obter os usuários da API');
-        }*/
-
-    public function postagens(){
-
-            return view('bootstrap.postagens');
+        $response = $this->apiUsersController->getAllUsers();
+        return view('bootstrap.postagens', ['users' => $response]); // Passa os dados para a view
 
     }
-
+   
     // MÉTODO POST
     public function postagens2(Request $request){
 

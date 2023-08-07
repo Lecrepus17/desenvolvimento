@@ -35,7 +35,8 @@ class UsersController extends Controller
 
 
     // MÉTODO GET
-    public function postagens()
+
+  /**   public function postagens()
     {
         \Log::info('Entrou na função postagens()');
         try {
@@ -51,7 +52,12 @@ class UsersController extends Controller
         } catch (\Exception $e) {
             \Log::error('Erro ao fazer a requisição HTTP: ' . $e->getMessage());
             abort(500, 'Erro ao obter os usuários da API');
-        }
+        }*/
+
+    public function postagens(){
+
+            return view('bootstrap.postagens');
+
     }
 
     // MÉTODO POST

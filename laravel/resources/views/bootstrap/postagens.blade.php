@@ -24,25 +24,52 @@
 
 	<div class="topbar stick">
 		<div class="logo">
-			<a title="" href=""><img src="assets/images/logo2.png" alt=""></a>
+			<a title="" href="{{route('postagens')}}"><img src="assets/images/logo2.png" alt=""></a>
 		</div>
 
 		<div class="top-area">
 			<ul class="main-menu">
-
-					<a href="#" title="">Sobre</a>
-			</ul>
-			<ul class="setting-area">
 				<li>
-					<a href="#" title="Home" data-ripple=""><i class="ti-search"></i></a>
-					<div class="searched">
-						<form method="post" class="form-search">
-							<input type="text" placeholder="Search Friend">
-							<button data-ripple><i class="ti-search"></i></button>
-						</form>
-					</div>
+					<a href="#" title="">Home</a>
+					<ul>
+						<li><a href="index-2.html" title="">Home Social</a></li>
+						<li><a href="landing.html" title="">Login page</a></li>
+						<li><a href="logout.html" title="">Logout Page</a></li>
+						<li><a href="newsfeed.html" title="">news feed</a></li>
+					</ul>
 				</li>
-				<li><a href="newsfeed.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
+				<li>
+					<a href="#" title="">timeline</a>
+					<ul>
+						<li><a href="time-line.html" title="">timeline</a></li>
+						<li><a href="{{route('amigos')}}" title="">Amigos</a></li>
+						<li><a href="timeline-pages.html" title="">timeline pages</a></li>
+						<li><a href="timeline-photos.html" title="">timeline photos</a></li>
+						<li><a href="timeline-videos.html" title="">timeline videos</a></li>
+						<li><a href="page-likers.html" title="">Likes page</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="">Configurações da conta</a>
+					<ul>
+						<li><a href="create-fav-page.html" title="">create fav page</a></li>
+						<li><a href="{{route('editar_perfil')}}" title="">Editar perfil</a></li>
+						<li><a href="edit-password.html" title="">edit-password</a></li>
+						<li><a href="edit-work-eductation.html" title="">edit work educations</a></li>
+						<li><a href="messages.html" title="">message box</a></li>
+						<li><a href="inbox.html" title="">Inbox</a></li>
+						<li><a href="notifications.html" title="">notifications page</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" title="">more pages</a>
+					<ul>
+						<li><a href="404.html" title="">404 error page</a></li>
+						<li><a href="about.html" title="">about</a></li>
+						<li><a href="contact.html" title="">contact</a></li>
+						<li><a href="widgets.html" title="">Widgts</a></li>
+					</ul>
+				</li>
 			</ul>
 			<div class="user-img">
 				<img src="images/resources/admin.jpg" alt="">
@@ -51,7 +78,7 @@
 					<a href="#" title=""><span class="status f-online"></span>online</a>
 					<a href="#" title=""><span class="status f-away"></span>away</a>
 					<a href="#" title=""><span class="status f-off"></span>offline</a>
-					<a href="#" title=""><i class="ti-user"></i> view profile</a>
+					<a href="{{route('perfil')}}" title=""><i class="ti-user"></i> view profile</a>
 					<a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
 					<a href="#" title=""><i class="ti-target"></i>activity log</a>
 					<a href="#" title=""><i class="ti-settings"></i>account setting</a>
@@ -90,60 +117,11 @@
 												<a href="{{route('amigos')}}" title="">Amigos</a>
 											</li>
 											<li>
-												<i class="ti-image"></i>
-												<a href="timeline-photos.html" title="">images</a>
-											</li>
-											<li>
-												<i class="ti-video-camera"></i>
-												<a href="timeline-videos.html" title="">videos</a>
-											</li>
-											<li>
-												<i class="ti-comments-smiley"></i>
-												<a href="messages.html" title="">Messages</a>
-											</li>
-											<li>
-												<i class="ti-bell"></i>
-												<a href="notifications.html" title="">Notifications</a>
-											</li>
-											<li>
-												<i class="ti-share"></i>
-												<a href="people-nearby.html" title="">People Nearby</a>
-											</li>
-											<li>
-												<i class="fa fa-bar-chart-o"></i>
-												<a href="insights.html" title="">insights</a>
-											</li>
-											<li>
 												<i class="ti-power-off"></i>
 												<a href="landing.html" title="">Logout</a>
 											</li>
 										</ul>
 									</div><!-- Shortcuts -->
-									<div class="widget">
-										<h4 class="widget-title">Recent Activity</h4>
-										<ul class="activitiez">
-											<li>
-												<div class="activity-meta">
-													<i>10 hours Ago</i>
-													<span><a href="#" title="">Commented on Video posted </a></span>
-													<h6>by <a href="time-line.html">black demon.</a></h6>
-												</div>
-											</li>
-											<li>
-												<div class="activity-meta">
-													<i>30 Days Ago</i>
-													<span><a href="#" title="">Posted your status. “Hello guys, how are you?”</a></span>
-												</div>
-											</li>
-											<li>
-												<div class="activity-meta">
-													<i>2 Years Ago</i>
-													<span><a href="#" title="">Share a video on her timeline.</a></span>
-													<h6>"<a href="#">you are so funny mr.been.</a>"</h6>
-												</div>
-											</li>
-										</ul>
-									</div><!-- recent activites -->
 									<div class="widget stick-widget">
 										<h4 class="widget-title">Who's follownig</h4>
 										<ul class="followers">
@@ -798,98 +776,8 @@
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
-									<div class="widget">
-										<h4 class="widget-title">Your page</h4>
-										<div class="your-page">
-											<figure>
-												<a href="#" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
-											</figure>
-											<div class="page-meta">
-												<a href="#" title="" class="underline">My page</a>
-												<span><i class="ti-comment"></i><a href="insight.html" title="">Messages <em>9</em></a></span>
-												<span><i class="ti-bell"></i><a href="insight.html" title="">Notifications <em>2</em></a></span>
-											</div>
-											<div class="page-likes">
-												<ul class="nav nav-tabs likes-btn">
-													<li class="nav-item"><a class="active" href="#link1" data-toggle="tab">likes</a></li>
-													 <li class="nav-item"><a class="" href="#link2" data-toggle="tab">views</a></li>
-												</ul>
-												<!-- Tab panes -->
-												<div class="tab-content">
-												  <div class="tab-pane active fade show " id="link1" >
-													<span><i class="ti-heart"></i>884</span>
-													  <a href="#" title="weekly-likes">35 new likes this week</a>
-													  <div class="users-thumb-list">
-														<a href="#" title="Anderw" data-toggle="tooltip">
-															<img src="images/resources/userlist-1.jpg" alt="">
-														</a>
-														<a href="#" title="frank" data-toggle="tooltip">
-															<img src="images/resources/userlist-2.jpg" alt="">
-														</a>
-														<a href="#" title="Sara" data-toggle="tooltip">
-															<img src="images/resources/userlist-3.jpg" alt="">
-														</a>
-														<a href="#" title="Amy" data-toggle="tooltip">
-															<img src="images/resources/userlist-4.jpg" alt="">
-														</a>
-														<a href="#" title="Ema" data-toggle="tooltip">
-															<img src="images/resources/userlist-5.jpg" alt="">
-														</a>
-														<a href="#" title="Sophie" data-toggle="tooltip">
-															<img src="images/resources/userlist-6.jpg" alt="">
-														</a>
-														<a href="#" title="Maria" data-toggle="tooltip">
-															<img src="images/resources/userlist-7.jpg" alt="">
-														</a>
-													  </div>
-												  </div>
-												  <div class="tab-pane fade" id="link2" >
-													  <span><i class="ti-eye"></i>440</span>
-													  <a href="#" title="weekly-likes">440 new views this week</a>
-													  <div class="users-thumb-list">
-														<a href="#" title="Anderw" data-toggle="tooltip">
-															<img src="images/resources/userlist-1.jpg" alt="">
-														</a>
-														<a href="#" title="frank" data-toggle="tooltip">
-															<img src="images/resources/userlist-2.jpg" alt="">
-														</a>
-														<a href="#" title="Sara" data-toggle="tooltip">
-															<img src="images/resources/userlist-3.jpg" alt="">
-														</a>
-														<a href="#" title="Amy" data-toggle="tooltip">
-															<img src="images/resources/userlist-4.jpg" alt="">
-														</a>
-														<a href="#" title="Ema" data-toggle="tooltip">
-															<img src="images/resources/userlist-5.jpg" alt="">
-														</a>
-														<a href="#" title="Sophie" data-toggle="tooltip">
-															<img src="images/resources/userlist-6.jpg" alt="">
-														</a>
-														<a href="#" title="Maria" data-toggle="tooltip">
-															<img src="images/resources/userlist-7.jpg" alt="">
-														</a>
-													  </div>
-												  </div>
-												</div>
-											</div>
-										</div>
-									</div><!-- page like widget -->
-									<div class="widget">
-										<div class="banner medium-opacity bluesh">
-											<div class="bg-image" style="background-image: url(images/resources/baner-widgetbg.jpg)"></div>
-											<div class="baner-top">
-												<span><img alt="" src="images/book-icon.png"></span>
-												<i class="fa fa-ellipsis-h"></i>
-											</div>
-											<div class="banermeta">
-												<p>
-													create your own favourit page.
-												</p>
-												<span>like them all</span>
-												<a data-ripple="" title="" href="#">start now!</a>
-											</div>
-										</div>
-									</div>
+									
+									
 									<div class="widget friend-list stick-widget">
 										<h4 class="widget-title">Friends</h4>
 										<div id="searchDir"></div>
@@ -990,68 +878,7 @@
 												</div>
 											</li>
 										</ul>
-										<div class="chat-box">
-											<div class="chat-head">
-												<span class="status f-online"></span>
-												<h6>Bucky Barnes</h6>
-												<div class="more">
-													<span><i class="ti-more-alt"></i></span>
-													<span class="close-mesage"><i class="ti-close"></i></span>
-												</div>
-											</div>
-											<div class="chat-list">
-												<ul>
-													<li class="me">
-														<div class="chat-thumb"><img src="images/resources/chatlist1.jpg" alt=""></div>
-														<div class="notification-event">
-															<span class="chat-message-item">
-																Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
-															</span>
-															<span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Yesterday at 8:10pm</time></span>
-														</div>
-													</li>
-													<li class="you">
-														<div class="chat-thumb"><img src="images/resources/chatlist2.jpg" alt=""></div>
-														<div class="notification-event">
-															<span class="chat-message-item">
-																Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
-															</span>
-															<span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Yesterday at 8:10pm</time></span>
-														</div>
-													</li>
-													<li class="me">
-														<div class="chat-thumb"><img src="images/resources/chatlist1.jpg" alt=""></div>
-														<div class="notification-event">
-															<span class="chat-message-item">
-																Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks
-															</span>
-															<span class="notification-date"><time datetime="2004-07-24T18:18" class="entry-date updated">Yesterday at 8:10pm</time></span>
-														</div>
-													</li>
-												</ul>
-												<form class="text-box">
-													<textarea placeholder="Post enter to post..."></textarea>
-													<div class="add-smiles">
-														<span title="add icon" class="em em-expressionless"></span>
-													</div>
-													<div class="smiles-bunch">
-														<i class="em em---1"></i>
-														<i class="em em-smiley"></i>
-														<i class="em em-anguished"></i>
-														<i class="em em-laughing"></i>
-														<i class="em em-angry"></i>
-														<i class="em em-astonished"></i>
-														<i class="em em-blush"></i>
-														<i class="em em-disappointed"></i>
-														<i class="em em-worried"></i>
-														<i class="em em-kissing_heart"></i>
-														<i class="em em-rage"></i>
-														<i class="em em-stuck_out_tongue"></i>
-													</div>
-													<button type="submit"></button>
-												</form>
-											</div>
-										</div>
+										
 									</div><!-- friends list sidebar -->
 								</aside>
 							</div><!-- sidebar -->

@@ -21,28 +21,31 @@ class ApiUsersController extends Controller
     }
     public function getAllUsers() {
         $users = User::all();
-        \Log::info('Usuários obtidos com sucesso: ' . count($users));
         return response()->json($users, 200);
     }
 
     public function createUser(StoreUpdateUserRequest $request) {
         $data = $request->validated();
-        $data['password'] = bcrypt($request->password);
+        $data['password'] = Hash::make($data['password']);
         $user = $this->repository->create($data);
         event(new Registered($user));
         return redirect()->route('index');
     }
     public function login(Request $request){
+        $data = $request->validate([
+            'email' => 'required',
+            'password' => 'required'
+        ]);
 
-            $data = $request->validate([
-                'email' => 'required',
-                'password' => 'required'
-            ]);
-            if (Auth::attempt($data)){
-                return redirect()->route('home');
-            } else {
-                return redirect()->route('index');
-            }
+        if (Auth::attempt($data)){
+            // Mensagem de depuração para verificar se a autenticação foi bem-sucedida
+            \Log::info('Usuário autenticado com sucesso.');
+            return redirect()->route('postagens');
+        } else {
+            // Mensagem de depuração para verificar se a autenticação falhou
+            \Log::info('Autenticação falhou.');
+            return redirect()->route('index');
+        }
     }
     public function logout(){
         Auth::logout();

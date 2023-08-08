@@ -28,7 +28,9 @@ Route::get('/GetUsers/{id}', [ApiUsersController::class, 'getUser'])->name('get.
 Route::post('/CreateUser', [ApiUsersController::class, 'createUser'])->name('create.user');
 Route::patch('/UpdateUser/{id}', [ApiUsersController::class, 'updateUser'])->name('update.users');
 Route::delete('/DeleteUser/{id}', [ApiUsersController::class, 'deleteUser'])->name('deltete.users');
-Route::post('/login', [ApiUsersController::class, 'login'])->name('login.user');
+
+Route::post('/login', [ApiUsersController::class, 'login'])->name('login');
+Route::get('/login', [ApiUsersController::class, 'login']);
 
 Route::post('/CreateSeguirs', [ApiSeguirsController::class, 'createSeguirs'])->name('create.seguirs');
 Route::post('/DeleteSeguirs', [ApiSeguirsController::class, 'deleteSeguirs'])->name('delete.seguirs');

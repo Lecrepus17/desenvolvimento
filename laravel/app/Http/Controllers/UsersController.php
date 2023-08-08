@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\ApiPostsController;
 use App\Http\Controllers\Api\ApiSeguirsController;
 use App\Http\Controllers\Api\ApiUsersController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
@@ -20,8 +21,8 @@ class UsersController extends Controller
         $this->apiComentariosController = $api4;
     }
 
- 
-        
+
+
 
     public function index(){
         return view('bootstrap.index');
@@ -33,9 +34,9 @@ class UsersController extends Controller
 
 
     public function perfil(){
-        
+
         return view('bootstrap.perfil');
-        
+
     }
 
 
@@ -52,13 +53,13 @@ class UsersController extends Controller
 
     public function postagens()
     {
-        \Log::info('Entrou na função postagens()');
-
+        $follower = Auth::user();
+        dd($follower);
         $response = $this->apiUsersController->getAllUsers();
         return view('bootstrap.postagens', ['users' => $response]); // Passa os dados para a view
 
     }
-   
+
     // MÉTODO POST
     public function postagens2(Request $request){
 

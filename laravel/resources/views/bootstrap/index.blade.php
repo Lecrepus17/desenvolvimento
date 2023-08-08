@@ -39,14 +39,14 @@
 						<p class="highlight-paragraph">
           Ainda não é um AmiGo? Torne-se um amigo <a href="{{ route('register')}}" title="" class="highlight">aqui.</a>
         </p>
-						<form method="post" action="{{ route('login.user')}}">
+						<form method="POST" action="{{ route('login')}}">
 							@csrf
 							<div class="form-group" >
-							  <input type="text" id="input" required="required"/>
-							  <label class="control-label" for="input">Nome de usuário</label><i class="mtrl-select"></i>
+							  <input type="email" id="input" required="required" name="email"/>
+							  <label class="control-label" for="input">Email</label><i class="mtrl-select"></i>
 							</div>
 							<div class="form-group">
-							  <input type="password" required="required"/>
+							  <input type="password" required="required" name="password"/>
 							  <label class="control-label" for="input">Senha</label><i class="mtrl-select"></i>
 							</div>
 							<div class="submit-btns">

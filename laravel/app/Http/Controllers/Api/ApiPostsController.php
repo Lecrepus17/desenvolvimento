@@ -28,7 +28,9 @@ class ApiPostsController extends Controller
     }
 
     public function getAllPostUser(){
-        $allPost = Post::where();
+        $follower = Auth::user();
+        $allPost = Post::where('user_kf');
+        dd($follower);
     }
 
     public function getAllPost() {

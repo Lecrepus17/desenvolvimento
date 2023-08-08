@@ -648,9 +648,8 @@ header.sticky {
 }
 
 body .topbar {
-    background: #9400D3; /* Cor roxa (#9400D3) */
-    color: #fff; /* Cor do texto (opcional) */
-    /* Adicione mais estilos de layout, tamanho de fonte, etc., conforme necessário */
+    background: #9400D3;
+    color: #fff;
   }
 
 .logo {

@@ -26,6 +26,11 @@ class ApiPostsController extends Controller
         })->get();
         return $post;
     }
+
+    public function getAllPostUser(){
+        $allPost = Post::where();
+    }
+
     public function getAllPost() {
         $post = Post::all();
         return $post;

@@ -34,7 +34,7 @@
 					<ul>
 						<li><a href="{{route('postagens')}}" title="">Página incial</a></li>
 						<li><a href="{{route('feedSeguindo')}}" title="">Seguindo</a></li>
-						
+
 					</ul>
 				</li>
 				<li>
@@ -44,15 +44,12 @@
 						<li><a href="{{route('amigos')}}" title="">Meus Amigos</a></li>
 					</ul>
 				</li>
-				
+
 			</ul>
 			<div class="user-img">
 				<img src="images/resources/admin.jpg" alt="">
 				<span class="status f-online"></span>
 				<div class="user-setting">
-					<a href="#" title=""><span class="status f-online"></span>online</a>
-					<a href="#" title=""><span class="status f-away"></span>away</a>
-					<a href="#" title=""><span class="status f-off"></span>offline</a>
 					<a href="{{route('perfil')}}" title=""><i class="ti-user"></i> ver perfil</a>
 					<a href="{{route('editar_perfil')}}" title=""><i class="ti-pencil-alt"></i>editar perfil</a>
 					<a href="#" title=""><i class="ti-power-off"></i>log out</a>
@@ -95,46 +92,6 @@
 											</li>
 										</ul>
 									</div><!-- Shortcuts -->
-									<div class="widget stick-widget">
-										<h4 class="widget-title">Who's follownig</h4>
-										<ul class="followers">
-											<li>
-												<figure><img src="images/resources/friend-avatar2.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Kelly Bill</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar4.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Issabel</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar6.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Andrew</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar8.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Sophia</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar3.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Allen</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-										</ul>
-									</div><!-- who's following -->
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
@@ -749,8 +706,8 @@
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
-									
-									
+
+
 									<div class="widget friend-list stick-widget">
 										<h4 class="widget-title">Friends</h4>
 										<div id="searchDir"></div>
@@ -851,7 +808,7 @@
 												</div>
 											</li>
 										</ul>
-										
+
 									</div><!-- friends list sidebar -->
 								</aside>
 							</div><!-- sidebar -->
@@ -862,7 +819,7 @@
 		</div>
 	</section>
 
-	
+
 
 	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
 	<script src="js/script.js"></script>

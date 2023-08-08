@@ -696,6 +696,19 @@
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
+									<div class="widget">
+										<h4 class="widget-title">Sua página</h4>
+										<div class="your-page">
+											<figure>
+												<a href="{{route('perfil')}}" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
+											</figure>
+											<div class="page-meta">
+												<a href="{{route('perfil')}}" title="" class="underline">Meu perfil</a>
+												<span><i class="ti-comment"></i><a href="insight.html" title="">Posts <em>##</em></a></span>
+												<span><i class="ti-bell"></i><a href="insight.html" title="">AmiGos <em>##</em></a></span>
+											</div>
+										</div>
+									</div><!-- page like widget -->
 
 
 									<div class="widget friend-list stick-widget">

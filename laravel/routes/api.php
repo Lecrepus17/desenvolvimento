@@ -44,3 +44,5 @@ Route::get('/getComent/{id}', [ApiComentariosController::class, 'getComent'])->n
 Route::get('/coment', [ApiComentariosController::class, 'getAllComent'])->name('coment');
 Route::post('/createComent', [ApiComentariosController::class, 'createComent'])->name('createComent');
 Route::delete('/deleteComent/{id}', [ApiComentariosController::class, 'deleteComent'])->name('deleteComent');
+
+Route::get('/getAllPostUser', [ApiPostsController::class, 'getAllPostUser'])->name('getAllPostUser');

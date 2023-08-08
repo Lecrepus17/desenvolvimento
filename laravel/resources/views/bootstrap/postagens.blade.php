@@ -46,16 +46,6 @@
 				</li>
 
 			</ul>
-			<div class="user-img">
-				<img src="images/resources/admin.jpg" alt="">
-				<span class="status f-online"></span>
-				<div class="user-setting">
-					<a href="{{route('perfil')}}" title=""><i class="ti-user"></i> ver perfil</a>
-					<a href="{{route('editar_perfil')}}" title=""><i class="ti-pencil-alt"></i>editar perfil</a>
-					<a href="#" title=""><i class="ti-power-off"></i>log out</a>
-				</div>
-			</div>
-			<span class="ti-menu main-menu" data-ripple=""></span>
 		</div>
 	</div><!-- topbar -->
 
@@ -772,39 +762,6 @@
 												<div class="friendz-meta">
 													<a href="time-line.html">andrew</a>
 													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1872796b77767a587f75797174367b7775">[email&#160;protected]</a></i>
-												</div>
-											</li>
-											<li>
-
-												<figure>
-													<img src="images/resources/friend-avatar7.jpg" alt="">
-													<span class="status f-off"></span>
-												</figure>
-												<div class="friendz-meta">
-													<a href="time-line.html">amy watson</a>
-													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="711b10021e1f1331161c10181d5f121e1c">[email&#160;protected]</a></i>
-												</div>
-											</li>
-											<li>
-
-												<figure>
-													<img src="images/resources/friend-avatar5.jpg" alt="">
-													<span class="status f-online"></span>
-												</figure>
-												<div class="friendz-meta">
-													<a href="time-line.html">daniel warber</a>
-													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="234942504c4d4163444e424a4f0d404c4e">[email&#160;protected]</a></i>
-												</div>
-											</li>
-											<li>
-
-												<figure>
-													<img src="images/resources/friend-avatar2.jpg" alt="">
-													<span class="status f-away"></span>
-												</figure>
-												<div class="friendz-meta">
-													<a href="time-line.html">Sarah Loren</a>
-													<i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d5b7b4a7bbb0a695b2b8b4bcb9fbb6bab8">[email&#160;protected]</a></i>
 												</div>
 											</li>
 										</ul>

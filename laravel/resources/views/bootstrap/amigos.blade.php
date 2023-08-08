@@ -100,7 +100,6 @@
 									<li>
 									<a class="" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
 									<a class="active" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
-									<a class="" href="{{route('sobre_perfil')}}" title="" data-ripple="">Informações</a>
 									<a class="" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
 
 								</li>

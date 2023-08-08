@@ -155,6 +155,18 @@
 																<ins>52</ins>
 															</span>
 														</li>
+														<script>
+   															 const likeButton = document.querySelector('.like');
+    														const likeCount = likeButton.querySelector('ins');
+
+ 														   likeButton.addEventListener('click', function () {
+        													// Aqui você pode incrementar a contagem de likes
+       														 let currentLikes = parseFloat(likeCount.textContent);
+      														  currentLikes += 1; // Você pode ajustar a lógica de incremento conforme necessário
+     														   likeCount.textContent = currentLikes.toFixed(1); // Atualiza o contador exibido
+  															  });
+															</script>
+
 														<li>
 															<span class="like" data-toggle="tooltip" title="like">
 																<i class="ti-heart"></i>

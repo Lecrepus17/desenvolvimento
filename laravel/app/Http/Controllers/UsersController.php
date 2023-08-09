@@ -71,7 +71,8 @@ class UsersController extends Controller
 
     public function postagens()
     {
-        $follower = Auth::user();
+        $response = $this->apiComentariosController->getAllUsers();
+        $response = $this->apiPostsController->getAllUsers();
 
         $response = $this->apiUsersController->getAllUsers();
         return view('bootstrap.postagens', ['users' => $response]); // Passa os dados para a view

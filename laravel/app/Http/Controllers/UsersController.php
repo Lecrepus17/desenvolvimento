@@ -11,14 +11,14 @@ use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
-    protected ApiUsersController $apiUsersController;
+    protected ApiUsersController $ApiUsersController;
     protected ApiSeguirsController $ApiSeguirsController;
     protected ApiPostsController $ApiPostsController;
     protected ApiComentariosController $ApiComentariosController;
 
-    public function __construct(ApiUsersController $api1, ApiSeguirsController $ApiSeguirsController, ApiPostsController $ApiPostsController, ApiComentariosController $ApiComentariosController)
+    public function __construct(ApiUsersController $ApiUsersController, ApiSeguirsController $ApiSeguirsController, ApiPostsController $ApiPostsController, ApiComentariosController $ApiComentariosController)
     {
-        $this->apiUsersController = $api1;
+        $this->ApiUsersController = $ApiUsersController;
         $this->ApiSeguirsController = $ApiSeguirsController;
         $this->ApiPostsController = $ApiPostsController;
         $this->ApiComentariosController = $ApiComentariosController;
@@ -74,10 +74,10 @@ class UsersController extends Controller
 
     public function postagens()
     {
-        $response = $this->apiComentariosController->getAllUsers();
-        $response = $this->apiPostsController->getAllUsers();
+        $response = $this->ApiComentariosController->getAllComent();
+        $response = $this->ApiPostsController->getAllPost();
 
-        $response = $this->apiUsersController->getAllUsers();
+        $response = $this->ApiUsersController->getAllUsers();
         return view('bootstrap.postagens', ['users' => $response]); // Passa os dados para a view
 
     }

@@ -74,7 +74,7 @@
 											</li>
 											<li>
 											<img src="assets/images/sair.png" alt="" class="ti-files">
-												<a href="landing.html" title="">Sair</a>
+												<a href="{{route('logout')}}" title="">Sair</a>
 											</li>
 										</ul>
 									</div><!-- Shortcuts -->
@@ -169,7 +169,7 @@
   														</script>
 															<style>
     														.liked i{
-       															 color: red; 
+       															 color: red;
  															   }
 															</style>
 													</ul>

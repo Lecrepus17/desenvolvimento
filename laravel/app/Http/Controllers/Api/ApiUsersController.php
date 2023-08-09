@@ -29,28 +29,10 @@ class ApiUsersController extends Controller
         $data['password'] = Hash::make($data['password']);
         $user = $this->repository->create($data);
         event(new Registered($user));
-        return redirect()->route('index');
+        return redirect()->route('login');
     }
-    public function login(Request $request){
-        $data = $request->validate([
-            'email' => 'required',
-            'password' => 'required'
-        ]);
 
-        if (Auth::attempt($data)){
-            // Mensagem de depuração para verificar se a autenticação foi bem-sucedida
-            \Log::info('Usuário autenticado com sucesso.');
-            return redirect()->route('postagens');
-        } else {
-            // Mensagem de depuração para verificar se a autenticação falhou
-            \Log::info('Autenticação falhou.');
-            return redirect()->route('index');
-        }
-    }
-    public function logout(){
-        Auth::logout();
-        return redirect()->route('home');
-    }
+
     public function getUser(string $id) {
         $user = $this->repository->findOrFail($id);
 

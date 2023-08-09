@@ -39,7 +39,7 @@
 					<div class="log-reg-area sign">
 						<h2 class="log-title">Cadastre-se</h2>
 							<p class="highlight-paragraph">
-								Já é um amigo? Entre na sua conta <a href="{{ route('index')}}" title="" class="highlight">aqui.</a>
+								Já é um amigo? Entre na sua conta <a href="{{ route('login')}}" title="" class="highlight">aqui.</a>
 							</p>
 
 

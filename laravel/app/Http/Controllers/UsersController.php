@@ -23,10 +23,28 @@ class UsersController extends Controller
 
 
 
+    public function index(Request $request){
+        if($request->isMethod('POST')){
 
-    public function index(){
+            $data = $request->validate([
+                'email' => 'required',
+                'password' => 'required'
+            ]);
+
+            if (Auth::attempt($data)){
+                return redirect()->route('postagens');
+            } else {
+                return redirect()->route('login')->with('erro', 'Deu ruim');
+            }
+        }
         return view('bootstrap.index');
     }
+
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('login');
+    }
+
 
     public function register(){
         return view('bootstrap.register');
@@ -54,7 +72,7 @@ class UsersController extends Controller
     public function postagens()
     {
         $follower = Auth::user();
-        dd($follower);
+
         $response = $this->apiUsersController->getAllUsers();
         return view('bootstrap.postagens', ['users' => $response]); // Passa os dados para a view
 

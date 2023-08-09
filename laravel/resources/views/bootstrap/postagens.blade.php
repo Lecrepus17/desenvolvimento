@@ -109,7 +109,6 @@
 
 
                                 @foreach ($posts as $post)
-                                @foreach ($users as $user)
 
                                                 @endforeach
 								<div class="loadMore">
@@ -121,7 +120,10 @@
 											</figure>
 											<div class="friend-name">
 												<ins><a href="time-line.html" title="">
-
+                                @foreach ($users as $user)
+                                @if ($post->user_fk = $user->id)
+                                    {{$user->name}}
+                                @endif
                                                 </a></ins>
 												<span>published: june,2 2018 19:PM</span>
 											</div>

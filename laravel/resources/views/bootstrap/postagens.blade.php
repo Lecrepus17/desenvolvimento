@@ -155,30 +155,45 @@
 																<ins>52</ins>
 															</span>
 														</li>
-														<script>
-   															 const likeButton = document.querySelector('.like');
-    														const likeCount = likeButton.querySelector('ins');
-
- 														   likeButton.addEventListener('click', function () {
-        													// Aqui você pode incrementar a contagem de likes
-       														 let currentLikes = parseFloat(likeCount.textContent);
-      														  currentLikes += 1; // Você pode ajustar a lógica de incremento conforme necessário
-     														   likeCount.textContent = currentLikes.toFixed(1); // Atualiza o contador exibido
-  															  });
-															</script>
+														
 
 														<li>
 															<span class="like" data-toggle="tooltip" title="like">
 																<i class="ti-heart"></i>
-																<ins>2.2k</ins>
+																<ins>0</ins>
 															</span>
 														</li>
-														<li>
-															<span class="dislike" data-toggle="tooltip" title="dislike">
-																<i class="ti-heart-broken"></i>
-																<ins>200</ins>
-															</span>
-														</li>
+														<script>
+															const likeButton = document.querySelector('.like');
+ 													  	 	const likeCount = likeButton.querySelector('ins');
+   															 let hasLiked = false; // Variável para rastrear se o botão foi clicado
+
+  														  likeButton.addEventListener('click', function () {
+   														     if (!hasLiked) {
+         													   let currentLikes = parseFloat(likeCount.textContent);
+          														  currentLikes += 1;
+          													  likeCount.textContent = currentLikes.toFixed(1);
+
+           												 hasLiked = true; // Atualiza o estado para indicar que o botão foi clicado
+															likeButton.classList.add('liked'); // Adiciona uma classe para estilo visual
+        													} else {
+         													  let currentLikes = parseFloat(likeCount.textContent);
+          													  currentLikes -= 1;
+          													  likeCount.textContent = currentLikes.toFixed(1);
+
+           													 hasLiked = false; // Botão foi deslikado
+           													 likeButton.classList.remove('liked'); // Remove a classe de estilo visual
+      													  }
+
+   														 });
+
+  														</script>
+															<style>
+    														.liked i{
+       															 color: red; 
+ 															   }
+															</style>
+														
 														<li class="social-media">
 															<div class="menu">
 															  <div class="btn trigger"><i class="fa fa-share-alt"></i></div>

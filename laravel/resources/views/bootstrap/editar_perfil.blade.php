@@ -21,7 +21,7 @@
 
 <div class="topbar stick">
 		<div class="logo">
-			<a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
+			<a title="" href="{{route('postagens')}}"><img src="assets/images/logo2.png" alt=""></a>
 		</div>
 
 		<div class="top-area">
@@ -43,22 +43,8 @@
 				</li>
 
 			</ul>
-			<div class="user-img">
-				<img src="images/resources/admin.jpg" alt="">
-				<span class="status f-online"></span>
-				<div class="user-setting">
-					<a href="#" title=""><span class="status f-online"></span>online</a>
-					<a href="#" title=""><span class="status f-away"></span>away</a>
-					<a href="#" title=""><span class="status f-off"></span>offline</a>
-					<a href="{{route('perfil')}}" title=""><i class="ti-user"></i> ver perfil</a>
-					<a href="{{route('editar_perfil')}}" title=""><i class="ti-pencil-alt"></i>editar perfil</a>
-					<a href="#" title=""><i class="ti-power-off"></i>log out</a>
-				</div>
-			</div>
-			<span class="ti-menu main-menu" data-ripple=""></span>
 		</div>
 	</div><!-- topbar -->
-
 	<section>
 		<div class="feature-photo">
 			<figure><img src="images/resources/timeline-1.jpg" alt=""></figure>
@@ -117,56 +103,28 @@
 						<div class="row" id="page-contents">
 							<div class="col-lg-3">
 								<aside class="sidebar static">
-									<div class="widget">
-										<h4 class="widget-title">Recent Activity</h4>
-										<ul class="activitiez">
-											<li>
-												<div class="activity-meta">
-													<i>10 hours Ago</i>
-													<span><a title="" href="#">Commented on Video posted </a></span>
-													<h6>by <a href="time-line.html">black demon.</a></h6>
-												</div>
-											</li>
-											<li>
-												<div class="activity-meta">
-													<i>30 Days Ago</i>
-													<span><a title="" href="#">Posted your status. “Hello guys, how are you?”</a></span>
-												</div>
-											</li>
-											<li>
-												<div class="activity-meta">
-													<i>2 Years Ago</i>
-													<span><a title="" href="#">Share a video on her timeline.</a></span>
-													<h6>"<a href="#">you are so funny mr.been.</a>"</h6>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="widget stick-widget">
-										<h4 class="widget-title">Edit info</h4>
+								<div class="widget">
+										<h4 class="widget-title">Atalhos</h4>
 										<ul class="naves">
 											<li>
-												<i class="ti-info-alt"></i>
-												<a href="edit-profile-basic.html" title="">Basic info</a>
+											<img src="assets/images/sinal-aprovado.png" alt="" class="ti-files">
+												<a href="{{route('postagens')}}" title="">Recomendados</a>
 											</li>
 											<li>
-												<i class="ti-mouse-alt"></i>
-												<a href="edit-work-eductation.html" title="">Education & Work</a>
+												<img src="assets/images/editar-texto.png" alt="" class="ti-files">
+												<a href="{{route('perfil')}}" title="">Meus Posts</a>
 											</li>
 											<li>
-												<i class="ti-heart"></i>
-												<a href="edit-interest.html" title="">My interests</a>
+											<img src="assets/images/amigos.png" alt="" class="ti-files">
+												<a href="{{route('feedSeguindo')}}" title="">Posts dos meus AmiGos</a>
 											</li>
 											<li>
-												<i class="ti-settings"></i>
-												<a href="edit-account-setting.html" title="">account setting</a>
-											</li>
-											<li>
-												<i class="ti-lock"></i>
-												<a href="edit-password.html" title="">change password</a>
+											<img src="assets/images/sair.png" alt="" class="ti-files">
+												<a href="{{route('logout')}}" title="">Sair</a>
 											</li>
 										</ul>
-									</div><!-- settings widget -->
+									</div><!-- Shortcuts -->
+									
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
@@ -199,122 +157,7 @@
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
-									<div class="widget">
-											<h4 class="widget-title">Your page</h4>
-											<div class="your-page">
-												<figure>
-													<a title="" href="#"><img alt="" src="images/resources/friend-avatar9.jpg"></a>
-												</figure>
-												<div class="page-meta">
-													<a class="underline" title="" href="#">My page</a>
-													<span><i class="ti-comment"></i>Messages <em>9</em></span>
-													<span><i class="ti-bell"></i>Notifications <em>2</em></span>
-												</div>
-												<div class="page-likes">
-													<ul class="nav nav-tabs likes-btn">
-														<li class="nav-item"><a data-toggle="tab" href="#link1" class="active">likes</a></li>
-														 <li class="nav-item"><a data-toggle="tab" href="#link2" class="">views</a></li>
-													</ul>
-													<!-- Tab panes -->
-													<div class="tab-content">
-													  <div id="link1" class="tab-pane active fade show">
-														<span><i class="ti-heart"></i>884</span>
-														  <a title="weekly-likes" href="#">35 new likes this week</a>
-														  <div class="users-thumb-list">
-														  	<a data-toggle="tooltip" title="" href="#" data-original-title="Anderw">
-																<img alt="" src="images/resources/userlist-1.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="frank">
-																<img alt="" src="images/resources/userlist-2.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Sara">
-																<img alt="" src="images/resources/userlist-3.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Amy">
-																<img alt="" src="images/resources/userlist-4.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Ema">
-																<img alt="" src="images/resources/userlist-5.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Sophie">
-																<img alt="" src="images/resources/userlist-6.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Maria">
-																<img alt="" src="images/resources/userlist-7.jpg">
-															</a>
-														  </div>
-													  </div>
-													  <div id="link2" class="tab-pane fade">
-														  <span><i class="ti-eye"></i>445</span>
-														  <a title="weekly-likes" href="#">440 new views this week</a>
-														  <div class="users-thumb-list">
-														  	<a data-toggle="tooltip" title="" href="#" data-original-title="Anderw">
-																<img alt="" src="images/resources/userlist-1.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="frank">
-																<img alt="" src="images/resources/userlist-2.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Sara">
-																<img alt="" src="images/resources/userlist-3.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Amy">
-																<img alt="" src="images/resources/userlist-4.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Ema">
-																<img alt="" src="images/resources/userlist-5.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Sophie">
-																<img alt="" src="images/resources/userlist-6.jpg">
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Maria">
-																<img alt="" src="images/resources/userlist-7.jpg">
-															</a>
-														  </div>
-													  </div>
-													</div>
-												</div>
-											</div>
-										</div>
-									<div class="widget stick-widget">
-										<h4 class="widget-title">Who's follownig</h4>
-										<ul class="followers">
-											<li>
-												<figure><img src="images/resources/friend-avatar2.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Kelly Bill</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar4.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Issabel</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar6.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Andrew</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar8.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Sophia</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar3.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Allen</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-										</ul>
-									</div><!-- who's following -->
+									
 								</aside>
 							</div><!-- sidebar -->
 						</div>

@@ -34,7 +34,7 @@
 					<ul>
 						<li><a href="{{route('postagens')}}" title="">Página incial</a></li>
 						<li><a href="{{route('feedSeguindo')}}" title="">Seguindo</a></li>
-						
+
 					</ul>
 				</li>
 				<li>
@@ -44,24 +44,10 @@
 						<li><a href="{{route('amigos')}}" title="">Meus Amigos</a></li>
 					</ul>
 				</li>
-				
+
 			</ul>
-			<div class="user-img">
-				<img src="images/resources/admin.jpg" alt="">
-				<span class="status f-online"></span>
-				<div class="user-setting">
-					<a href="#" title=""><span class="status f-online"></span>online</a>
-					<a href="#" title=""><span class="status f-away"></span>away</a>
-					<a href="#" title=""><span class="status f-off"></span>offline</a>
-					<a href="{{route('perfil')}}" title=""><i class="ti-user"></i> ver perfil</a>
-					<a href="{{route('editar_perfil')}}" title=""><i class="ti-pencil-alt"></i>editar perfil</a>
-					<a href="#" title=""><i class="ti-power-off"></i>log out</a>
-				</div>
-			</div>
-			<span class="ti-menu main-menu" data-ripple=""></span>
 		</div>
 	</div><!-- topbar -->
-
 		
 	<section>
 		<div class="gap gray-bg">

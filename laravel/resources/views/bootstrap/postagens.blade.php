@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
 	<title>AmiGo</title>
     <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="16x16">
 
@@ -14,14 +11,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/color.css">
     <link rel="stylesheet" href="css/responsive.css">
-
 </head>
+
 <body>
-<!--<div class="se-pre-con"></div>-->
 <div class="theme-layout">
 
-
-
+<!-- header -->
 	<div class="topbar stick">
 		<div class="logo">
 			<a title="" href="{{route('postagens')}}"><img src="assets/images/logo2.png" alt=""></a>
@@ -47,7 +42,8 @@
 
 			</ul>
 		</div>
-	</div><!-- topbar -->
+	</div>
+<!-- header -->
 
 	<section>
 		<div class="gap gray-bg">
@@ -58,6 +54,19 @@
 							<div class="col-lg-3">
 								<aside class="sidebar static">
 									<div class="widget">
+									<div class="widget">
+									<h4 class="widget-title">Sua página</h4>
+										<div class="your-page">
+											<figure>
+												<a href="{{route('perfil')}}" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
+											</figure>
+											<div class="page-meta">
+												<a href="{{route('perfil')}}" title="" class="underline">Meu perfil</a>
+												<span><i class="ti-comment"></i><a href="insight.html" title="">Posts <em>##</em></a></span>
+												<span><i class="ti-bell"></i><a href="insight.html" title="">AmiGos <em>##</em></a></span>
+											</div>
+										</div>
+									</div><!-- page like widget -->
 										<h4 class="widget-title">Atalhos</h4>
 										<ul class="naves">
 											<li>
@@ -111,8 +120,9 @@
                                 @foreach ($posts as $post)
 
 
-								<div class="loadMore">
+								
 								<div class="central-meta item">
+									
 									<div class="user-post">
 										<div class="friend-info">
 											<figure>
@@ -126,7 +136,6 @@
                                 @endif
                                 @endforeach
                                                 </a></ins>
-												<span>published: june,2 2018 19:PM</span>
 											</div>
                                             <div class="description">
                                                 <p>
@@ -154,34 +163,37 @@
 															let hasLiked = false; // Variável para rastrear se o botão foi clicado
 
 															likeButton.addEventListener('click', function () {
-															if (!hasLiked) {
-																let currentLikes = parseFloat(likeCount.textContent);
-																currentLikes += 1;
+																if (!hasLiked) {
+																	let currentLikes = parseFloat(likeCount.textContent);
+																	currentLikes += 1;
 
-																if (currentLikes === 1) {
-																likeCount.textContent = currentLikes;
+																	// Verifica se o número é inteiro
+																	if (currentLikes % 1 === 0) {
+																		likeCount.textContent = currentLikes; // Exibe o número sem decimais
+																	} else {
+																		likeCount.textContent = currentLikes.toFixed(1); // Exibe o número com 1 casa decimal
+																	}
+
+																	hasLiked = true; // Atualiza o estado para indicar que o botão foi clicado
+																	likeButton.classList.add('liked'); // Adiciona uma classe para estilo visual
 																} else {
-																likeCount.textContent = currentLikes.toFixed(1);
+																	let currentLikes = parseFloat(likeCount.textContent);
+																	currentLikes -= 1;
+
+																	// Verifica se o número é inteiro
+																	if (currentLikes % 1 === 0) {
+																		likeCount.textContent = currentLikes; // Exibe o número sem decimais
+																	} else {
+																		likeCount.textContent = currentLikes.toFixed(1); // Exibe o número com 1 casa decimal
+																	}
+
+																	hasLiked = false; // Botão foi deslikado
+																	likeButton.classList.remove('liked'); // Remove a classe de estilo visual
 																}
-
-																hasLiked = true; // Atualiza o estado para indicar que o botão foi clicado
-																likeButton.classList.add('liked'); // Adiciona uma classe para estilo visual
-															} else {
-																let currentLikes = parseFloat(likeCount.textContent);
-																currentLikes -= 1;
-
-																if (currentLikes === 0) {
-																likeCount.textContent = currentLikes;
-																} else {
-																likeCount.textContent = currentLikes.toFixed(1);
-																}
-
-																hasLiked = false; // Botão foi deslikado
-																likeButton.classList.remove('liked'); // Remove a classe de estilo visual
-															}
 															});
+														</script>
 
-  														</script>
+
 															<style>
     														.liked i{
        															 color: red;
@@ -202,7 +214,6 @@
 														<div class="coment-head">
 															<h5><a href="time-line.html" title="">Jason borne</a></h5>
 															<span>1 year ago</span>
-															<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
 														</div>
 														<p>
                                                              @foreach ($comentarios as $comentario)
@@ -214,49 +225,16 @@
 													</div>
 
 												</li>
-												<li>
-													<div class="comet-avatar">
-														<img src="images/resources/comet-1.jpg" alt="">
-													</div>
-													<div class="we-comment">
-														<div class="coment-head">
-															<h5><a href="time-line.html" title="">Donald Trump</a></h5>
-															<span>1 week ago</span>
-															<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-														</div>
-														<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel
-															<i class="em em-smiley"></i>
-														</p>
-													</div>
-												</li>
-												<li>
-													<a href="#" title="" class="showmore underline">more comments</a>
-												</li>
 												<li class="post-comment">
 													<div class="comet-avatar">
 														<img src="images/resources/comet-1.jpg" alt="">
 													</div>
 													<div class="post-comt-box">
 														<form method="post">
-															<textarea placeholder="Post your comment"></textarea>
-															<div class="add-smiles">
-																<span class="em em-expressionless" title="add icon"></span>
-															</div>
-															<div class="smiles-bunch">
-																<i class="em em---1"></i>
-																<i class="em em-smiley"></i>
-																<i class="em em-anguished"></i>
-																<i class="em em-laughing"></i>
-																<i class="em em-angry"></i>
-																<i class="em em-astonished"></i>
-																<i class="em em-blush"></i>
-																<i class="em em-disappointed"></i>
-																<i class="em em-worried"></i>
-																<i class="em em-kissing_heart"></i>
-																<i class="em em-rage"></i>
-																<i class="em em-stuck_out_tongue"></i>
-															</div>
-															<button type="submit"></button>
+															<textarea placeholder="Faça seu comentário"></textarea>
+															<li>
+															<button type="submit">Postar</button>
+															</li>
 														</form>
 													</div>
 												</li>
@@ -265,10 +243,6 @@
 									</div>
 								</div>
                                 @endforeach
-
-
-
-
 						</div>
 					</div>
 				</div>
@@ -281,7 +255,6 @@
 	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/map-init.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 
 </body>
 

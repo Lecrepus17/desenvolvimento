@@ -12,13 +12,16 @@ use Illuminate\Support\Facades\Auth;
 class UsersController extends Controller
 {
     protected ApiUsersController $apiUsersController;
+    protected ApiSeguirsController $ApiSeguirsController;
+    protected ApiPostsController $ApiPostsController;
+    protected ApiComentariosController $ApiComentariosController;
 
-    public function __construct(ApiUsersController $api1, ApiSeguirsController $api2, ApiPostsController $api3, ApiComentariosController $api4)
+    public function __construct(ApiUsersController $api1, ApiSeguirsController $ApiSeguirsController, ApiPostsController $ApiPostsController, ApiComentariosController $ApiComentariosController)
     {
         $this->apiUsersController = $api1;
-        $this->apiSeguirsController = $api2;
-        $this->apiPostsController = $api3;
-        $this->apiComentariosController = $api4;
+        $this->ApiSeguirsController = $ApiSeguirsController;
+        $this->ApiPostsController = $ApiPostsController;
+        $this->ApiComentariosController = $ApiComentariosController;
     }
 
 

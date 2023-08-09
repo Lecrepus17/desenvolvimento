@@ -74,11 +74,11 @@ class UsersController extends Controller
 
     public function postagens()
     {
-        $response = $this->ApiComentariosController->getAllComent();
-        $response = $this->ApiPostsController->getAllPost();
+        $comentario = $this->ApiComentariosController->getAllComent();
+        $post = $this->ApiPostsController->getAllPost();
 
-        $response = $this->ApiUsersController->getAllUsers();
-        return view('bootstrap.postagens', ['users' => $response]); // Passa os dados para a view
+        $user = $this->ApiUsersController->getAllUsers();
+        return view('bootstrap.postagens', ['users' => $user, 'posts' => $post]); // Passa os dados para a view
 
     }
 

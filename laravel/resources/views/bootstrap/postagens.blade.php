@@ -106,6 +106,12 @@
 										</div>
 									</div>
 								</div><!-- add post new box -->
+
+
+                                @foreach ($posts as $post)
+                                @foreach ($users as $user)
+
+                                                @endforeach
 								<div class="loadMore">
 								<div class="central-meta item">
 									<div class="user-post">
@@ -114,7 +120,9 @@
 												<img src="images/resources/friend-avatar10.jpg" alt="">
 											</figure>
 											<div class="friend-name">
-												<ins><a href="time-line.html" title="">Janice Griffith</a></ins>
+												<ins><a href="time-line.html" title="">
+
+                                                </a></ins>
 												<span>published: june,2 2018 19:PM</span>
 											</div>
 											<div class="post-meta">
@@ -275,6 +283,7 @@
 										</div>
 									</div>
 								</div>
+                                @endforeach
 								<div class="central-meta item">
 									<div class="user-post">
 										<div class="friend-info">

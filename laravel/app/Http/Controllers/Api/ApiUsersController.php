@@ -45,7 +45,10 @@ class ApiUsersController extends Controller
         $user = $this->repository->findOrFail($id);
 
         $data = $request->validated();
-
+        if ($request->hasFile('profile_image')) {
+            $imagePath = $request->file('profile_image')->store('profile_images', 'public');
+            $data['profile_image'] = $imagePath;
+        }
         if ($request->password)
             $data['password'] = bcrypt($request->password);
 

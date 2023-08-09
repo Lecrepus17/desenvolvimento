@@ -63,7 +63,8 @@ class UsersController extends Controller
 
     // MÉTODO GET
     public function editar_perfil(){
-        return view('bootstrap.editar_perfil');
+        $user = Auth::user();
+        return view('bootstrap.editar_perfil', ['user' => $user]);
     }
     // MÉTODO POST
     public function editar_perfil2(Request $request){
@@ -77,7 +78,6 @@ class UsersController extends Controller
         $comentario = $this->ApiComentariosController->getAllComent();
         $post = $this->ApiPostsController->getAllPost();
         $response = $this->ApiUsersController->getAllUsers(); // Sua chamada à API para obter os usuários
-
         $user = $response->getData();
         return view('bootstrap.postagens', ['users' => $user, 'posts' => $post, 'comentarios' => $comentario]); // Passa os dados para a view
 

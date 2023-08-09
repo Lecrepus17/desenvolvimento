@@ -31,7 +31,7 @@
 					<ul>
 						<li><a href="{{route('postagens')}}" title="">Página incial</a></li>
 						<li><a href="{{route('feedSeguindo')}}" title="">Seguindo</a></li>
-						
+
 					</ul>
 				</li>
 				<li>
@@ -41,7 +41,7 @@
 						<li><a href="{{route('amigos')}}" title="">Meus Amigos</a></li>
 					</ul>
 				</li>
-				
+
 			</ul>
 			<div class="user-img">
 				<img src="images/resources/admin.jpg" alt="">
@@ -174,7 +174,9 @@
 									<div class="editing-info">
 										<h5 class="f-title"><i class="ti-info-alt"></i> Edit Basic Information</h5>
 
-										<form method="post" action="{{ route('update.user') }}">
+										<form method="post" action="{{ route('update.users', ['id' => $user->id]) }}" enctype="multipart/form-data">
+                                            @csrf
+                                            @method('PATCH')
 											<div class="form-group half">
 											  <input type="text" id="input" required="required"/>
 											  <label class="control-label" for="input">First Name</label><i class="mtrl-select"></i>
@@ -686,7 +688,7 @@
 		</div>
 	</section>
 
-	
+
 
 	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
 	<script src="js/script.js"></script>

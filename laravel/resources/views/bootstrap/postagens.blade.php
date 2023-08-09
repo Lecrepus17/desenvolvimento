@@ -58,27 +58,23 @@
 							<div class="col-lg-3">
 								<aside class="sidebar static">
 									<div class="widget">
-										<h4 class="widget-title">Shortcuts</h4>
+										<h4 class="widget-title">Atalhos</h4>
 										<ul class="naves">
 											<li>
-												<i class="ti-clipboard"></i>
-												<a href="newsfeed.html" title="">News feed</a>
+											<img src="assets/images/sinal-aprovado.png" alt="" class="ti-files">
+												<a href="{{route('postagens')}}" title="">Recomendados</a>
 											</li>
 											<li>
-												<i class="ti-mouse-alt"></i>
-												<a href="inbox.html" title="">Inbox</a>
+												<img src="assets/images/editar-texto.png" alt="" class="ti-files">
+												<a href="{{route('postagens')}}" title="">Meus Posts</a>
 											</li>
 											<li>
-												<i class="ti-files"></i>
-												<a href="fav-page.html" title="">My pages</a>
+											<img src="assets/images/amigos.png" alt="" class="ti-files">
+												<a href="{{route('postagens')}}" title="">Posts dos meus AmiGos</a>
 											</li>
 											<li>
-												<i class="ti-user"></i>
-												<a href="{{route('amigos')}}" title="">Amigos</a>
-											</li>
-											<li>
-												<i class="ti-power-off"></i>
-												<a href="landing.html" title="">Logout</a>
+											<img src="assets/images/sair.png" alt="" class="ti-files">
+												<a href="landing.html" title="">Sair</a>
 											</li>
 										</ul>
 									</div><!-- Shortcuts -->
@@ -92,15 +88,9 @@
 										</figure>
 										<div class="newpst-input">
 											<form method="post">
-												<textarea rows="2" placeholder="write something"></textarea>
+												<textarea rows="2" placeholder="escreva algo..."></textarea>
 												<div class="attachments">
 													<ul>
-														<li>
-															<i class="fa fa-music"></i>
-															<label class="fileContainer">
-																<input type="file">
-															</label>
-														</li>
 														<li>
 															<i class="fa fa-image"></i>
 															<label class="fileContainer">
@@ -108,19 +98,7 @@
 															</label>
 														</li>
 														<li>
-															<i class="fa fa-video-camera"></i>
-															<label class="fileContainer">
-																<input type="file">
-															</label>
-														</li>
-														<li>
-															<i class="fa fa-camera"></i>
-															<label class="fileContainer">
-																<input type="file">
-															</label>
-														</li>
-														<li>
-															<button type="submit">Post</button>
+															<button type="submit">Postar</button>
 														</li>
 													</ul>
 												</div>
@@ -143,10 +121,10 @@
 												<img src="images/resources/user-post.jpg" alt="">
 												<div class="we-video-info">
 													<ul>
-														<li>
-															<span class="views" data-toggle="tooltip" title="views">
-																<i class="fa fa-eye"></i>
-																<ins>1.2k</ins>
+													<li>
+															<span class="like" data-toggle="tooltip" title="like">
+																<i class="ti-heart"></i>
+																<ins>0</ins>
 															</span>
 														</li>
 														<li>
@@ -155,37 +133,38 @@
 																<ins>52</ins>
 															</span>
 														</li>
-														
-
-														<li>
-															<span class="like" data-toggle="tooltip" title="like">
-																<i class="ti-heart"></i>
-																<ins>0</ins>
-															</span>
-														</li>
 														<script>
 															const likeButton = document.querySelector('.like');
- 													  	 	const likeCount = likeButton.querySelector('ins');
-   															 let hasLiked = false; // Variável para rastrear se o botão foi clicado
+															const likeCount = likeButton.querySelector('ins');
+															let hasLiked = false; // Variável para rastrear se o botão foi clicado
 
-  														  likeButton.addEventListener('click', function () {
-   														     if (!hasLiked) {
-         													   let currentLikes = parseFloat(likeCount.textContent);
-          														  currentLikes += 1;
-          													  likeCount.textContent = currentLikes.toFixed(1);
+															likeButton.addEventListener('click', function () {
+															if (!hasLiked) {
+																let currentLikes = parseFloat(likeCount.textContent);
+																currentLikes += 1;
 
-           												 hasLiked = true; // Atualiza o estado para indicar que o botão foi clicado
-															likeButton.classList.add('liked'); // Adiciona uma classe para estilo visual
-        													} else {
-         													  let currentLikes = parseFloat(likeCount.textContent);
-          													  currentLikes -= 1;
-          													  likeCount.textContent = currentLikes.toFixed(1);
+																if (currentLikes === 1) {
+																likeCount.textContent = currentLikes;
+																} else {
+																likeCount.textContent = currentLikes.toFixed(1);
+																}
 
-           													 hasLiked = false; // Botão foi deslikado
-           													 likeButton.classList.remove('liked'); // Remove a classe de estilo visual
-      													  }
+																hasLiked = true; // Atualiza o estado para indicar que o botão foi clicado
+																likeButton.classList.add('liked'); // Adiciona uma classe para estilo visual
+															} else {
+																let currentLikes = parseFloat(likeCount.textContent);
+																currentLikes -= 1;
 
-   														 });
+																if (currentLikes === 0) {
+																likeCount.textContent = currentLikes;
+																} else {
+																likeCount.textContent = currentLikes.toFixed(1);
+																}
+
+																hasLiked = false; // Botão foi deslikado
+																likeButton.classList.remove('liked'); // Remove a classe de estilo visual
+															}
+															});
 
   														</script>
 															<style>
@@ -193,40 +172,6 @@
        															 color: red; 
  															   }
 															</style>
-														
-														<li class="social-media">
-															<div class="menu">
-															  <div class="btn trigger"><i class="fa fa-share-alt"></i></div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-html5"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-facebook"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-google-plus"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-twitter"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-css3"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-instagram"></i></a>
-																</div>
-															  </div>
-																<div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-dribbble"></i></a>
-																</div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-pinterest"></i></a>
-																</div>
-															  </div>
-
-															</div>
-														</li>
 													</ul>
 												</div>
 												<div class="description">

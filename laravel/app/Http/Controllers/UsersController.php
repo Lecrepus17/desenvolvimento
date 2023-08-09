@@ -55,8 +55,12 @@ class UsersController extends Controller
 
 
     public function perfil(){
+        $comentario = $this->ApiComentariosController->getAllComent();
+        $post = $this->ApiPostsController->getAllPost();
+        $response = $this->ApiUsersController->getAllUsers(); // Sua chamada à API para obter os usuários
+        $user = $response->getData();
+        return view('bootstrap.perfil', ['users' => $user, 'posts' => $post, 'comentarios' => $comentario]); // Passa os dados para a view
 
-        return view('bootstrap.perfil');
 
     }
 

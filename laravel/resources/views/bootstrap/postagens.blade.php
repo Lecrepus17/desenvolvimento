@@ -66,11 +66,11 @@
 											</li>
 											<li>
 												<img src="assets/images/editar-texto.png" alt="" class="ti-files">
-												<a href="{{route('postagens')}}" title="">Meus Posts</a>
+												<a href="{{route('perfil')}}" title="">Meus Posts</a>
 											</li>
 											<li>
 											<img src="assets/images/amigos.png" alt="" class="ti-files">
-												<a href="{{route('postagens')}}" title="">Posts dos meus AmiGos</a>
+												<a href="{{route('feedSeguindo')}}" title="">Posts dos meus AmiGos</a>
 											</li>
 											<li>
 											<img src="assets/images/sair.png" alt="" class="ti-files">

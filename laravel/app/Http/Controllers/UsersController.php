@@ -99,6 +99,11 @@ class UsersController extends Controller
     }
 
     public function feedSeguindo(){
-        return view('bootstrap.feedSeguindo');
+        $comentario = $this->ApiComentariosController->getAllComent();
+        $post = $this->ApiPostsController->getAllPost();
+        $response = $this->ApiUsersController->getAllUsers(); // Sua chamada à API para obter os usuários
+        $user = $response->getData();
+        return view('bootstrap.feedSeguindo', ['users' => $user, 'posts' => $post, 'comentarios' => $comentario]); // Passa os dados para a view
+
     }
 }

@@ -1481,12 +1481,6 @@ form button {
     text-transform: capitalize;
 }
 
-.we-video-info > ul li span.dislike {
-    color: red;
-    cursor: pointer;
-    transition: all 0.2s linear 0s;
-}
-
 .we-video-info > ul li span ins {
     font-size: 11px;
     left: 20px;
@@ -1496,7 +1490,7 @@ form button {
 }
 
 .we-video-info > ul li span.like {
-    color: green;
+    color: gray;
     cursor: pointer;
     transition: all 0.2s linear 0s;
 }
@@ -3555,7 +3549,7 @@ a.add-butn {
 }
 
 .page-likes .tab-content .tab-pane > span i {
-    color: green;
+    color: gray;
     font-size: 15px;
     margin-right: 6px;
 }
@@ -3582,7 +3576,7 @@ a.add-butn {
 }
 
 .page-likes .tab-content .tab-pane > a {
-    color: green;
+    color: gray;
     float: left;
     font-size: 13px;
     text-align: center;
@@ -4702,33 +4696,30 @@ canvas {
     border-top: 2px solid;
 }
 
-.top-area > ul.main-menu > li:hover > ul {
-    opacity: 1;
-    visibility: visible;
+.top-area ul.main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
 }
 
-.top-area > ul.main-menu {
-    float: left;
-    margin-left: 0px;
-    line-height: 60px;
-}
-
-.top-area > ul.main-menu > li {
-    line-height: 59px;
+.top-area ul.main-menu li {
     margin-right: 30px;
     padding-right: 30px;
     position: relative;
 }
 
-.top-area > ul.main-menu > li a {
+.top-area ul.main-menu li a {
     color: #575b5f;
     font-size: 14px;
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 0.3px;
+    display: block; /* Transforma o link em um bloco para ocupar todo o espaço disponível */
 }
 
-.top-area > ul.main-menu > li::after {
+.top-area ul.main-menu li::after {
     content: "";
     font-family: fontawesome;
     font-size: 13px;
@@ -4737,13 +4728,29 @@ canvas {
     top: 0;
 }
 
-.top-area > ul.main-menu > li > ul li {
+.top-area ul.main-menu li ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    background-color: #fff; /* Adicione a cor de fundo do submenu aqui */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Adicione sombra ao submenu */
+    border-radius: 5px; /* Adicione borda arredondada ao submenu */
+}
+
+.top-area ul.main-menu li:hover ul {
+    display: block;
+}
+
+.top-area ul.main-menu li ul li {
+    margin: 0;
+    padding: 0;
     line-height: initial;
 }
 
-.top-area > ul.main-menu > li > ul li a {
+.top-area ul.main-menu li ul li a {
     color: #5f5f5f;
-    display: inline-block;
+    display: block;
     font-size: 13.5px;
     font-weight: normal;
     padding: 10px 15px;
@@ -4753,7 +4760,7 @@ canvas {
     border-radius: 0 0 5px 5px;
 }
 
-.top-area > ul.main-menu > li > ul li a:hover {
+.top-area ul.main-menu li ul li a:hover {
     background: #f5f5f5 none repeat scroll 0 0;
     padding-left: 17px;
 }

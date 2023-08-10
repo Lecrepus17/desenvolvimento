@@ -5,8 +5,6 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
 	<title>AmiGo</title>
     <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="16x16">
 
@@ -17,11 +15,9 @@
 
 </head>
 <body>
-<!--<div class="se-pre-con"></div>-->
+
 <div class="theme-layout">
-
-
-
+	<!-- header -->
 	<div class="topbar stick">
 		<div class="logo">
 			<a title="" href="{{route('postagens')}}"><img src="assets/images/logo2.png" alt=""></a>
@@ -47,7 +43,8 @@
 
 			</ul>
 		</div>
-	</div><!-- topbar -->
+	</div>
+	<!-- fim da header -->
 
 	<section>
 		<div class="gap gray-bg">
@@ -55,9 +52,25 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="row" id="page-contents">
+
+						
+					        <!-- atalho de perfil e páginas -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
 									<div class="widget">
+									<div class="widget">
+										<h4 class="widget-title">Sua página</h4>
+										<div class="your-page">
+											<figure>
+												<a href="{{route('perfil')}}" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
+											</figure>
+											<div class="page-meta">
+												<a href="{{route('perfil')}}" title="" class="underline">Meu perfil</a>
+												<span><i class="ti-comment"></i><a href="insight.html" title="">Posts <em>##</em></a></span>
+												<span><i class="ti-bell"></i><a href="insight.html" title="">AmiGos <em>##</em></a></span>
+											</div>
+										</div>
+									</div>
 										<h4 class="widget-title">Atalhos</h4>
 										<ul class="naves">
 											<li>
@@ -77,10 +90,14 @@
 												<a href="{{route('logout')}}" title="">Sair</a>
 											</li>
 										</ul>
-									</div><!-- Shortcuts -->
+									</div>
 								</aside>
-							</div><!-- sidebar -->
+							</div>
+							<!-- fim do atalho de perfil e páginas -->
+							
+							
 							<div class="col-lg-6">
+								<!-- fazer post -->
 								<div class="central-meta">
 									<div class="new-postbox">
 										<figure>
@@ -105,13 +122,13 @@
 											</form>
 										</div>
 									</div>
-								</div><!-- add post new box -->
+								</div>
+								<!-- fim de fazer post -->
 
 
                                 @foreach ($posts as $post)
 
-
-								<div class="loadMore">
+								<!-- estrutura dos posts -->
 								<div class="central-meta item">
 									<div class="user-post">
 										<div class="friend-info">
@@ -126,7 +143,6 @@
                                 @endif
                                 @endforeach
                                                 </a></ins>
-												<span>published: june,2 2018 19:PM</span>
 											</div>
                                             <div class="description">
                                                 <p>
@@ -136,7 +152,7 @@
 											<div class="post-meta">
 												<div class="we-video-info">
 													<ul>
-													<li>
+														<li>
 															<span class="like" data-toggle="tooltip" title="like">
 																<i class="ti-heart"></i>
 																<ins>{{$post->like}}</ins>
@@ -148,50 +164,51 @@
 																<ins>52</ins>
 															</span>
 														</li>
+
+														<!-- botão de curtir -->
 														<script>
 															const likeButton = document.querySelector('.like');
 															const likeCount = likeButton.querySelector('ins');
-															let hasLiked = false; // Variável para rastrear se o botão foi clicado
+															let hasLiked = false;
 
 															likeButton.addEventListener('click', function () {
 															if (!hasLiked) {
 																let currentLikes = parseFloat(likeCount.textContent);
 																currentLikes += 1;
 
-																if (currentLikes === 1) {
-																likeCount.textContent = currentLikes;
-																} else {
-																likeCount.textContent = currentLikes.toFixed(1);
-																}
+																likeCount.textContent = Math.round(currentLikes);
 
-																hasLiked = true; // Atualiza o estado para indicar que o botão foi clicado
-																likeButton.classList.add('liked'); // Adiciona uma classe para estilo visual
+																hasLiked = true;
+																likeButton.classList.add('liked');
 															} else {
 																let currentLikes = parseFloat(likeCount.textContent);
 																currentLikes -= 1;
 
-																if (currentLikes === 0) {
-																likeCount.textContent = currentLikes;
+																if (currentLikes < 1) {
+																likeCount.textContent = '0';
 																} else {
-																likeCount.textContent = currentLikes.toFixed(1);
+																likeCount.textContent = Math.round(currentLikes);
 																}
 
-																hasLiked = false; // Botão foi deslikado
-																likeButton.classList.remove('liked'); // Remove a classe de estilo visual
+																hasLiked = false;
+																likeButton.classList.remove('liked');
 															}
 															});
-
   														</script>
 															<style>
-    														.liked i{
+    															.liked i{
        															 color: red;
- 															   }
+ 															    }
 															</style>
+														<!-- fim do botão de curtir -->
+
 													</ul>
 												</div>
 
 											</div>
 										</div>
+
+										<!-- área dos comentários -->
 										<div class="coment-area">
 											<ul class="we-comet">
 												<li>
@@ -201,8 +218,6 @@
 													<div class="we-comment">
 														<div class="coment-head">
 															<h5><a href="time-line.html" title="">Jason borne</a></h5>
-															<span>1 year ago</span>
-															<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
 														</div>
 														<p>
                                                              @foreach ($comentarios as $comentario)
@@ -221,54 +236,35 @@
 													<div class="we-comment">
 														<div class="coment-head">
 															<h5><a href="time-line.html" title="">Donald Trump</a></h5>
-															<span>1 week ago</span>
-															<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
 														</div>
 														<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel
 															<i class="em em-smiley"></i>
 														</p>
 													</div>
 												</li>
-												<li>
-													<a href="#" title="" class="showmore underline">more comments</a>
-												</li>
+
 												<li class="post-comment">
 													<div class="comet-avatar">
 														<img src="images/resources/comet-1.jpg" alt="">
 													</div>
 													<div class="post-comt-box">
 														<form method="post">
-															<textarea placeholder="Post your comment"></textarea>
-															<div class="add-smiles">
-																<span class="em em-expressionless" title="add icon"></span>
-															</div>
-															<div class="smiles-bunch">
-																<i class="em em---1"></i>
-																<i class="em em-smiley"></i>
-																<i class="em em-anguished"></i>
-																<i class="em em-laughing"></i>
-																<i class="em em-angry"></i>
-																<i class="em em-astonished"></i>
-																<i class="em em-blush"></i>
-																<i class="em em-disappointed"></i>
-																<i class="em em-worried"></i>
-																<i class="em em-kissing_heart"></i>
-																<i class="em em-rage"></i>
-																<i class="em em-stuck_out_tongue"></i>
-															</div>
-															<button type="submit"></button>
+															<textarea placeholder="faça seu comentário"></textarea>
+															<li>
+															<button type="submit">Comentar</button>
+															</li>
 														</form>
 													</div>
 												</li>
 											</ul>
 										</div>
+										<!-- fim da área dos comentários -->
 									</div>
 								</div>
+								<!-- fim da estrutura dos posts -->
                                 @endforeach
 
-
-
-
+							
 						</div>
 					</div>
 				</div>
@@ -281,7 +277,6 @@
 	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/map-init.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 
 </body>
 

@@ -76,9 +76,9 @@ class ApiPostsController extends Controller
     public function createPost(StorePostRequest $request) {
         $data = $request->validated();
         $post = $this->repository->create($data);
-        //(new Registered($post));
-        //return redirect()->route('index');
-        return new Registered($post);
+        new Registered($post);
+        return redirect()->route('postagens');
+        //return new Registered($post);
     }
 
     //public function updatePost(Request $request, $id) {

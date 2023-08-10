@@ -6,6 +6,8 @@ use App\Http\Requests\StoreComentarioRequest;
 use App\Http\Resources\ComentarioResource;
 use App\Models\Comentario;
 use App\Models\Post;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Auth\Events\Registered as EventsRegistered;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -32,10 +34,9 @@ class ApiComentariosController extends Controller
     }
     public function createComent(StoreComentarioRequest $request) {
         $data = $request->validated();
-
         $coment = $this->repository->create($data);
-
-        return new ComentarioResource($coment);
+        new Registered($coment);
+        return redirect()->route('postagens');
     }
 
     public function deleteComent(string $id){

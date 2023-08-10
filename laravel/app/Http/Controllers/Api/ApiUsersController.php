@@ -9,8 +9,12 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Resources\UserResource;
+use App\Models\Post;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Nette\Utils\Strings;
 
 class ApiUsersController extends Controller
 {
@@ -59,5 +63,12 @@ class ApiUsersController extends Controller
         $user->delete();
 
         return response()->json([], Response::HTTP_NO_CONTENT);
+    }
+
+    public function allUserPost (User $user, string $id){
+        $user = $this->repository->findOrFail($id);
+
+        return dd($user->usersPost());
+
     }
 }

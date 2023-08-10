@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\Post;
+
 class Comentario extends Model
 {
     use HasFactory;
@@ -15,5 +17,9 @@ class Comentario extends Model
         'post_fk',
         'user_fk',
     ];
+
 }
+
+
+
 

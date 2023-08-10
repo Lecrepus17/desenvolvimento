@@ -51,7 +51,8 @@ class ApiPostsController extends Controller
 
         $post = $this->repository->create($data);
 
-        return new PostResource($post);
+        event(new PostResource($post));
+        return redirect()->route('index');
     }
 
     //public function updatePost(Request $request, $id) {

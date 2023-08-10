@@ -35,6 +35,7 @@ class ApiComentariosController extends Controller
     public function createComent(StoreComentarioRequest $request) {
         $data = $request->validated();
         $coment = $this->repository->create($data);
+
         new Registered($coment);
         return redirect()->route('postagens');
     }
@@ -44,12 +45,5 @@ class ApiComentariosController extends Controller
         $coment->delete();
 
         return $coment;
-    }
-
-    public function getAllComentPost(string $id){
-        $post = Post::coments($id);
-
-        return $post;
-
     }
 }

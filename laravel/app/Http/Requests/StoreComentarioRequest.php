@@ -23,10 +23,8 @@ class StoreComentarioRequest extends FormRequest
     {
         $rules = [
             'texto' => 'required|min:1|max:255',
-            'imagem' => 'min:3|max:255',
-            'like' => 'min:0',
-            'post_fk' => 'required|min:1|max:255',
-            'user_fk' => 'required|min:1|max:255',
+            'post_fk' => 'required',
+            'user_fk' => 'required',
         ];
 
         return $rules;

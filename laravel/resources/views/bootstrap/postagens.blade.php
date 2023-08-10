@@ -191,8 +191,11 @@
 														<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 													</div>
 													<div class="post-comt-box">
-														<form method="post">
-															<textarea placeholder="faça seu comentário"></textarea>
+														<form method="post" action="{{ route("createComent")}}">
+                                                            <input type="hidden" name="user_fk" value="{{ $userAuth->id }}">
+                                                            <input type="hidden" name="post_fk" value="{{ $userAuth->id }}">
+
+															<textarea tyepe="text" name="texto" placeholder="faça seu comentário"></textarea>
 															<li>
 															<button type="submit">Comentar</button>
 															</li>

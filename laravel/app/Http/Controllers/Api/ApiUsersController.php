@@ -71,11 +71,4 @@ class ApiUsersController extends Controller
 
         return response()->json([], Response::HTTP_NO_CONTENT);
     }
-
-    public function allUserPost (User $user, string $id){
-        $user = $this->repository->findOrFail($id);
-
-        return dd($user->usersPost());
-
-    }
 }

@@ -15,8 +15,6 @@ return new class extends Migration
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id();
             $table->string('texto');
-            $table->string('imagem')->nullable();
-            $table->integer('like')->nullable();
             $table->foreignId('post_fk')->constrained(
                 table: 'posts'
             );

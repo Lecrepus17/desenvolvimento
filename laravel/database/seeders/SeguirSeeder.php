@@ -18,6 +18,10 @@ class SeguirSeeder extends Seeder
                 'seguido_fk' => 1,
                 'seguidor_fk' => 2,
             ],
+            [
+                'seguido_fk' => 2,
+                'seguidor_fk' => 1,
+            ]
     ]);
     }
 }

@@ -5,8 +5,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreComentarioRequest;
 use App\Http\Resources\ComentarioResource;
 use App\Models\Comentario;
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+
 
 class ApiComentariosController extends Controller
 {
@@ -41,5 +43,12 @@ class ApiComentariosController extends Controller
         $coment->delete();
 
         return $coment;
+    }
+
+    public function getAllComentPost(string $id){
+        $post = Post::coments($id);
+
+        return $post;
+
     }
 }

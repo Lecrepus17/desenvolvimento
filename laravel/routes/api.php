@@ -28,10 +28,14 @@ Route::get('/GetUsers/{id}', [ApiUsersController::class, 'getUser'])->name('get.
 Route::post('/CreateUser', [ApiUsersController::class, 'createUser'])->name('create.user');
 Route::patch('/UpdateUser/{id}', [ApiUsersController::class, 'updateUser'])->name('update.users');
 Route::delete('/DeleteUser/{id}', [ApiUsersController::class, 'deleteUser'])->name('deltete.users');
-Route::post('/login', [ApiUsersController::class, 'login'])->name('login.user');
+
+
 
 Route::post('/CreateSeguirs', [ApiSeguirsController::class, 'createSeguirs'])->name('create.seguirs');
 Route::post('/DeleteSeguirs', [ApiSeguirsController::class, 'deleteSeguirs'])->name('delete.seguirs');
+
+Route::get('/upLike/{id}', [ApiPostsController::class, 'upLike'])->name('upLike');
+Route::get('/unLike/{id}', [ApiPostsController::class, 'unLike'])->name('unLike');
 
 Route::get('/getPost/{id}', [ApiPostsController::class, 'getPost'])->name('getPost');
 Route::get('/post', [ApiPostsController::class, 'getAllPost'])->name('post');
@@ -44,5 +48,6 @@ Route::get('/getComent/{id}', [ApiComentariosController::class, 'getComent'])->n
 Route::get('/coment', [ApiComentariosController::class, 'getAllComent'])->name('coment');
 Route::post('/createComent', [ApiComentariosController::class, 'createComent'])->name('createComent');
 Route::delete('/deleteComent/{id}', [ApiComentariosController::class, 'deleteComent'])->name('deleteComent');
+Route::get('/getAllComentPost/{id}', [ApiComentariosController::class, 'getAllComentPost'])->name('getALlComentPost');
 
-Route::get('/getAllPostUser', [ApiPostsController::class, 'getAllPostUser'])->name('getAllPostUser');
+Route::get('/allUserPost/{id}', [ApiUsersController::class, 'allUserPost'])->name('allUserPost');

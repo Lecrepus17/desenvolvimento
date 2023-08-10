@@ -24,7 +24,7 @@ class StorePostRequest extends FormRequest
 
         $rules = [
             'texto' => 'required|min:1|max:255',
-            'user_fk' => 'required|min:1|max:225',
+            'user_fk' => 'required',
         ];
         return $rules;
     }

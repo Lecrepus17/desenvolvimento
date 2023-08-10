@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-	<title>AmiGo</title>
+	<title>AmiGo - Seu Perfil</title>
     <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" href="css/main.min.css">
@@ -53,13 +51,6 @@
 				<span>1205 followers</span>
 				<a href="#" title="" data-ripple="">Add Friend</a>
 			</div>
-			<form class="edit-phto">
-				<i class="fa fa-camera-retro"></i>
-				<label class="fileContainer">
-					Edit Cover Photo
-				<input type="file"/>
-				</label>
-			</form>
 			<div class="container-fluid">
 				<div class="row merged">
 					<div class="col-lg-2 col-sm-3">
@@ -130,7 +121,6 @@
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
-								<div class="loadMore">
 								<div class="central-meta">
 									<div class="new-postbox">
 										<figure>
@@ -160,7 +150,6 @@
 									@foreach ($posts as $post)
 
 
-								<div class="loadMore">
 									<div class="central-meta item">
 										<div class="user-post">
 											<div class="friend-info">

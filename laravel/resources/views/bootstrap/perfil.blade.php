@@ -108,14 +108,14 @@
 											</li>
 										</ul>
 									</div><!-- Shortcuts -->
-								
+
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
 								<div class="central-meta">
 									<div class="new-postbox">
 										<figure>
-											<img src="images/resources/admin2.jpg" alt="">
+											<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 										</figure>
 										<div class="newpst-input">
 											<form method="post">
@@ -145,7 +145,7 @@
 										<div class="user-post">
 											<div class="friend-info">
 											<figure>
-											<img src="images/resources/friend-avatar10.jpg" alt="">
+											<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 											</figure>
 												<div class="friend-name">
 												<ins><a href="time-line.html" title="">
@@ -266,9 +266,9 @@
 	</div>
 </div>
 @endforeach
-								
-							
-								
+
+
+
 						</div>
 					</div>
 				</div>

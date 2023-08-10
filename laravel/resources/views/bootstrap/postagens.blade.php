@@ -53,7 +53,7 @@
 					<div class="col-lg-12">
 						<div class="row" id="page-contents">
 
-						
+
 					        <!-- atalho de perfil e páginas -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
@@ -62,12 +62,12 @@
 										<h4 class="widget-title">Sua página</h4>
 										<div class="your-page">
 											<figure>
-												<a href="{{route('perfil')}}" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
+												<a href="{{route('perfil')}}" title=""><img src="{{ asset('storage/' . $userAuth->foto) }}" alt=""></a>
 											</figure>
 											<div class="page-meta">
 												<a href="{{route('perfil')}}" title="" class="underline">Meu perfil</a>
-												<span><i class="ti-comment"></i><a href="insight.html" title="">Posts <em>##</em></a></span>
-												<span><i class="ti-bell"></i><a href="insight.html" title="">AmiGos <em>##</em></a></span>
+												<span><i class="ti-comment"></i><a href="{{route('perfil')}}" title="">Posts </a></span>
+												<span><i class="ti-bell"></i><a href="{{route('amigos')}}" title="">AmiGos </a></span>
 											</div>
 										</div>
 									</div>
@@ -94,8 +94,8 @@
 								</aside>
 							</div>
 							<!-- fim do atalho de perfil e páginas -->
-							
-							
+
+
 							<div class="col-lg-6">
 								<!-- fazer post -->
 								<div class="central-meta">
@@ -132,18 +132,20 @@
 								<div class="central-meta item">
 									<div class="user-post">
 										<div class="friend-info">
+                                               @foreach ($users as $user)
+                                @if ($post->user_fk == $user->id)
 											<figure>
-												<img src="images/resources/friend-avatar10.jpg" alt="">
+												<img src="{{ asset('storage/' . $user->foto) }}"  alt="">
 											</figure>
 											<div class="friend-name">
 												<ins><a href="time-line.html" title="">
-                                @foreach ($users as $user)
-                                @if ($post->user_fk == $user->id)
+
                                     {{$user->name}}
-                                @endif
-                                @endforeach
+
                                                 </a></ins>
 											</div>
+                                          @endif
+                                @endforeach
                                             <div class="description">
                                                 <p>
                                                     {{$post->texto}}
@@ -211,41 +213,38 @@
 										<!-- área dos comentários -->
 										<div class="coment-area">
 											<ul class="we-comet">
-												<li>
+                                                @foreach ($comentarios as $comentario)
+                                                @if ($post->id == $comentario->post_fk)
+
+                                                <li>
+                                                    @foreach ($users as $user)
+                                                    @if ($comentario->user_fk == $user->id)
+
 													<div class="comet-avatar">
-														<img src="images/resources/comet-1.jpg" alt="">
+														<img src="{{ asset('storage/' . $user->foto) }}" alt="">
 													</div>
 													<div class="we-comment">
 														<div class="coment-head">
-															<h5><a href="time-line.html" title="">Jason borne</a></h5>
+															<h5><a href="time-line.html" title="">
+                                                                {{$user->name}}
+                                                            </a></h5>
 														</div>
+
 														<p>
-                                                             @foreach ($comentarios as $comentario)
-                                                            @if ($post->id == $comentario->post_fk)
                                                                 {{$comentario->texto}}
-                                                            @endif
-                                                            @endforeach
+
+
                                                          </p>
 													</div>
-
+                                                    @endif
+                                                    @endforeach
 												</li>
-												<li>
-													<div class="comet-avatar">
-														<img src="images/resources/comet-1.jpg" alt="">
-													</div>
-													<div class="we-comment">
-														<div class="coment-head">
-															<h5><a href="time-line.html" title="">Donald Trump</a></h5>
-														</div>
-														<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel
-															<i class="em em-smiley"></i>
-														</p>
-													</div>
-												</li>
+                                                @endif
+                                                @endforeach
 
 												<li class="post-comment">
 													<div class="comet-avatar">
-														<img src="images/resources/comet-1.jpg" alt="">
+														<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 													</div>
 													<div class="post-comt-box">
 														<form method="post">
@@ -264,7 +263,7 @@
 								<!-- fim da estrutura dos posts -->
                                 @endforeach
 
-							
+
 						</div>
 					</div>
 				</div>

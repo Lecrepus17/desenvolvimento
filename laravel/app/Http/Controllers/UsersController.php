@@ -59,7 +59,9 @@ class UsersController extends Controller
         $post = $this->ApiPostsController->getAllPost();
         $response = $this->ApiUsersController->getAllUsers(); // Sua chamada à API para obter os usuários
         $user = $response->getData();
-        return view('bootstrap.perfil', ['users' => $user, 'posts' => $post, 'comentarios' => $comentario]); // Passa os dados para a view
+        $userAuth = Auth::user();
+
+        return view('bootstrap.perfil', ['users' => $user, 'posts' => $post, 'comentarios' => $comentario, 'userAuth' => $userAuth]); // Passa os dados para a view
 
 
     }
@@ -79,11 +81,12 @@ class UsersController extends Controller
 
     public function postagens()
     {
+        $userAuth = Auth::user();
         $comentario = $this->ApiComentariosController->getAllComent();
         $post = $this->ApiPostsController->getAllPost();
         $response = $this->ApiUsersController->getAllUsers(); // Sua chamada à API para obter os usuários
         $user = $response->getData();
-        return view('bootstrap.postagens', ['users' => $user, 'posts' => $post, 'comentarios' => $comentario]); // Passa os dados para a view
+        return view('bootstrap.postagens', ['users' => $user, 'posts' => $post, 'comentarios' => $comentario, 'userAuth' => $userAuth]); // Passa os dados para a view
 
     }
 

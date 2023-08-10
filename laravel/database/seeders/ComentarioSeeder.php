@@ -32,7 +32,7 @@ class ComentarioSeeder extends Seeder
                 'imagem' => 'imagem3',
                 'like' => 1,
                 'user_fk' => 3,
-                'post_fk' => 2,
+                'post_fk' => 3,
             ],
     ]);
     }

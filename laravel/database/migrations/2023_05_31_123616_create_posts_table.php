@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('texto');
             $table->string('imagem')->nullable();
-            $table->integer('like')->default(0);
+            $table->integer('like')->nullable();
             $table->foreignId('user_fk')->constrained(
                 table: 'users'
             );

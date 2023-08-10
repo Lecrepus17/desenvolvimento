@@ -30,6 +30,7 @@ class ApiUsersController extends Controller
 
     public function createUser(StoreUpdateUserRequest $request) {
         $data = $request->validated();
+
         $data['foto'] = 'padrao.png';
         $data['password'] = Hash::make($data['password']);
         $user = $this->repository->create($data);

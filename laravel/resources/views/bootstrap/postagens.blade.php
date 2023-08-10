@@ -128,7 +128,7 @@
 									<div class="user-post">
 										<div class="friend-info">
                                                @foreach ($users as $user)
-                                @if ($post->user_fk == $user->id)
+                                				@if ($post->user_fk == $user->id)
 											<figure>
 												<img src="{{ asset('storage/' . $user->foto) }}"  alt="">
 											</figure>

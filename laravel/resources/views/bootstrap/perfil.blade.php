@@ -55,16 +55,20 @@
 					<div class="col-lg-2 col-sm-3">
 						<div class="user-avatar">
 							<figure>
-								<img src="images/resources/user-avatar.jpg" alt="">
+								<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 							</figure>
 						</div>
 					</div>
 					<div class="col-lg-10 col-sm-9">
+					
+						
 						<div class="timeline-info">
 							<ul>
+							
 								<li class="admin-name">
-								  <h5>Janice Griffith</h5>
+								  <h5>{{$userAuth->name}}</h5>
 								</li>
+								
 								<li>
 									<a class="active" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
 									<a class="" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
@@ -72,6 +76,8 @@
 
 								</li>
 							</ul>
+							
+							 
 						</div>
 					</div>
 				</div>
@@ -144,18 +150,19 @@
 									<div class="central-meta item">
 										<div class="user-post">
 											<div class="friend-info">
+											@foreach ($users as $user)
+                                				@if ($post->user_fk == $user->id)
+
 											<figure>
 											<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 											</figure>
 												<div class="friend-name">
 												<ins><a href="time-line.html" title="">
-												@foreach ($users as $user)
-													@if ($post->user_fk == $user->id)
-														{{$user->name}}
-													@endif
-												@endforeach
-												</a></ins>
-			</div>
+												{{$userAuth->name}}												
+											</a></ins>
+												</div>
+														@endif
+                             					   @endforeach
 			<div class="description">
 				<p>
 					{{$post->texto}}
@@ -219,40 +226,35 @@
 		</div>
 		<div class="coment-area">
 			<ul class="we-comet">
+			@foreach ($comentarios as $comentario)
+             @if ($post->id == $comentario->post_fk)
 				<li>
+				@foreach ($users as $user)
+                    @if ($comentario->user_fk == $user->id)
 					<div class="comet-avatar">
-						<img src="images/resources/comet-1.jpg" alt="">
+						<img src="{{ asset('storage/' . $user->foto) }}" alt="">
 					</div>
 					<div class="we-comment">
+					
 						<div class="coment-head">
-							<h5><a href="time-line.html" title="">Jason borne</a></h5>
+							<h5><a href="time-line.html" title="">{{$user->name}}</a></h5>
 						</div>
 						<p>
-							 @foreach ($comentarios as $comentario)
-							@if ($post->id == $comentario->post_fk)
+							
 								{{$comentario->texto}}
-							@endif
-							@endforeach
+							
 						 </p>
+						 
 					</div>
-
+					@endif
+						 @endforeach
 				</li>
-				<li>
-					<div class="comet-avatar">
-						<img src="images/resources/comet-1.jpg" alt="">
-					</div>
-					<div class="we-comment">
-						<div class="coment-head">
-							<h5><a href="time-line.html" title="">Donald Trump</a></h5>
-						</div>
-						<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel
-							<i class="em em-smiley"></i>
-						</p>
-					</div>
-				</li>
+				@endif
+						 @endforeach
+				
 				<li class="post-comment">
 					<div class="comet-avatar">
-						<img src="images/resources/comet-1.jpg" alt="">
+						<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 					</div>
 					<div class="post-comt-box">
 						<form method="post">

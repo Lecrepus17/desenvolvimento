@@ -101,7 +101,7 @@
 								<div class="central-meta">
 									<div class="new-postbox">
 										<figure>
-											<img src="images/resources/admin2.jpg" alt="">
+											<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 										</figure>
 										<div class="newpst-input">
 											<form method="post" action="{{ route('createPost') }}">
@@ -138,6 +138,11 @@
                                     {{$user->name}}
 
                                                 </a></ins>
+                                            <form action="{{route('create.seguirs')}}" method="post">
+                                                <input type="hidden" name="seguido_fk" value="{{$user->id}}">
+                                                <input type="hidden" name="seguidor_fk" value="{{$userAuth->id}}">
+                                                <input type="submit" value="Se Tornar amigo">
+                                            </form>
 											</div>
                                           @endif
                                 @endforeach

@@ -19,7 +19,14 @@ class ApiSeguirsController extends Controller
     public function createSeguirs(StoreSeguirs $request) {
         $data = $request->validated();
         $seguirs = $this->repository->create($data);
-        return new SeguirsResource($seguirs);
+        event(new SeguirsResource($seguirs));
+        return true;
+    }
+    public function getAllSeguir() {
+        $Seguir = Seguir::all();
+        return $Seguir;
+        // $users = User::withTrashed()->get(); ou $users = User::onlyTrashed()->get();
+        //return response($users, 200);
     }
     public function deleteSeguirs (string $id){
         $user = $this->repository->findOrFail($id);
@@ -30,4 +37,4 @@ class ApiSeguirsController extends Controller
 }
 
 
-    //$seguir = Seguir::create($data);
+

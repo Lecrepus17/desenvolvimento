@@ -118,16 +118,16 @@
 											<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 										</figure>
 										<div class="newpst-input">
-											<form method="post">
-												<textarea rows="2" placeholder="escreva algo..."></textarea>
+											<form method="post" action="{{route('perfil')}}">
+												<textarea name="texto" rows="2" placeholder="escreva algo..."></textarea>
 												<div class="attachments">
 													<ul>
-														<li>
+														<!--<li>
 															<i class="fa fa-image"></i>
 															<label class="fileContainer">
 																<input type="file">
 															</label>
-														</li>
+														</li>-->
 														<li>
 															<button type="submit">Postar</button>
 														</li>

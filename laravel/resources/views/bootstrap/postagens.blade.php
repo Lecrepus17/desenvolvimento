@@ -104,16 +104,11 @@
 											<img src="images/resources/admin2.jpg" alt="">
 										</figure>
 										<div class="newpst-input">
-											<form method="post">
-												<textarea rows="2" placeholder="escreva algo..."></textarea>
+											<form method="post" action="{{ route('createPost') }}">
+                                                <input type="hidden" name="user_fk" value="{{$userAuth->id}}">
+												<textarea type="text" name="texto" rows="2" placeholder="escreva algo..."></textarea>
 												<div class="attachments">
 													<ul>
-														<li>
-															<i class="fa fa-image"></i>
-															<label class="fileContainer">
-																<input type="file">
-															</label>
-														</li>
 														<li>
 															<button type="submit">Postar</button>
 														</li>

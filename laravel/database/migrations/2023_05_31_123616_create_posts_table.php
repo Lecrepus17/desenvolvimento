@@ -15,8 +15,6 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('texto');
-            $table->string('imagem')->nullable();
-            $table->integer('like')->default(0);
             $table->foreignId('user_fk')->constrained(
                 table: 'users'
             );

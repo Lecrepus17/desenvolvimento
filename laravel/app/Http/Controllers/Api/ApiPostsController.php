@@ -7,6 +7,7 @@ use App\Http\Requests\StorePostRequest;
 use App\Models\Post;
 use App\Http\Resources\PostResource;
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
@@ -74,11 +75,10 @@ class ApiPostsController extends Controller
 
     public function createPost(StorePostRequest $request) {
         $data = $request->validated();
-
         $post = $this->repository->create($data);
-
-        event(new PostResource($post));
-        return redirect()->route('index');
+        //(new Registered($post));
+        //return redirect()->route('index');
+        return new Registered($post);
     }
 
     //public function updatePost(Request $request, $id) {

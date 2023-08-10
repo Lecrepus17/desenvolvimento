@@ -13,7 +13,7 @@ class Post extends Model
         'texto',
         'imagem',
         'like',
-        'user_id',
+        'user_fk',
     ];
 
 

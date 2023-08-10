@@ -22,11 +22,9 @@ class ApiPostsController extends Controller
     }
     public function getAllPostIfSeguir(){
         $follower = Auth::user();
-
-
         $post = Post::whereHas('user', function($querry) use ($follower){
             $querry->where('user_fk', $follower->seguidor_fk);
-        })->get();
+        })->query();
 
         return $post;
     }
@@ -41,10 +39,8 @@ class ApiPostsController extends Controller
     }
 
     public function getAllPost() {
-        $post = Post::all();
-        return $post;
-        // $users = User::withTrashed()->get(); ou $users = User::onlyTrashed()->get();
-        //return response($users, 200);
+        $posts = Post::orderBy('id', 'desc')->get();
+        return $posts;
     }
 
     public function getPost(string $id) {

@@ -34,6 +34,9 @@ Route::delete('/DeleteUser/{id}', [ApiUsersController::class, 'deleteUser'])->na
 Route::post('/CreateSeguirs', [ApiSeguirsController::class, 'createSeguirs'])->name('create.seguirs');
 Route::post('/DeleteSeguirs', [ApiSeguirsController::class, 'deleteSeguirs'])->name('delete.seguirs');
 
+Route::get('/upLike/{id}', [ApiPostsController::class, 'upLike'])->name('upLike');
+Route::get('/unLike/{id}', [ApiPostsController::class, 'unLike'])->name('unLike');
+
 Route::get('/getPost/{id}', [ApiPostsController::class, 'getPost'])->name('getPost');
 Route::get('/post', [ApiPostsController::class, 'getAllPost'])->name('post');
 Route::post('/createPost', [ApiPostsController::class, 'createPost'])->name('createPost');

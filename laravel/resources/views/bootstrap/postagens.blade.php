@@ -148,40 +148,55 @@
 																<ins>52</ins>
 															</span>
 														</li>
-														<script>
-															const likeButton = document.querySelector('.like');
-															const likeCount = likeButton.querySelector('ins');
-															let hasLiked = false; // Variável para rastrear se o botão foi clicado
 
-															likeButton.addEventListener('click', function () {
-															if (!hasLiked) {
-																let currentLikes = parseFloat(likeCount.textContent);
-																currentLikes += 1;
+                                                        <script>
+                                                          const likeButton = document.querySelector('.like');
+                                                          const likeCount = likeButton.querySelector('ins');
+                                                          let hasLiked = false;
 
-																if (currentLikes === 1) {
-																likeCount.textContent = currentLikes;
-																} else {
-																likeCount.textContent = currentLikes.toFixed(1);
-																}
+                                                          likeButton.addEventListener('click', function () {
+                                                            const postId = likeButton.getAttribute('data-post-id');
 
-																hasLiked = true; // Atualiza o estado para indicar que o botão foi clicado
-																likeButton.classList.add('liked'); // Adiciona uma classe para estilo visual
-															} else {
-																let currentLikes = parseFloat(likeCount.textContent);
-																currentLikes -= 1;
+                                                            if (!hasLiked) {
+                                                              let currentLikes = parseFloat(likeCount.textContent);
+                                                              currentLikes += 1;
 
-																if (currentLikes === 0) {
-																likeCount.textContent = currentLikes;
-																} else {
-																likeCount.textContent = currentLikes.toFixed(1);
-																}
+                                                              axios.post(`/api/posts/${postId}/like`)
+                                                                .then(response => {
+                                                                  if (currentLikes === 1) {
+                                                                    likeCount.textContent = currentLikes;
+                                                                  } else {
+                                                                    likeCount.textContent = currentLikes.toFixed(1);
+                                                                  }
 
-																hasLiked = false; // Botão foi deslikado
-																likeButton.classList.remove('liked'); // Remove a classe de estilo visual
-															}
-															});
+                                                                  hasLiked = true;
+                                                                  likeButton.classList.add('liked');
+                                                                })
+                                                                .catch(error => {
+                                                                  console.error(error);
+                                                                });
+                                                            } else {
+                                                              let currentLikes = parseFloat(likeCount.textContent);
+                                                              currentLikes -= 1;
 
-  														</script>
+                                                              axios.post(`/api/posts/${postId}/unlike`)
+                                                                .then(response => {
+                                                                  if (currentLikes === 0) {
+                                                                    likeCount.textContent = currentLikes;
+                                                                  } else {
+                                                                    likeCount.textContent = currentLikes.toFixed(1);
+                                                                  }
+
+                                                                  hasLiked = false;
+                                                                  likeButton.classList.remove('liked');
+                                                                })
+                                                                .catch(error => {
+                                                                  console.error(error);
+                                                                });
+                                                            }
+                                                          });
+                                                        </script>
+
 															<style>
     														.liked i{
        															 color: red;
@@ -282,7 +297,7 @@
 	<script src="js/script.js"></script>
 	<script src="js/map-init.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 
 </html>

@@ -41,7 +41,7 @@ Route::get('/getPost/{id}', [ApiPostsController::class, 'getPost'])->name('getPo
 Route::get('/post', [ApiPostsController::class, 'getAllPost'])->name('post');
 Route::post('/createPost', [ApiPostsController::class, 'createPost'])->name('createPost');
 Route::delete('/deletePost/{id}', [ApiPostsController::class, 'deletePost'])->name('deletePost');
-Route::get('/getAllPostIfSeguir', [ApiPostsController::class, 'getAllPostIfSeguir'])->name('postIfSeguir');
+Route::get('/getAllPostIfSeguir/{id}', [ApiPostsController::class, 'getAllPostIfSeguir'])->name('postIfSeguir');
 
 
 Route::get('/getComent/{id}', [ApiComentariosController::class, 'getComent'])->name('getComent');

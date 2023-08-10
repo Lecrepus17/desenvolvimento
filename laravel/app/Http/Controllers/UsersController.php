@@ -98,7 +98,12 @@ class UsersController extends Controller
 
 
     public function amigos(){
-        return view('bootstrap.amigos');
+        $userAuth = Auth::user();
+        
+        $response = $this->ApiUsersController->getAllUsers(); // Sua chamada à API para obter os usuários
+        $user = $response->getData();
+        return view('bootstrap.amigos', ['users' => $user, 'userAuth' => $userAuth]); // Passa os dados para a view
+
     }
 
     public function sobre_perfil(){

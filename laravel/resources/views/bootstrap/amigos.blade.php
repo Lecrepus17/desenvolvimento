@@ -55,7 +55,7 @@
 						<div class="col-lg-2 col-sm-3">
 							<div class="user-avatar">
 								<figure>
-									<img src="images/resources/user-avatar.jpg" alt="">
+									<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 								</figure>
 							</div>
 						</div>
@@ -63,7 +63,7 @@
 							<div class="timeline-info">
 								<ul>
 									<li class="admin-name">
-									  <h5>Janice Griffith</h5>
+									  <h5>{{$userAuth->name}}</h5>
 									</li>
 									<li>
 									<a class="" href="{{route('perfil')}}" title="" data-ripple="">Início</a>

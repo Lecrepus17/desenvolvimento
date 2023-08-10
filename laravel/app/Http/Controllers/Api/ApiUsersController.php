@@ -30,6 +30,7 @@ class ApiUsersController extends Controller
 
     public function createUser(StoreUpdateUserRequest $request) {
         $data = $request->validated();
+        $data['foto'] = 'padrao.png';
         $data['password'] = Hash::make($data['password']);
         $user = $this->repository->create($data);
         event(new Registered($user));
@@ -47,15 +48,20 @@ class ApiUsersController extends Controller
 
     public function updateUser(StoreUpdateUserRequest $request, string $id){
         $user = $this->repository->findOrFail($id);
-
         $data = $request->validated();
+
+        if ($request->hasFile('foto')) {
+            $imagePath = $request->file('foto')->store('fotos', 'public');
+            $data['foto'] = $imagePath;
+        }
+
 
         if ($request->password)
             $data['password'] = bcrypt($request->password);
 
         $user->update($data);
-
-        return new UserResource($user);
+        event(new UserResource($user));
+        return redirect()->route('editar_perfil');
     }
 
     public function deleteUser (string $id){

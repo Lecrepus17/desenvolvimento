@@ -53,7 +53,7 @@
 					<div class="col-lg-12">
 						<div class="row" id="page-contents">
 
-						
+
 					        <!-- atalho de perfil e páginas -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
@@ -94,8 +94,8 @@
 								</aside>
 							</div>
 							<!-- fim do atalho de perfil e páginas -->
-							
-							
+
+
 							<div class="col-lg-6">
 								<!-- fazer post -->
 								<div class="central-meta">
@@ -156,12 +156,6 @@
 															<span class="like" data-toggle="tooltip" title="like">
 																<i class="ti-heart"></i>
 																<ins>{{$post->like}}</ins>
-															</span>
-														</li>
-														<li>
-															<span class="comment" data-toggle="tooltip" title="Comments">
-																<i class="fa fa-comments-o"></i>
-																<ins>52</ins>
 															</span>
 														</li>
 
@@ -264,7 +258,7 @@
 								<!-- fim da estrutura dos posts -->
                                 @endforeach
 
-							
+
 						</div>
 					</div>
 				</div>

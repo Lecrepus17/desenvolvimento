@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-	<title>AmiGo</title>
+	<title>AmiGo - Amigos</title>
     <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" href="css/main.min.css">
@@ -48,31 +45,17 @@
 	</div><!-- topbar -->
 	<section>
 			<div class="feature-photo">
-				<figure><img src="images/resources/timeline-1.jpg" alt=""></figure>
+				<figure><img src="images/resources/layout.jpg" alt=""></figure>
 				<div class="add-btn">
 					<span>1205 followers</span>
 					<a href="#" title="" data-ripple="">Add Friend</a>
 				</div>
-				<form class="edit-phto">
-					<i class="fa fa-camera-retro"></i>
-					<label class="fileContainer">
-						Edit Cover Photo
-					<input type="file"/>
-					</label>
-				</form>
 				<div class="container-fluid">
 					<div class="row merged">
 						<div class="col-lg-2 col-sm-3">
 							<div class="user-avatar">
 								<figure>
 									<img src="images/resources/user-avatar.jpg" alt="">
-									<form class="edit-phto">
-										<i class="fa fa-camera-retro"></i>
-										<label class="fileContainer">
-											Edit Display Photo
-											<input type="file"/>
-										</label>
-									</form>
 								</figure>
 							</div>
 						</div>
@@ -81,7 +64,6 @@
 								<ul>
 									<li class="admin-name">
 									  <h5>Janice Griffith</h5>
-									  <span>Group Admin</span>
 									</li>
 									<li>
 									<a class="" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
@@ -134,8 +116,8 @@
 								<div class="central-meta">
 									<div class="frnds">
 										<ul class="nav nav-tabs">
-											 <li class="nav-item"><a class="active" href="#frends" data-toggle="tab">My Friends</a> <span>55</span></li>
-											 <li class="nav-item"><a class="" href="#frends-req" data-toggle="tab">Friend Requests</a><span>60</span></li>
+											 <li class="nav-item"><a class="active" href="#frends" data-toggle="tab">Meus Amigos</a> <span>55</span></li>
+											 <li class="nav-item"><a class="" href="#frends-req" data-toggle="tab">Pedidos de Amizade</a><span>60</span></li>
 										</ul>
 									
 										<!-- Tab panes -->
@@ -149,9 +131,7 @@
 													</figure>
 													<div class="pepl-info">
 														<h4><a href="time-line.html" title="">jhon kates</a></h4>
-														<span>ftv model</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">unfriend</a>
-														<a href="#" title="" class="add-butn" data-ripple="">add friend</a>
+														<a href="#" title="" class="add-butn more-action" data-ripple="">remover</a>
 													</div>
 												</div>
 											</li>
@@ -162,9 +142,7 @@
 													</figure>
 													<div class="pepl-info">
 														<h4><a href="time-line.html" title="">sophia Gate</a></h4>
-														<span>tv actresses</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">unfriend</a>
-														<a href="#" title="" class="add-butn" data-ripple="">add friend</a>
+														<a href="#" title="" class="add-butn more-action" data-ripple="">remover</a>
 													</div>
 												</div>
 											</li>
@@ -175,61 +153,7 @@
 													</figure>
 													<div class="pepl-info">
 														<h4><a href="time-line.html" title="">sara grey</a></h4>
-														<span>work at IBM</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">unfriend</a>
-														<a href="#" title="" class="add-butn" data-ripple="">add friend</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly3.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">Sexy cat</a></h4>
-														<span>Student</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">unfriend</a>
-														<a href="#" title="" class="add-butn" data-ripple="">add friend</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly4.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">Sara grey</a></h4>
-														<span>ftv model</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">unfriend</a>
-														<a href="#" title="" class="add-butn" data-ripple="">add friend</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly5.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">Amy watson</a></h4>
-														<span>Study in university</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">unfriend</a>
-														<a href="#" title="" class="add-butn" data-ripple="">add friend</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly6.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">caty lasbo</a></h4>
-														<span>work as dancers</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">unfriend</a>
-														<a href="#" title="" class="add-butn" data-ripple="">add friend</a>
+														<a href="#" title="" class="add-butn more-action" data-ripple="">remover</a>
 													</div>
 												</div>
 											</li>
@@ -240,15 +164,12 @@
 													</figure>
 													<div class="pepl-info">
 														<h4><a href="time-line.html" title="">Ema watson</a></h4>
-														<span>personal business</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">unfriend</a>
-														<a href="#" title="" class="add-butn" data-ripple="">add friend</a>
+														<a href="#" title="" class="add-butn more-action" data-ripple="">remover</a>
 													</div>
 												</div>
 											</li>
 										</ul>
-											<div class="lodmore"><button class="btn-view btn-load-more"></button></div>
-										  </div>
+										</div>
 										  <div class="tab-pane fade" id="frends-req" >
 											<ul class="nearby-contct">
 											<li>
@@ -258,23 +179,8 @@
 													</figure>
 													<div class="pepl-info">
 														<h4><a href="time-line.html" title="">Amy watson</a></h4>
-														<span>ftv model</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">delete Request</a>
-														<a href="#" title="" class="add-butn" data-ripple="">Confirm</a>
-													</div>
-												</div>
-											</li>
-
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly1.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">sophia Gate</a></h4>
-														<span>ftv model</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">delete Request</a>
-														<a href="#" title="" class="add-butn" data-ripple="">Confirm</a>
+														<a href="#" title="" class="add-butn more-action" data-ripple="">Recusar</a>
+														<a href="#" title="" class="add-butn" data-ripple="">Aceitar</a>
 													</div>
 												</div>
 											</li>
@@ -285,79 +191,12 @@
 													</figure>
 													<div class="pepl-info">
 														<h4><a href="time-line.html" title="">caty lasbo</a></h4>
-														<span>ftv model</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">delete Request</a>
-														<a href="#" title="" class="add-butn" data-ripple="">Confirm</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">jhon kates</a></h4>
-														<span>ftv model</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">delete Request</a>
-														<a href="#" title="" class="add-butn" data-ripple="">Confirm</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly2.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">sara grey</a></h4>
-														<span>ftv model</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">delete Request</a>
-														<a href="#" title="" class="add-butn" data-ripple="">Confirm</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly4.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">Sara grey</a></h4>
-														<span>ftv model</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">delete Request</a>
-														<a href="#" title="" class="add-butn" data-ripple="">Confirm</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly3.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">Sexy cat</a></h4>
-														<span>ftv model</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">delete Request</a>
-														<a href="#" title="" class="add-butn" data-ripple="">Confirm</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">jhon kates</a></h4>
-														<span>ftv model</span>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">delete Request</a>
-														<a href="#" title="" class="add-butn" data-ripple="">Confirm</a>
+														<a href="#" title="" class="add-butn more-action" data-ripple="">Recusar</a>
+														<a href="#" title="" class="add-butn" data-ripple="">Aceitar</a>
 													</div>
 												</div>
 											</li>
 										</ul>
-											  <button class="btn-view btn-load-more"></button>
 										  </div>
 										</div>
 									</div>

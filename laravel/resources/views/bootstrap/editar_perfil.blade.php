@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-	<title>AmiGo</title>
+	<title>AmiGo - Editar Perfil</title>
     <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" href="css/main.min.css">
@@ -47,31 +45,17 @@
 	</div><!-- topbar -->
 	<section>
 		<div class="feature-photo">
-			<figure><img src="images/resources/timeline-1.jpg" alt=""></figure>
+			<figure><img src="images/resources/layout.jpg" alt=""></figure>
 			<div class="add-btn">
 				<span>1205 followers</span>
 				<a href="#" title="" data-ripple="">Add Friend</a>
 			</div>
-			<form class="edit-phto">
-				<i class="fa fa-camera-retro"></i>
-				<label class="fileContainer">
-					Edit Cover Photo
-				<input type="file"/>
-				</label>
-			</form>
 			<div class="container-fluid">
 				<div class="row merged">
 					<div class="col-lg-2 col-sm-3">
 						<div class="user-avatar">
 							<figure>
 								<img src="{{ asset('storage/' . $user->foto) }}" alt="Foto de Perfil">
-								<form class="edit-phto">
-									<i class="fa fa-camera-retro"></i>
-									<label class="fileContainer">
-										Edit Display Photo
-										<input type="file"/>
-									</label>
-								</form>
 							</figure>
 						</div>
 					</div>
@@ -80,11 +64,10 @@
 							<ul>
 								<li class="admin-name">
 								  <h5>Janice Griffith</h5>
-								  <span>Group Admin</span>
 								</li>
 								<li>
 									<a class="" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
-									<a class="" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
+									<a class="" href="{{route('amigos')}}" title="" data-ripple="">AmiGos</a>
 									<a class="active" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
 								</li>
 							</ul>
@@ -130,27 +113,27 @@
 							<div class="col-lg-6">
 								<div class="central-meta">
 									<div class="editing-info">
-										<h5 class="f-title"><i class="ti-info-alt"></i> Edit Basic Information</h5>
+										<h5 class="f-title"><i class="ti-info-alt"></i> Editar informações</h5>
 
 										<form method="post" action="{{ route('update.users', ['id' => $user->id]) }}" enctype="multipart/form-data">
                                             @csrf
                                             @method('PATCH')
 											<div class="form-group ">
 											  <input type="text" id="input" name="name"  value="{{ old('name', $user['name'] ?? '') }}"/>
-											  <label class="control-label" for="input">First Name</label><i class="mtrl-select"></i>
+											  <label class="control-label" for="input">Nome</label><i class="mtrl-select"></i>
 											</div>
 											<div class="form-group">
 											  <input type="email" name="email"  value="{{ old('email', $user['email'] ?? '') }}"/>
-											  <label class="control-label" for="input">Email</label><i class="mtrl-select"></i>
+											  <label class="control-label" for="input">E-mail</label><i class="mtrl-select"></i>
 											</div>
-                                            <div class="form-group">
-                                                <input type="password" id="input"  />
-                                                <label class="control-label" for="input">New password</label><i class="mtrl-select"></i>
-                                              </div>
-                                              <input type="file" name="foto" value="{{ old('foto', $user['foto'] ?? '') }}">
+                                              <input type="file" name="foto" value="{{ old('foto', $user['foto'] ?? '') }}"/>
                                               <div class="submit-btns">
-                                                  <input type="submit" value="Atualizar">
+												<br>
+											  	<li>
+												<button type="submit" value="Atualizar">Atualizar</button>
+												</li>
                                               </div>
+												</br>
                                             </form>
 									</div>
 								</div>

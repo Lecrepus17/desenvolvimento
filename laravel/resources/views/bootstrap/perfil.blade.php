@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-	<title>AmiGo</title>
+	<title>AmiGo - Seu Perfil</title>
     <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16">
 
     <link rel="stylesheet" href="css/main.min.css">
@@ -48,31 +45,17 @@
 	</div><!-- topbar -->
 	<section>
 		<div class="feature-photo">
-			<figure><img src="images/resources/timeline-1.jpg" alt=""></figure>
+			<figure><img src="images/resources/layout.jpg" alt=""></figure>
 			<div class="add-btn">
-				<span>1205 followers</span>
-				<a href="#" title="" data-ripple="">Add Friend</a>
+				<span>1205 AmiGos</span>
+				<a href="#" title="" data-ripple="">Adicionar AmiGo</a>
 			</div>
-			<form class="edit-phto">
-				<i class="fa fa-camera-retro"></i>
-				<label class="fileContainer">
-					Edit Cover Photo
-				<input type="file"/>
-				</label>
-			</form>
 			<div class="container-fluid">
 				<div class="row merged">
 					<div class="col-lg-2 col-sm-3">
 						<div class="user-avatar">
 							<figure>
 								<img src="images/resources/user-avatar.jpg" alt="">
-								<form class="edit-phto">
-									<i class="fa fa-camera-retro"></i>
-									<label class="fileContainer">
-										Edit Display Photo
-										<input type="file"/>
-									</label>
-								</form>
 							</figure>
 						</div>
 					</div>
@@ -81,7 +64,6 @@
 							<ul>
 								<li class="admin-name">
 								  <h5>Janice Griffith</h5>
-								  <span>Group Admin</span>
 								</li>
 								<li>
 									<a class="active" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
@@ -126,15 +108,14 @@
 											</li>
 										</ul>
 									</div><!-- Shortcuts -->
-								
+
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
-								<div class="loadMore">
 								<div class="central-meta">
 									<div class="new-postbox">
 										<figure>
-											<img src="images/resources/admin2.jpg" alt="">
+											<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 										</figure>
 										<div class="newpst-input">
 											<form method="post">
@@ -160,12 +141,11 @@
 									@foreach ($posts as $post)
 
 
-								<div class="loadMore">
 									<div class="central-meta item">
 										<div class="user-post">
 											<div class="friend-info">
 											<figure>
-											<img src="images/resources/friend-avatar10.jpg" alt="">
+											<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 											</figure>
 												<div class="friend-name">
 												<ins><a href="time-line.html" title="">
@@ -175,7 +155,6 @@
 													@endif
 												@endforeach
 												</a></ins>
-				<span>published: june,2 2018 19:PM</span>
 			</div>
 			<div class="description">
 				<p>
@@ -197,45 +176,42 @@
 								<ins>52</ins>
 							</span>
 						</li>
-						<script>
-							const likeButton = document.querySelector('.like');
-							const likeCount = likeButton.querySelector('ins');
-							let hasLiked = false; // Variável para rastrear se o botão foi clicado
+														<!-- botão de curtir -->
+														<script>
+															const likeButton = document.querySelector('.like');
+															const likeCount = likeButton.querySelector('ins');
+															let hasLiked = false;
 
-							likeButton.addEventListener('click', function () {
-							if (!hasLiked) {
-								let currentLikes = parseFloat(likeCount.textContent);
-								currentLikes += 1;
+															likeButton.addEventListener('click', function () {
+															if (!hasLiked) {
+																let currentLikes = parseFloat(likeCount.textContent);
+																currentLikes += 1;
 
-								if (currentLikes === 1) {
-								likeCount.textContent = currentLikes;
-								} else {
-								likeCount.textContent = currentLikes.toFixed(1);
-								}
+																likeCount.textContent = Math.round(currentLikes);
 
-								hasLiked = true; // Atualiza o estado para indicar que o botão foi clicado
-								likeButton.classList.add('liked'); // Adiciona uma classe para estilo visual
-							} else {
-								let currentLikes = parseFloat(likeCount.textContent);
-								currentLikes -= 1;
+																hasLiked = true;
+																likeButton.classList.add('liked');
+															} else {
+																let currentLikes = parseFloat(likeCount.textContent);
+																currentLikes -= 1;
 
-								if (currentLikes === 0) {
-								likeCount.textContent = currentLikes;
-								} else {
-								likeCount.textContent = currentLikes.toFixed(1);
-								}
+																if (currentLikes < 1) {
+																likeCount.textContent = '0';
+																} else {
+																likeCount.textContent = Math.round(currentLikes);
+																}
 
-								hasLiked = false; // Botão foi deslikado
-								likeButton.classList.remove('liked'); // Remove a classe de estilo visual
-							}
-							});
-
-						  </script>
-							<style>
-							.liked i{
-									color: red;
-								}
-							</style>
+																hasLiked = false;
+																likeButton.classList.remove('liked');
+															}
+															});
+  														</script>
+															<style>
+    															.liked i{
+       															 color: red;
+ 															    }
+															</style>
+														<!-- fim do botão de curtir -->
 					</ul>
 				</div>
 
@@ -250,8 +226,6 @@
 					<div class="we-comment">
 						<div class="coment-head">
 							<h5><a href="time-line.html" title="">Jason borne</a></h5>
-							<span>1 year ago</span>
-							<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
 						</div>
 						<p>
 							 @foreach ($comentarios as $comentario)
@@ -270,16 +244,11 @@
 					<div class="we-comment">
 						<div class="coment-head">
 							<h5><a href="time-line.html" title="">Donald Trump</a></h5>
-							<span>1 week ago</span>
-							<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
 						</div>
 						<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel
 							<i class="em em-smiley"></i>
 						</p>
 					</div>
-				</li>
-				<li>
-					<a href="#" title="" class="showmore underline">more comments</a>
 				</li>
 				<li class="post-comment">
 					<div class="comet-avatar">
@@ -297,9 +266,9 @@
 	</div>
 </div>
 @endforeach
-								
-							
-								
+
+
+
 						</div>
 					</div>
 				</div>

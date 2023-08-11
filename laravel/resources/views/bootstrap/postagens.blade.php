@@ -28,7 +28,7 @@
 				<li>
 					<a href="#" title="">Home</a>
 					<ul>
-						<li><a href="{{route('postagens')}}" title="">Página incial</a></li>
+						<li><a href="{{route('postagens')}}" title="">Página inicial</a></li>
 						<li><a href="{{route('feedSeguindo')}}" title="">Seguindo</a></li>
 
 					</ul>
@@ -67,8 +67,7 @@
 											<div class="page-meta">
 
 												<a href="{{route('perfil', ['id' => $userAuth->id])}}" title="" class="underline">Meu perfil</a>
-												<span><i class="ti-comment"></i><a href="{{route('perfil', ['id' => $userAuth->id])}}" title="">Posts </a></span>
-												<span><i class="ti-bell"></i><a href="{{route('amigos')}}" title="">AmiGos </a></span>
+												<span><i class="ti-comment"></i><a href="{{route('amigos')}}">Amigos </a></span>
 
 
 											</div>
@@ -136,14 +135,15 @@
 												<img src="{{ asset('storage/' . $user->foto) }}"  alt="">
 											</figure>
 											<div class="friend-name">
-												<ins><a href="time-line.html" title="">
+												<ins>
 
                                     {{$user->name}}
-
                                                 </a></ins>
 
                                                 @if($post->user_fk == $userAuth->id)
                                                 @else
+                                                </ins>
+
                                                 @foreach($seguir as $segui)
                                                  @if($segui->seguido_fk === $post->user_fk && $segui->seguidor_fk === $userAuth->id)
 
@@ -184,9 +184,9 @@
 													</div>
 													<div class="we-comment">
 														<div class="coment-head">
-															<h5><a href="time-line.html" title="">
+															<h5>
                                                                 {{$user->name}}
-                                                            </a></h5>
+                                                            </h5>
 														</div>
 
 														<p>

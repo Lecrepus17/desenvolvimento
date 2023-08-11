@@ -116,88 +116,36 @@
 								<div class="central-meta">
 									<div class="frnds">
 										<ul class="nav nav-tabs">
-											 <li class="nav-item"><a class="active" href="#frends" data-toggle="tab">Meus Amigos</a> <span>55</span></li>
-											 <li class="nav-item"><a class="" href="#frends-req" data-toggle="tab">Pedidos de Amizade</a><span>60</span></li>
+											 <li class="nav-item"><a class="active" href="#frends" data-toggle="tab">Meus Amigos</a> </li>
+											
 										</ul>
 									
 										<!-- Tab panes -->
 										<div class="tab-content">
 										  <div class="tab-pane active fade show " id="frends" >
-											<ul class="nearby-contct">
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">jhon kates</a></h4>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">remover</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly1.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">sophia Gate</a></h4>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">remover</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly2.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">sara grey</a></h4>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">remover</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly2.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">Ema watson</a></h4>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">remover</a>
-													</div>
-												</div>
-											</li>
-										</ul>
+										  <ul class="nearby-contct">
+ 											   @foreach ($seguir as $seguirs)
+     											   @if ($seguirs->seguidor_fk == $userAuth->id)
+       											     @foreach ($user as $users)
+          										      @if ($seguirs->seguido_fk == $users->id)
+           							         <li>
+               							         <div class="nearly-pepls">
+                   							         <figure>
+                        					        <a href="time-line.html" title=""><img src="{{ asset('storage/' . $users->foto) }}" alt=""></a>
+                        						    </figure>
+                         					   <div class="pepl-info">
+                               						 <h4><a href="time-line.html" title="">{{ $users->name }}</a></h4>
+                               					 <a href="#" title="" class="add-butn more-action" data-ripple="">remover</a>
+                           					 </div>
+                        					</div>
+                    						</li>
+                							@endif
+            								@endforeach
+       										 @endif
+    											@endforeach
+											</ul>
 										</div>
-										  <div class="tab-pane fade" id="frends-req" >
-											<ul class="nearby-contct">
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly5.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">Amy watson</a></h4>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">Recusar</a>
-														<a href="#" title="" class="add-butn" data-ripple="">Aceitar</a>
-													</div>
-												</div>
-											</li>
-											<li>
-												<div class="nearly-pepls">
-													<figure>
-														<a href="time-line.html" title=""><img src="images/resources/nearly6.jpg" alt=""></a>
-													</figure>
-													<div class="pepl-info">
-														<h4><a href="time-line.html" title="">caty lasbo</a></h4>
-														<a href="#" title="" class="add-butn more-action" data-ripple="">Recusar</a>
-														<a href="#" title="" class="add-butn" data-ripple="">Aceitar</a>
-													</div>
-												</div>
-											</li>
-										</ul>
-										  </div>
+										  
 										</div>
 									</div>
 								</div>

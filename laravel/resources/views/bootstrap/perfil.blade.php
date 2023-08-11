@@ -143,13 +143,13 @@
 
 
                                 @foreach ($posts as $post)
-
+                                @if ($post->user_fk == $userAuth->id)
 								<!-- estrutura dos posts -->
 								<div class="central-meta item">
 									<div class="user-post">
 										<div class="friend-info">
 
-                                				@if ($post->user_fk == $userAuth->id)
+
 											<figure>
 												<img src="{{ asset('storage/' . $userAuth->foto) }}"  alt="">
 											</figure>
@@ -161,7 +161,7 @@
 
                                                 </a></ins>
 											</div>
-                                          @endif
+
                                             <div class="description">
                                                 <p>
                                                     {{$post->texto}}
@@ -226,6 +226,7 @@
 									</div>
 								</div>
 								<!-- fim da estrutura dos posts -->
+                                @endif
                                 @endforeach
 
 

@@ -87,7 +87,7 @@ class UsersController extends Controller
         $post = $this->ApiPostsController->getAllPost();
         $response = $this->ApiUsersController->getAllUsers(); // Sua chamada à API para obter os usuários
         $user = $response->getData();
-        $seguir = $this->ApiSeguirController->getAllSeguir();
+        $seguir = $this->ApiSeguirsController->getAllSeguir();
         return view('bootstrap.postagens', ['users' => $user, 'posts' => $post, 'comentarios' => $comentario, 'seguir' => $seguir, 'userAuth' => $userAuth]); // Passa os dados para a view
 
     }

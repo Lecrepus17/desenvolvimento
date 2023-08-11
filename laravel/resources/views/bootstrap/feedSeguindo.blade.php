@@ -36,7 +36,7 @@
 				<li>
 					<a href="#" title="">mais</a>
 					<ul>
-						<li><a href="{{route('perfil')}}" title="">Minhas postagens</a></li>
+						<li><a href="{{route('perfil', ['id' => $userAuth->id])}}" title="">Minhas postagens</a></li>
 						<li><a href="{{route('amigos')}}" title="">Meus Amigos</a></li>
 					</ul>
 				</li>
@@ -62,11 +62,11 @@
 										<h4 class="widget-title">Sua página</h4>
 										<div class="your-page">
 											<figure>
-												<a href="{{route('perfil')}}" title=""><img src="{{ asset('storage/' . $userAuth->foto) }}" alt=""></a>
+												<a href="{{route('perfil', ['id' => $userAuth->id])}}" title=""><img src="{{ asset('storage/' . $userAuth->foto) }}" alt=""></a>
 											</figure>
 											<div class="page-meta">
-												<a href="{{route('perfil')}}" title="" class="underline">Meu perfil</a>
-												<span><i class="ti-comment"></i><a href="{{route('perfil')}}" title="">Posts </a></span>
+												<a href="{{route('perfil', ['id' => $userAuth->id])}}" title="" class="underline">Meu perfil</a>
+												<span><i class="ti-comment"></i><a href="{{route('perfil', ['id' => $userAuth->id])}}" title="">Posts </a></span>
 												<span><i class="ti-bell"></i><a href="{{route('amigos')}}" title="">AmiGos </a></span>
 											</div>
 										</div>
@@ -79,7 +79,7 @@
 											</li>
 											<li>
 												<img src="assets/images/editar-texto.png" alt="" class="ti-files">
-												<a href="{{route('perfil')}}" title="">Meus Posts</a>
+												<a href="{{route('perfil', ['id' => $userAuth->id])}}" title="">Meus Posts</a>
 											</li>
 											<li>
 											<img src="assets/images/amigos.png" alt="" class="ti-files">

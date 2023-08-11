@@ -35,7 +35,7 @@
 				<li>
 					<a href="#" title="">mais</a>
 					<ul>
-						<li><a href="{{route('perfil')}}" title="">Minhas postagens</a></li>
+						<li><a href="{{route('perfil', ['id' => $user->id])}}" title="">Minhas postagens</a></li>
 						<li><a href="{{route('amigos')}}" title="">Meus Amigos</a></li>
 					</ul>
 				</li>
@@ -60,24 +60,24 @@
 						</div>
 					</div>
 					<div class="col-lg-10 col-sm-9">
-					
-						
+
+
 						<div class="timeline-info">
 							<ul>
-							
+
 								<li class="admin-name">
 								  <h5>{{$userAuth->name}}</h5>
 								</li>
-								
+
 								<li>
-									<a class="active" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
+									<a class="active" href="{{route('perfil', ['id' => $user->id])}}" title="" data-ripple="">Início</a>
 									<a class="" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
 									<a class="" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
 
 								</li>
 							</ul>
-							
-							 
+
+
 						</div>
 					</div>
 				</div>
@@ -102,7 +102,7 @@
 											</li>
 											<li>
 												<img src="assets/images/editar-texto.png" alt="" class="ti-files">
-												<a href="{{route('perfil')}}" title="">Meus Posts</a>
+												<a href="{{route('perfil', ['id' => $user->id])}}" title="">Meus Posts</a>
 											</li>
 											<li>
 											<img src="assets/images/amigos.png" alt="" class="ti-files">
@@ -118,22 +118,18 @@
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
+								<!-- fazer post -->
 								<div class="central-meta">
 									<div class="new-postbox">
 										<figure>
 											<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
 										</figure>
 										<div class="newpst-input">
-											<form method="post" action="{{route('perfil')}}">
-												<textarea name="texto" rows="2" placeholder="escreva algo..."></textarea>
+											<form method="post" action="{{ route('createPost') }}">
+                                                <input type="hidden" name="user_fk" value="{{$userAuth->id}}">
+												<textarea type="text" name="texto" rows="2" placeholder="escreva algo..."></textarea>
 												<div class="attachments">
 													<ul>
-														<!--<li>
-															<i class="fa fa-image"></i>
-															<label class="fileContainer">
-																<input type="file">
-															</label>
-														</li>-->
 														<li>
 															<button type="submit">Postar</button>
 														</li>
@@ -142,132 +138,94 @@
 											</form>
 										</div>
 									</div>
-								</div><!-- add post new box -->
+								</div>
+								<!-- fim de fazer post -->
 
-									@foreach ($posts as $post)
 
+                                @foreach ($posts as $post)
 
-									<div class="central-meta item">
-										<div class="user-post">
-											<div class="friend-info">
-											@foreach ($users as $user)
-                                				@if ($post->user_fk == $user->id)
+								<!-- estrutura dos posts -->
+								<div class="central-meta item">
+									<div class="user-post">
+										<div class="friend-info">
 
+                                				@if ($post->user_fk == $userAuth->id)
 											<figure>
-											<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
+												<img src="{{ asset('storage/' . $userAuth->foto) }}"  alt="">
 											</figure>
-												<div class="friend-name">
+											<div class="friend-name">
 												<ins><a href="time-line.html" title="">
-												{{$userAuth->name}}												
-											</a></ins>
-												</div>
-														@endif
-                             					   @endforeach
-			<div class="description">
-				<p>
-					{{$post->texto}}
-					</p>
-			</div>
-			<div class="post-meta">
-				<div class="we-video-info">
-					<ul>
-					<li>
-							<span class="like" data-toggle="tooltip" title="like">
-								<i class="ti-heart"></i>
-								<ins>{{$post->like}}</ins>
-							</span>
-						</li>
-						<li>
-							<span class="comment" data-toggle="tooltip" title="Comments">
-								<i class="fa fa-comments-o"></i>
-								<ins>52</ins>
-							</span>
-						</li>
-														<!-- botão de curtir -->
-														<script>
-															const likeButton = document.querySelector('.like');
-															const likeCount = likeButton.querySelector('ins');
-															let hasLiked = false;
 
-															likeButton.addEventListener('click', function () {
-															if (!hasLiked) {
-																let currentLikes = parseFloat(likeCount.textContent);
-																currentLikes += 1;
+                                    {{$userAuth->name}}
 
-																likeCount.textContent = Math.round(currentLikes);
+                                                </a></ins>
+											</div>
+                                          @endif
+                                            <div class="description">
+                                                <p>
+                                                    {{$post->texto}}
+                                                    </p>
+                                            </div>
 
-																hasLiked = true;
-																likeButton.classList.add('liked');
-															} else {
-																let currentLikes = parseFloat(likeCount.textContent);
-																currentLikes -= 1;
+										</div>
 
-																if (currentLikes < 1) {
-																likeCount.textContent = '0';
-																} else {
-																likeCount.textContent = Math.round(currentLikes);
-																}
+										<!-- área dos comentários -->
+										<div class="coment-area">
+											<ul class="we-comet">
+                                                @foreach ($comentarios as $comentario)
+                                                @if ($post->id == $comentario->post_fk)
 
-																hasLiked = false;
-																likeButton.classList.remove('liked');
-															}
-															});
-  														</script>
-															<style>
-    															.liked i{
-       															 color: red;
- 															    }
-															</style>
-														<!-- fim do botão de curtir -->
-					</ul>
-				</div>
+                                                <li>
+                                                    @foreach ($users as $user)
+                                                    @if ($comentario->user_fk == $user->id)
 
-			</div>
-		</div>
-		<div class="coment-area">
-			<ul class="we-comet">
-			@foreach ($comentarios as $comentario)
-             @if ($post->id == $comentario->post_fk)
-				<li>
-				@foreach ($users as $user)
-                    @if ($comentario->user_fk == $user->id)
-					<div class="comet-avatar">
-						<img src="{{ asset('storage/' . $user->foto) }}" alt="">
-					</div>
-					<div class="we-comment">
-					
-						<div class="coment-head">
-							<h5><a href="time-line.html" title="">{{$user->name}}</a></h5>
-						</div>
-						<p>
-							
-								{{$comentario->texto}}
-							
-						 </p>
-						 
-					</div>
-					@endif
-						 @endforeach
-				</li>
-				@endif
-						 @endforeach
-				
-				<li class="post-comment">
-					<div class="comet-avatar">
-						<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
-					</div>
-					<div class="post-comt-box">
-						<form method="post">
-							<textarea placeholder="Post your comment"></textarea>
-							<button type="submit"></button>
-						</form>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-@endforeach
+													<div class="comet-avatar">
+														<img src="{{ asset('storage/' . $user->foto) }}" alt="">
+													</div>
+													<div class="we-comment">
+														<div class="coment-head">
+															<h5><a href="time-line.html" title="">
+                                                                {{$user->name}}
+                                                            </a></h5>
+														</div>
+
+														<p>
+                                                                {{$comentario->texto}}
+
+
+                                                         </p>
+													</div>
+                                                    @endif
+                                                    @endforeach
+												</li>
+                                                @endif
+                                                @endforeach
+
+												<li class="post-comment">
+													<div class="comet-avatar">
+														<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">
+													</div>
+													<div class="post-comt-box">
+
+														<form method="post" action="{{ route("createComent")}}">
+                                                            <input type="hidden" name="user_fk" value="{{ $userAuth->id }}">
+                                                            <input type="hidden" name="post_fk" value="{{ $post->id }}">
+
+
+															<textarea tyepe="text" name="texto" placeholder="faça seu comentário"></textarea>
+															<li>
+															<button type="submit">Comentar</button>
+															</li>
+														</form>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!-- fim da área dos comentários -->
+									</div>
+								</div>
+								<!-- fim da estrutura dos posts -->
+                                @endforeach
 
 
 

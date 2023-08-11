@@ -29,7 +29,7 @@ Route::get('/register', [UsersController::class, 'register'])->name('register');
 Route::get('/criar_post', [UsersController::class, 'criar_post'])->name('criar_post')->middleware('auth');
 
 
-Route::get('/perfil', [UsersController::class, 'perfil'])->name('perfil')->middleware('auth');
+
 
 Route::get('/editar_perfil', [UsersController::class, 'editar_perfil'])->name('editar_perfil')->middleware('auth');
 Route::post('/editar_perfil', [UsersController::class, 'editar_perfil'])->middleware('auth');
@@ -47,3 +47,4 @@ Route::get('/sobre_perfil', [UsersController::class, 'sobre_perfil'])->name('sob
 
 Route::get('/feedSeguindo', [UsersController::class, 'feedSeguindo'])->name('feedSeguindo')->middleware('auth');
 
+Route::get('/{id}', [UsersController::class, 'perfil'])->name('perfil')->middleware('auth');

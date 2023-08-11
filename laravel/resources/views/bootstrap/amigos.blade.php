@@ -35,7 +35,7 @@
 				<li>
 					<a href="#" title="">mais</a>
 					<ul>
-						<li><a href="{{route('perfil')}}" title="">Minhas postagens</a></li>
+						<li><a href="{{route('perfil', ['id' => $userAuth->id])}}" title="">Minhas postagens</a></li>
 						<li><a href="{{route('amigos')}}" title="">Meus Amigos</a></li>
 					</ul>
 				</li>
@@ -66,9 +66,9 @@
 									  <h5>{{$userAuth->name}}</h5>
 									</li>
 									<li>
-									<a class="" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
+									<a class="" href="{{route('perfil', ['id' => $userAuth->id])}}" title="" data-ripple="">Início</a>
 									<a class="active" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
-									<a class="" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
+									<a class="" href="{{route('editar_perfil', ['id' => $userAuth->id])}}" title="" data-ripple="">Editar</a>
 
 								</li>
 								</ul>
@@ -96,7 +96,7 @@
 											</li>
 											<li>
 												<img src="assets/images/editar-texto.png" alt="" class="ti-files">
-												<a href="{{route('perfil')}}" title="">Meus Posts</a>
+												<a href="{{route('perfil', ['id' => $userAuth->id])}}" title="">Meus Posts</a>
 											</li>
 											<li>
 											<img src="assets/images/amigos.png" alt="" class="ti-files">
@@ -108,7 +108,7 @@
 											</li>
 										</ul>
 									</div><!-- Shortcuts -->
-										
+
 
 								</aside>
 							</div><!-- sidebar -->
@@ -119,7 +119,7 @@
 											 <li class="nav-item"><a class="active" href="#frends" data-toggle="tab">Meus Amigos</a> <span>55</span></li>
 											 <li class="nav-item"><a class="" href="#frends-req" data-toggle="tab">Pedidos de Amizade</a><span>60</span></li>
 										</ul>
-									
+
 										<!-- Tab panes -->
 										<div class="tab-content">
 										  <div class="tab-pane active fade show " id="frends" >
@@ -204,9 +204,9 @@
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
-									
-									
-										
+
+
+
 
 								</aside>
 							</div><!-- sidebar -->
@@ -217,10 +217,10 @@
 		</div>
 	</section>
 
-	
-	
+
+
 </div>
-	
+
 
 	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/main.min.js"></script>
 	<script src="js/script.js"></script>

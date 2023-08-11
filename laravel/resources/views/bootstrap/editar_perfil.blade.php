@@ -35,7 +35,7 @@
 				<li>
 					<a href="#" title="">mais</a>
 					<ul>
-						<li><a href="{{route('perfil')}}" title="">Minhas postagens</a></li>
+						<li><a href="{{route('perfil', ['id' => $user->id])}}" title="">Minhas postagens</a></li>
 						<li><a href="{{route('amigos')}}" title="">Meus Amigos</a></li>
 					</ul>
 				</li>
@@ -63,10 +63,10 @@
 						<div class="timeline-info">
 							<ul>
 								<li class="admin-name">
-								  <h5>Janice Griffith</h5>
+								  <h5>{{$user->name}}</h5>
 								</li>
 								<li>
-									<a class="" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
+									<a class="" href="{{route('perfil', ['id' => $user->id])}}" title="" data-ripple="">Início</a>
 									<a class="" href="{{route('amigos')}}" title="" data-ripple="">AmiGos</a>
 									<a class="active" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
 								</li>
@@ -95,7 +95,7 @@
 											</li>
 											<li>
 												<img src="assets/images/editar-texto.png" alt="" class="ti-files">
-												<a href="{{route('perfil')}}" title="">Meus Posts</a>
+												<a href="{{route('perfil', ['id' => $user->id])}}" title="">Meus Posts</a>
 											</li>
 											<li>
 											<img src="assets/images/amigos.png" alt="" class="ti-files">
@@ -107,7 +107,7 @@
 											</li>
 										</ul>
 									</div><!-- Shortcuts -->
-									
+
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
@@ -140,7 +140,7 @@
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
-									
+
 								</aside>
 							</div><!-- sidebar -->
 						</div>

@@ -48,33 +48,13 @@ class ApiPostsController extends Controller
 
         return new PostResource($post);
     }
-    public function upLike(string $id) {
-      // Encontre o post pelo ID
-      $post = Post::findOrFail($id);
 
-      // Aumente a quantidade de likes em 1
-      $post->increment('likes');
-
-      // Retorne uma resposta, por exemplo, uma mensagem JSON
-      return response()->json(['message' => 'Like removed successfully'], 200);
-    }
-    public function unLike(string $id) {
-      // Encontre o post pelo ID
-      $post = Post::findOrFail($id);
-
-      // diminui a quantidade de likes em 1
-      $post->decrement('likes');
-
-      // Retorne uma resposta, por exemplo, uma mensagem JSON
-      return response()->json(['message' => 'Like removed successfully'], 200);
-    }
 
     public function createPost(StorePostRequest $request) {
         $data = $request->validated();
         $post = $this->repository->create($data);
         new Registered($post);
-        return redirect()->route('postagens');
-        //return new Registered($post);
+        return back();
     }
 
     //public function updatePost(Request $request, $id) {

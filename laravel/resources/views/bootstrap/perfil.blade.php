@@ -45,7 +45,7 @@
 	</div><!-- topbar -->
 	<section>
 		<div class="feature-photo">
-			<figure><img src="images/resources/layout.jpg" alt=""></figure>
+			<figure><img src="images/resources/layout.png" alt=""></figure>
 			<div class="add-btn">
 				<span>1205 AmiGos</span>
 				<a href="#" title="" data-ripple="">Adicionar AmiGo</a>

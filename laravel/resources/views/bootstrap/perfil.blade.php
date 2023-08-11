@@ -60,15 +60,15 @@
 						</div>
 					</div>
 					<div class="col-lg-10 col-sm-9">
-					
-						
+
+
 						<div class="timeline-info">
 							<ul>
-							
+
 								<li class="admin-name">
 								  <h5>{{$userAuth->name}}</h5>
 								</li>
-								
+
 								<li>
 									<a class="active" href="{{route('perfil')}}" title="" data-ripple="">Início</a>
 									<a class="" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
@@ -76,8 +76,8 @@
 
 								</li>
 							</ul>
-							
-							 
+
+
 						</div>
 					</div>
 				</div>
@@ -158,7 +158,7 @@
 											</figure>
 												<div class="friend-name">
 												<ins><a href="time-line.html" title="">
-												{{$userAuth->name}}												
+												{{$userAuth->name}}
 											</a></ins>
 												</div>
 														@endif
@@ -169,58 +169,6 @@
 					</p>
 			</div>
 			<div class="post-meta">
-				<div class="we-video-info">
-					<ul>
-					<li>
-							<span class="like" data-toggle="tooltip" title="like">
-								<i class="ti-heart"></i>
-								<ins>{{$post->like}}</ins>
-							</span>
-						</li>
-						<li>
-							<span class="comment" data-toggle="tooltip" title="Comments">
-								<i class="fa fa-comments-o"></i>
-								<ins>52</ins>
-							</span>
-						</li>
-														<!-- botão de curtir -->
-														<script>
-															const likeButton = document.querySelector('.like');
-															const likeCount = likeButton.querySelector('ins');
-															let hasLiked = false;
-
-															likeButton.addEventListener('click', function () {
-															if (!hasLiked) {
-																let currentLikes = parseFloat(likeCount.textContent);
-																currentLikes += 1;
-
-																likeCount.textContent = Math.round(currentLikes);
-
-																hasLiked = true;
-																likeButton.classList.add('liked');
-															} else {
-																let currentLikes = parseFloat(likeCount.textContent);
-																currentLikes -= 1;
-
-																if (currentLikes < 1) {
-																likeCount.textContent = '0';
-																} else {
-																likeCount.textContent = Math.round(currentLikes);
-																}
-
-																hasLiked = false;
-																likeButton.classList.remove('liked');
-															}
-															});
-  														</script>
-															<style>
-    															.liked i{
-       															 color: red;
- 															    }
-															</style>
-														<!-- fim do botão de curtir -->
-					</ul>
-				</div>
 
 			</div>
 		</div>
@@ -235,23 +183,23 @@
 						<img src="{{ asset('storage/' . $user->foto) }}" alt="">
 					</div>
 					<div class="we-comment">
-					
+
 						<div class="coment-head">
 							<h5><a href="time-line.html" title="">{{$user->name}}</a></h5>
 						</div>
 						<p>
-							
+
 								{{$comentario->texto}}
-							
+
 						 </p>
-						 
+
 					</div>
 					@endif
 						 @endforeach
 				</li>
 				@endif
 						 @endforeach
-				
+
 				<li class="post-comment">
 					<div class="comet-avatar">
 						<img src="{{ asset('storage/' . $userAuth->foto) }}" alt="">

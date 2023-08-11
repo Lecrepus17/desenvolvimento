@@ -86,7 +86,8 @@ class UsersController extends Controller
         $post = $this->ApiPostsController->getAllPost();
         $response = $this->ApiUsersController->getAllUsers(); // Sua chamada à API para obter os usuários
         $user = $response->getData();
-        return view('bootstrap.postagens', ['users' => $user, 'posts' => $post, 'comentarios' => $comentario, 'userAuth' => $userAuth]); // Passa os dados para a view
+        $seguir = $this->ApiSeguirController->getAllSeguir();
+        return view('bootstrap.postagens', ['users' => $user, 'posts' => $post, 'comentarios' => $comentario, 'seguir' => $seguir, 'userAuth' => $userAuth]); // Passa os dados para a view
 
     }
 
@@ -99,7 +100,7 @@ class UsersController extends Controller
 
     public function amigos(){
         $userAuth = Auth::user();
-        
+
         $response = $this->ApiUsersController->getAllUsers(); // Sua chamada à API para obter os usuários
         $user = $response->getData();
         return view('bootstrap.amigos', ['users' => $user, 'userAuth' => $userAuth]); // Passa os dados para a view

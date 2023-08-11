@@ -107,7 +107,7 @@
 											</li>
 										</ul>
 									</div><!-- Shortcuts -->
-									
+
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
@@ -140,7 +140,7 @@
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
 								<aside class="sidebar static">
-									
+
 								</aside>
 							</div><!-- sidebar -->
 						</div>

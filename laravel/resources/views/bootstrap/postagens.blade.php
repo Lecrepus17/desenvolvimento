@@ -141,25 +141,25 @@
                                     {{$user->name}}
 
                                                 </a></ins>
+
+                                                @if($post->user_fk == $userAuth->id)
+                                                @else
                                                 @foreach($seguir as $segui)
-                                                @if($post->user_fk !== $userAuth->user)
-                                                @elseif($segui->seguidor_fk == $userAuth->id and $segui->seguido_fk == $post->user_fk)
-                                                <form action="{{route('create.seguirs')}}" method="post">
-                                                <input type="hidden" name="seguido_fk" value="{{$user->id}}">
-                                                <input type="hidden" name="seguidor_fk" value="{{$userAuth->id}}">
+                                                 @if($segui->seguido_fk === $post->user_fk && $segui->seguidor_fk === $userAuth->id)
 
+                                                    @csrf
+                                                    <form action="{{route('create.seguirs')}}" method="post">
+                                                        <input type="hidden" name="seguido_fk" value="{{$user->id}}">
+                                                        <input type="hidden" name="seguidor_fk" value="{{$userAuth->id}}">
+                                                        <input type="submit" value="Se Tornar amigo">
+                                                    </form>
 
-                                                     <input type="submit" value="Se Tornar amigo">
+                                                @endif
+                                                @endforeach
+                                                @endif
 
-
-
-                                            </form>
-                                            @endif
-                                            @endforeach
 											</div>
                                             @endif
-
-
                                 @endforeach
                                             <div class="description">
                                                 <p>

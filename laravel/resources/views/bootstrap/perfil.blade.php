@@ -156,6 +156,7 @@
 											<div class="friend-name">
 												<ins><a href="time-line.html" title="">
 
+
                                     {{$userAuth->name}}
 
                                                 </a></ins>
@@ -226,6 +227,8 @@
 								</div>
 								<!-- fim da estrutura dos posts -->
                                 @endforeach
+
+
 
 
 

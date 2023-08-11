@@ -20,7 +20,7 @@ class ApiSeguirsController extends Controller
         $data = $request->validated();
         $seguirs = $this->repository->create($data);
         event(new SeguirsResource($seguirs));
-        return true;
+        return redirect()->route('postagens');
     }
     public function getAllSeguir() {
         $Seguir = Seguir::all();

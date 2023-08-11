@@ -47,7 +47,6 @@
 			<div class="feature-photo">
 				<figure><img src="images/resources/layout.png" alt=""></figure>
 				<div class="add-btn">
-					<a href="#" title="" data-ripple="">Adicionar AmiGo</a>
 				</div>
 				<div class="container-fluid">
 					<div class="row merged">
@@ -132,10 +131,10 @@
            							         <li>
                							         <div class="nearly-pepls">
                    							         <figure>
-                        					        <a href="time-line.html" title=""><img src="{{ asset('storage/' . $users->foto) }}" alt=""></a>
+                        					        <img src="{{ asset('storage/' . $users->foto) }}" alt="">
                         						    </figure>
                          					   <div class="pepl-info">
-                               						 <h4><a href="time-line.html" title="">{{ $users->name }}</a></h4>
+                               						 <h4>{{ $users->name }}</h4>
 
                                                         <form action="{{route('delete.seguirs')}}" method="post">
                                                             @csrf

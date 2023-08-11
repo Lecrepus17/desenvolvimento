@@ -47,7 +47,6 @@
 		<div class="feature-photo">
 			<figure><img src="images/resources/layout.png" alt=""></figure>
 			<div class="add-btn">
-				<a href="#" title="" data-ripple="">Adicionar AmiGo</a>
 			</div>
 			<div class="container-fluid">
 				<div class="row merged">

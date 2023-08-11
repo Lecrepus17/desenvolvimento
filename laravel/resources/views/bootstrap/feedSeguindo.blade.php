@@ -136,11 +136,7 @@
 												<img src="{{ asset('storage/' . $user->foto) }}"  alt="">
 											</figure>
 											<div class="friend-name">
-												<ins><a href="time-line.html" title="">
-
                                     {{$user->name}}
-
-                                                </a></ins>
 											</div>
                                           @endif
                                 @endforeach
@@ -167,9 +163,9 @@
 													</div>
 													<div class="we-comment">
 														<div class="coment-head">
-															<h5><a href="time-line.html" title="">
+															<h5>
                                                                 {{$user->name}}
-                                                            </a></h5>
+                                                            </h5>
 														</div>
 
 														<p>

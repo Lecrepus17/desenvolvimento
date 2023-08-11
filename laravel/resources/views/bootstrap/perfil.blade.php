@@ -47,7 +47,6 @@
 		<div class="feature-photo">
 			<figure><img src="images/resources/layout.png" alt=""></figure>
 			<div class="add-btn">
-				<span>1205 AmiGos</span>
 				<a href="#" title="" data-ripple="">Adicionar AmiGo</a>
 			</div>
 			<div class="container-fluid">
@@ -64,14 +63,13 @@
 
 						<div class="timeline-info">
 							<ul>
-
 								<li class="admin-name">
 								  <h5>{{$userAuth->name}}</h5>
 								</li>
 
 								<li>
 									<a class="active" href="{{route('perfil', ['id' => $user->id])}}" title="" data-ripple="">Início</a>
-									<a class="" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
+									<a class="" href="{{route('amigos')}}" title="" data-ripple="">AmiGos</a>
 									<a class="" href="{{route('editar_perfil')}}" title="" data-ripple="">Editar</a>
 
 								</li>

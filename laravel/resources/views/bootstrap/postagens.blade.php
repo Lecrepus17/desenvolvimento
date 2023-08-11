@@ -28,7 +28,7 @@
 				<li>
 					<a href="#" title="">Home</a>
 					<ul>
-						<li><a href="{{route('postagens')}}" title="">Página incial</a></li>
+						<li><a href="{{route('postagens')}}" title="">Página inicial</a></li>
 						<li><a href="{{route('feedSeguindo')}}" title="">Seguindo</a></li>
 
 					</ul>
@@ -67,8 +67,7 @@
 											<div class="page-meta">
 
 												<a href="{{route('perfil', ['id' => $userAuth->id])}}" title="" class="underline">Meu perfil</a>
-												<span><i class="ti-comment"></i><a href="{{route('perfil', ['id' => $userAuth->id])}}" title="">Posts </a></span>
-												<span><i class="ti-bell"></i><a href="{{route('amigos')}}" title="">AmiGos </a></span>
+												<span><i class="ti-comment"></i><a href="{{route('amigos')}}">Amigos </a></span>
 
 
 											</div>

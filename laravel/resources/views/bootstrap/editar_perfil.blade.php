@@ -36,7 +36,7 @@
 					<a href="#" title="">mais</a>
 					<ul>
 						<li><a href="{{route('perfil', ['id' => $user->id])}}" title="">Minhas postagens</a></li>
-						<li><a href="{{route('amigos')}}" title="">Meus Amigos</a></li>
+						<li><a href="{{route('amigos')}}" title="">Meus AmiGos</a></li>
 					</ul>
 				</li>
 
@@ -47,8 +47,7 @@
 		<div class="feature-photo">
 			<figure><img src="images/resources/layout.png" alt=""></figure>
 			<div class="add-btn">
-				<span>1205 followers</span>
-				<a href="#" title="" data-ripple="">Add Friend</a>
+				<a href="#" title="" data-ripple="">Adicionar AmiGo</a>
 			</div>
 			<div class="container-fluid">
 				<div class="row merged">

@@ -36,7 +36,7 @@
 					<a href="#" title="">mais</a>
 					<ul>
 						<li><a href="{{route('perfil', ['id' => $userAuth->id])}}" title="">Minhas postagens</a></li>
-						<li><a href="{{route('amigos')}}" title="">Meus Amigos</a></li>
+						<li><a href="{{route('amigos')}}" title="">Meus AmiGos</a></li>
 					</ul>
 				</li>
 
@@ -47,8 +47,7 @@
 			<div class="feature-photo">
 				<figure><img src="images/resources/layout.png" alt=""></figure>
 				<div class="add-btn">
-					<span>1205 followers</span>
-					<a href="#" title="" data-ripple="">Add Friend</a>
+					<a href="#" title="" data-ripple="">Adicionar AmiGo</a>
 				</div>
 				<div class="container-fluid">
 					<div class="row merged">
@@ -67,7 +66,7 @@
 									</li>
 									<li>
 									<a class="" href="{{route('perfil', ['id' => $userAuth->id])}}" title="" data-ripple="">Início</a>
-									<a class="active" href="{{route('amigos')}}" title="" data-ripple="">Amigos</a>
+									<a class="active" href="{{route('amigos')}}" title="" data-ripple="">AmiGos</a>
 									<a class="" href="{{route('editar_perfil', ['id' => $userAuth->id])}}" title="" data-ripple="">Editar</a>
 
 								</li>
@@ -116,7 +115,9 @@
 								<div class="central-meta">
 									<div class="frnds">
 										<ul class="nav nav-tabs">
+
 											 <li class="nav-item"><a class="active" href="#frends" data-toggle="tab">Meus Amigos</a> </li>
+
 
 										</ul>
 
@@ -135,12 +136,14 @@
                         						    </figure>
                          					   <div class="pepl-info">
                                						 <h4><a href="time-line.html" title="">{{ $users->name }}</a></h4>
+
                                                         <form action="{{route('delete.seguirs')}}" method="post">
                                                             @csrf
                                                             <input type="hidden" name="seguido_fk" value="{{$users->id}}">
                                                             <input type="hidden" name="seguidor_fk" value="{{$userAuth->id}}">
                                                             <input type="submit" value="Remover">
                                                         </form>
+
                            					 </div>
                         					</div>
                     						</li>

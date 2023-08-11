@@ -126,6 +126,7 @@
 										</figure>
 										<div class="newpst-input">
 											<form method="post" action="{{ route('createPost') }}">
+                                                @csrf
                                                 <input type="hidden" name="user_fk" value="{{$userAuth->id}}">
 												<textarea type="text" name="texto" rows="2" placeholder="escreva algo..."></textarea>
 												<div class="attachments">
@@ -209,6 +210,7 @@
 													<div class="post-comt-box">
 
 														<form method="post" action="{{ route("createComent")}}">
+                                                            @csrf
                                                             <input type="hidden" name="user_fk" value="{{ $userAuth->id }}">
                                                             <input type="hidden" name="post_fk" value="{{ $post->id }}">
 

@@ -32,7 +32,7 @@ Route::delete('/DeleteUser/{id}', [ApiUsersController::class, 'deleteUser'])->na
 
 
 Route::post('/CreateSeguirs', [ApiSeguirsController::class, 'createSeguirs'])->name('create.seguirs');
-Route::post('/DeleteSeguirs', [ApiSeguirsController::class, 'deleteSeguirs'])->name('delete.seguirs');
+Route::post('/deleteSeguirs', [ApiSeguirsController::class, 'deleteSeguirs'])->name('delete.seguirs');
 
 Route::get('/upLike/{id}', [ApiPostsController::class, 'upLike'])->name('upLike');
 Route::get('/unLike/{id}', [ApiPostsController::class, 'unLike'])->name('unLike');

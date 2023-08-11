@@ -141,11 +141,6 @@
                                     {{$user->name}}
 
                                                 </a></ins>
-                                            <form action="{{route('create.seguirs')}}" method="post">
-                                                <input type="hidden" name="seguido_fk" value="{{$user->id}}">
-                                                <input type="hidden" name="seguidor_fk" value="{{$userAuth->id}}">
-                                                <input type="submit" value="Se Tornar amigo">
-                                            </form>
 											</div>
                                           @endif
                                 @endforeach

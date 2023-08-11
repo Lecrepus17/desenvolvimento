@@ -140,23 +140,27 @@
                                     {{$user->name}}
                                                 </a></ins>
 
-                                                @if($post->user_fk == $userAuth->id)
-                                                @else
-                                                </ins>
-
+                                                @if($post->user_fk !== $userAuth->id)
+                                                @php
+                                                    $isFollowing = false;
+                                                @endphp
                                                 @foreach($seguir as $segui)
-                                                 @if($segui->seguido_fk === $post->user_fk && $segui->seguidor_fk === $userAuth->id)
-
-                                                    @csrf
+                                                    @if($segui->seguido_fk === $post->user_fk && $segui->seguidor_fk === $userAuth->id)
+                                                        @php
+                                                            $isFollowing = true;
+                                                        @endphp
+                                                        @break
+                                                    @endif
+                                                @endforeach
+                                                @if(!$isFollowing)
                                                     <form action="{{route('create.seguirs')}}" method="post">
+                                                        @csrf
                                                         <input type="hidden" name="seguido_fk" value="{{$user->id}}">
                                                         <input type="hidden" name="seguidor_fk" value="{{$userAuth->id}}">
                                                         <input type="submit" value="Se Tornar amigo">
                                                     </form>
-
                                                 @endif
-                                                @endforeach
-                                                @endif
+                                            @endif
 
 											</div>
                                             @endif

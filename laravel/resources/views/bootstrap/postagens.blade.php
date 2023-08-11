@@ -65,9 +65,12 @@
 												<a href="{{route('perfil', ['id' => $userAuth->id])}}" title=""><img src="{{ asset('storage/' . $userAuth->foto) }}" alt=""></a>
 											</figure>
 											<div class="page-meta">
+
 												<a href="{{route('perfil', ['id' => $userAuth->id])}}" title="" class="underline">Meu perfil</a>
 												<span><i class="ti-comment"></i><a href="{{route('perfil', ['id' => $userAuth->id])}}" title="">Posts </a></span>
 												<span><i class="ti-bell"></i><a href="{{route('amigos')}}" title="">AmiGos </a></span>
+
+
 											</div>
 										</div>
 									</div>

@@ -141,18 +141,25 @@
                                     {{$user->name}}
 
                                                 </a></ins>
-                                            <form action="{{route('create.seguirs')}}" method="post">
+                                                @foreach($seguir as $segui)
+                                                @if($post->user_fk !== $userAuth->user)
+                                                @elseif($segui->seguidor_fk == $userAuth->id and $segui->seguido_fk == $post->user_fk)
+                                                <form action="{{route('create.seguirs')}}" method="post">
                                                 <input type="hidden" name="seguido_fk" value="{{$user->id}}">
                                                 <input type="hidden" name="seguidor_fk" value="{{$userAuth->id}}">
-                                                @foreach($seguir as $segui)
-                                                    @if($segui->seguindo_fk == $userAuth->id && $segui->seguido_fk == $user->id)
-                                                     <input type="submit" value="Se Tornar amigo">
-                                                    @endif
-                                            </form>
-											</div>
-                                            @endforeach
 
-                                          @endif
+
+                                                     <input type="submit" value="Se Tornar amigo">
+
+
+
+                                            </form>
+                                            @endif
+                                            @endforeach
+											</div>
+                                            @endif
+
+
                                 @endforeach
                                             <div class="description">
                                                 <p>

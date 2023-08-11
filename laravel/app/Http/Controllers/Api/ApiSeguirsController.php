@@ -28,12 +28,22 @@ class ApiSeguirsController extends Controller
         // $users = User::withTrashed()->get(); ou $users = User::onlyTrashed()->get();
         //return response($users, 200);
     }
-    public function deleteSeguirs (string $id){
-        $user = $this->repository->findOrFail($id);
-        $user->delete();
+    public function deleteSeguirs(StoreSeguirs $request)
+    {
 
-        return response()->json([], Response::HTTP_NO_CONTENT);
+        $seguido = $request->seguido_fk;
+        $seguidor = $request->seguidor_fk;
+
+        $sequirs = $this->repository
+            ->where('seguido_fk', $seguido)
+            ->where('seguidor_fk', $seguidor)
+            ->firstOrFail();
+
+        $sequirs->delete();
+
+        return redirect()->route('amigos');
     }
+
 }
 
 

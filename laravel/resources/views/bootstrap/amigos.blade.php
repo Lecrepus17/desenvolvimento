@@ -115,18 +115,20 @@
 								<div class="central-meta">
 									<div class="frnds">
 										<ul class="nav nav-tabs">
-											 <li class="nav-item"><a class="active" href="#frends" data-toggle="tab">Meus AmiGos</a> </li>
+
+											 <li class="nav-item"><a class="active" href="#frends" data-toggle="tab">Meus Amigos</a> </li>
+
 
 										</ul>
 
 										<!-- Tab panes -->
 										<div class="tab-content">
-										  <div class="tab-pane active fade show " id="frends" >
-										  <ul class="nearby-contct">
- 											   @foreach ($seguir as $seguirs)
-     											   @if ($seguirs->seguidor_fk == $userAuth->id)
-       											     @foreach ($user as $users)
-          										      @if ($seguirs->seguido_fk == $users->id)
+										<div class="tab-pane active fade show " id="frends" >
+									    <ul class="nearby-contct">
+ 										@foreach ($seguir as $seguirs)
+     										@if ($seguirs->seguidor_fk == $userAuth->id)
+       											@foreach ($user as $users)
+          										    @if ($seguirs->seguido_fk == $users->id)
            							         <li>
                							         <div class="nearly-pepls">
                    							         <figure>
@@ -135,7 +137,13 @@
                          					   <div class="pepl-info">
                                						 <h4><a href="time-line.html" title="">{{ $users->name }}</a></h4>
 
-                               					 <a href="#" title="" class="add-butn more-action" data-ripple="">remover</a>
+                                                        <form action="{{route('delete.seguirs')}}" method="post">
+                                                            @csrf
+                                                            <input type="hidden" name="seguido_fk" value="{{$users->id}}">
+                                                            <input type="hidden" name="seguidor_fk" value="{{$userAuth->id}}">
+                                                            <input type="submit" value="Remover">
+                                                        </form>
+
                            					 </div>
                         					</div>
                     						</li>

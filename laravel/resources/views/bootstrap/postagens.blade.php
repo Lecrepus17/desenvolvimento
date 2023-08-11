@@ -135,11 +135,11 @@
 												<img src="{{ asset('storage/' . $user->foto) }}"  alt="">
 											</figure>
 											<div class="friend-name">
-												<ins><a href="time-line.html" title="">
+												<ins>
 
                                     {{$user->name}}
 
-                                                </a></ins>
+                                                </ins>
                                                 @foreach($seguir as $segui)
                                                 @if($post->user_fk !== $userAuth->user)
                                                 @elseif($segui->seguidor_fk == $userAuth->id and $segui->seguido_fk == $post->user_fk)
@@ -183,9 +183,9 @@
 													</div>
 													<div class="we-comment">
 														<div class="coment-head">
-															<h5><a href="time-line.html" title="">
+															<h5>
                                                                 {{$user->name}}
-                                                            </a></h5>
+                                                            </h5>
 														</div>
 
 														<p>

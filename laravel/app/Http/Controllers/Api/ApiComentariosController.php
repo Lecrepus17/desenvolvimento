@@ -37,7 +37,7 @@ class ApiComentariosController extends Controller
         $coment = $this->repository->create($data);
 
         new Registered($coment);
-        return redirect()->route('postagens');
+        return back();
     }
 
     public function deleteComent(string $id){
